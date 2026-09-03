@@ -1,7 +1,11 @@
 import type { Metadata } from 'next';
 import { CatalogTabs } from '@/components/catalog-tabs';
-import { getDictionary, isLocale } from '@/lib/i18n';
+import { getDictionary, isLocale, locales } from '@/lib/i18n';
 import { products } from '@/lib/products';
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
-import { getDictionary, isLocale, whatsappUrl } from '@/lib/i18n';
+import { getDictionary, isLocale, locales, whatsappUrl } from '@/lib/i18n';
 import { categories, products } from '@/lib/products';
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

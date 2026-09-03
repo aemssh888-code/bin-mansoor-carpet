@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import { ArrowUpRight } from 'lucide-react';
-import { company, getDictionary, isLocale } from '@/lib/i18n';
+import { company, getDictionary, isLocale, locales } from '@/lib/i18n';
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
