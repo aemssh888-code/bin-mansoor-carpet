@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { company } from '@/lib/i18n';
 import type { Locale } from '@/lib/products';
 
@@ -22,8 +21,8 @@ export function SiteFooter({
           </div>
           <div className="flex flex-col items-start gap-3">
             <a href={`tel:${company.phoneHref}`} className="text-lg hover:text-[#c8b088]">{company.phoneDisplay}</a>
-            <Link href={`/${locale}/products`} className="text-white/60 hover:text-white">{nav.products}</Link>
-            <Link href={`/${locale}/contact`} className="text-white/60 hover:text-white">{nav.contact}</Link>
+            <a href={`/${locale}/products`} className="text-white/60 hover:text-white">{nav.products}</a>
+            <a href={`/${locale}/contact`} className="text-white/60 hover:text-white">{nav.contact}</a>
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { languageNames, locales } from '@/lib/i18n';
@@ -32,7 +31,7 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-40 border-b border-black/8 bg-[#f7f5f0]/90 backdrop-blur-xl">
       <div className="site-shell flex h-20 items-center justify-between gap-6">
-        <Link href={`/${locale}`} aria-label="BIN MANSOOR CARPET" className="shrink-0">
+        <a href={`/${locale}`} aria-label="BIN MANSOOR CARPET" className="shrink-0">
           <img
             src="/media/brand/bin-mansoor-logo.webp"
             alt="BIN MANSOOR CARPET"
@@ -40,31 +39,31 @@ export function SiteHeader({
             height="105"
             className="h-12 w-auto mix-blend-multiply"
           />
-        </Link>
+        </a>
 
         <nav aria-label={a11y.primaryNav} className="hidden items-center gap-7 lg:flex">
           {items.map((item) => (
-            <Link
+            <a
               key={item.href}
               href={item.href}
               aria-current={isActive(item.path) ? 'page' : undefined}
               className="nav-link"
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </nav>
 
         <div className="hidden items-center gap-1 rounded-full border border-black/10 bg-white/70 p-1 md:flex" aria-label={a11y.language}>
           {locales.map((item) => (
-            <Link
+            <a
               key={item}
               href={`/${item}${resolvedPath}`}
               aria-current={item === locale ? 'true' : undefined}
               className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-wide transition ${item === locale ? 'bg-[#1d1c19] text-white' : 'text-black/55 hover:text-black'}`}
             >
               {item.toUpperCase()}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -80,16 +79,16 @@ export function SiteHeader({
               </SheetHeader>
               <nav className="flex flex-col px-6 py-8" aria-label={a11y.mobileNav}>
                 {items.map((item, index) => (
-                  <Link key={item.href} href={item.href} className="flex items-center justify-between border-b border-black/10 py-5 text-xl">
+                  <a key={item.href} href={item.href} className="flex items-center justify-between border-b border-black/10 py-5 text-xl">
                     <span>{item.label}</span><span className="text-xs text-[#9b8059]">0{index + 1}</span>
-                  </Link>
+                  </a>
                 ))}
               </nav>
               <div className="mt-auto flex gap-2 border-t border-black/10 p-6">
                 {locales.map((item) => (
-                  <Link key={item} href={`/${item}${resolvedPath}`} className={`border px-3 py-2 text-xs ${item === locale ? 'border-black bg-black text-white' : 'border-black/15'}`}>
+                  <a key={item} href={`/${item}${resolvedPath}`} className={`border px-3 py-2 text-xs ${item === locale ? 'border-black bg-black text-white' : 'border-black/15'}`}>
                     {languageNames[item]}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </SheetContent>

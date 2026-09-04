@@ -1,11 +1,10 @@
-import Link from 'next/link';
 import type { Locale, Product } from '@/lib/products';
 
 export function ProductCard({ product, locale, viewLabel }: { product: Product; locale: Locale; viewLabel: string }) {
   const image = product.variants[0];
   return (
     <article className="group">
-      <Link href={`/${locale}/products/${product.slug}`} className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9b8059]">
+      <a href={`/${locale}/products/${product.slug}`} className="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9b8059]">
         <div className="product-frame relative aspect-[4/5] overflow-hidden bg-[#ebe7de]">
           <img
             src={image.image}
@@ -26,7 +25,7 @@ export function ProductCard({ product, locale, viewLabel }: { product: Product; 
           </div>
           <span className="mt-1 text-xs font-semibold text-[#8b724e] transition group-hover:translate-x-[-3px] rtl:group-hover:translate-x-[3px]">{viewLabel} ↗</span>
         </div>
-      </Link>
+      </a>
     </article>
   );
 }

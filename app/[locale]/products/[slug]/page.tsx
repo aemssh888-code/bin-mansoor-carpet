@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { ProductGallery } from '@/components/product-gallery';
@@ -27,7 +26,7 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
   return (
     <main id="main-content">
       <section className="site-shell py-10 sm:py-16">
-        <Link href={`/${locale}/products`} className="mb-10 inline-flex items-center gap-2 text-sm text-black/55 hover:text-black"><BackArrow className="size-4" />{dictionary.common.back}</Link>
+        <a href={`/${locale}/products`} className="mb-10 inline-flex items-center gap-2 text-sm text-black/55 hover:text-black"><BackArrow className="size-4" />{dictionary.common.back}</a>
         <div className="grid gap-12 lg:grid-cols-[1.08fr_.92fr] lg:gap-20">
           <ProductGallery variants={product.variants} locale={locale} label={dictionary.common.variants} />
           <div className="lg:sticky lg:top-28 lg:self-start">
@@ -43,4 +42,3 @@ export default async function ProductPage({ params }: { params: Promise<{ locale
     </main>
   );
 }
-

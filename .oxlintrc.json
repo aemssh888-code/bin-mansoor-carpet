@@ -47,6 +47,7 @@
     "react/require-render-return": "error",
     "react/rules-of-hooks": "error",
     "nextjs/no-img-element": "off",
+    "nextjs/no-html-link-for-pages": "off",
     "typescript/ban-ts-comment": "error",
     "typescript/no-deprecated": "error",
     "typescript/no-empty-object-type": "error",

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { ProductCard } from '@/components/product-card';
 import { getDictionary, isLocale, locales, whatsappUrl } from '@/lib/i18n';
@@ -27,7 +26,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <h1 className="display-title max-w-[12ch]">{dictionary.hero.title}</h1>
           <p className="mt-7 max-w-xl text-lg leading-8 text-black/60">{dictionary.hero.body}</p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link href={`/${locale}/products`} className="btn-primary">{dictionary.common.explore}<ArrowUpRight className="size-4" /></Link>
+            <a href={`/${locale}/products`} className="btn-primary">{dictionary.common.explore}<ArrowUpRight className="size-4" /></a>
             <a href={whatsappUrl(locale)} target="_blank" rel="noreferrer" className="btn-secondary">{dictionary.common.enquire}</a>
           </div>
           <p className="mt-10 font-mono text-[10px] uppercase tracking-[.2em] text-black/40">{dictionary.hero.note}</p>
@@ -50,10 +49,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="section-heading"><p className="eyebrow"><span>02</span>{dictionary.home.collectionsEyebrow}</p><h2>{dictionary.home.collectionsTitle}</h2></div>
           <div className="mt-14 grid gap-5 lg:grid-cols-3">
             {categories.map((category, index) => (
-              <Link key={category} href={`/${locale}/products`} className="collection-card group">
+              <a key={category} href={`/${locale}/products`} className="collection-card group">
                 <div className="aspect-[5/6] overflow-hidden"><img src={categoryImages[category]} alt={dictionary.categories[category]} width="760" height="900" loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]" /></div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-7 pt-24 text-white"><span className="font-mono text-[10px] tracking-[.2em] text-white/55">0{index + 1}</span><h3 className="mt-2 text-2xl">{dictionary.categories[category]}</h3><p className="mt-2 max-w-sm text-sm leading-6 text-white/65">{dictionary.categoryDescriptions[category]}</p></div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -68,7 +67,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <section className="bg-[#1d1c19] py-24 text-white sm:py-32">
         <div className="site-shell grid gap-16 lg:grid-cols-[.8fr_1.2fr]">
-          <div><p className="eyebrow mb-7 text-[#c8b088]"><span>04</span>{dictionary.home.factoryEyebrow}</p><h2 className="max-w-[12ch] text-4xl leading-tight tracking-[-.04em] sm:text-6xl">{dictionary.home.factoryTitle}</h2><p className="mt-7 max-w-lg leading-8 text-white/55">{dictionary.home.factoryBody}</p><Link href={`/${locale}/about`} className="mt-9 inline-flex items-center gap-2 border-b border-[#c8b088] pb-2 text-sm text-[#d5c29f]">{dictionary.common.learnMore}<ArrowUpRight className="size-4" /></Link></div>
+          <div><p className="eyebrow mb-7 text-[#c8b088]"><span>04</span>{dictionary.home.factoryEyebrow}</p><h2 className="max-w-[12ch] text-4xl leading-tight tracking-[-.04em] sm:text-6xl">{dictionary.home.factoryTitle}</h2><p className="mt-7 max-w-lg leading-8 text-white/55">{dictionary.home.factoryBody}</p><a href={`/${locale}/about`} className="mt-9 inline-flex items-center gap-2 border-b border-[#c8b088] pb-2 text-sm text-[#d5c29f]">{dictionary.common.learnMore}<ArrowUpRight className="size-4" /></a></div>
           <div className="grid content-end gap-px bg-white/12 sm:grid-cols-3">
             {[
               ['04', dictionary.home.machines], ['8,000', `${dictionary.home.moq} · ${dictionary.home.sqm}`], ['2023', dictionary.home.established],
