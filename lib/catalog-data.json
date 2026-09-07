@@ -1,0 +1,5730 @@
+[
+  {
+    "id": "BMC-MOD-003",
+    "binMansoorCode": "BMC-MOD-003",
+    "originalCode": "1007D",
+    "slug": "bmc-mod-003",
+    "name": {
+      "ar": "تضاريس",
+      "tr": "Katman",
+      "en": "Contours"
+    },
+    "categoryKey": "modern",
+    "category": {
+      "ar": "مودرن",
+      "tr": "Modern",
+      "en": "Modern"
+    },
+    "collection": {
+      "ar": "تضاريس",
+      "tr": "Yeryüzü",
+      "en": "Landforms"
+    },
+    "style": {
+      "ar": "عضوي",
+      "tr": "Organik",
+      "en": "Organic"
+    },
+    "styles": [
+      {
+        "ar": "عضوي",
+        "tr": "Organik",
+        "en": "Organic"
+      },
+      {
+        "ar": "تجريدي",
+        "tr": "Soyut",
+        "en": "Abstract"
+      }
+    ],
+    "heroImage": "/catalog/modern/bmc-mod-003-c01-639.webp",
+    "heroColorwayCode": "BMC-MOD-003-C01",
+    "galleryImages": [
+      "/catalog/modern/bmc-mod-003-c02-639.webp",
+      "/catalog/modern/bmc-mod-003-c03-639.webp",
+      "/catalog/modern/bmc-mod-003-c04-639.webp",
+      "/catalog/modern/bmc-mod-003-c05-639.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MOD-003-C01",
+        "originalCode": "1007D_CX644_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern/bmc-mod-003-c01-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-003-c01-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-003-c01-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-003-C02",
+        "originalCode": "1007D_CX666_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern/bmc-mod-003-c02-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-003-c02-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-003-c02-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-003-C03",
+        "originalCode": "1007D_CX677_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern/bmc-mod-003-c03-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-003-c03-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-003-c03-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-003-C04",
+        "originalCode": "1007D_RM122_BLUE",
+        "name": {
+          "ar": "أزرق",
+          "tr": "Mavi",
+          "en": "Blue"
+        },
+        "image": "/catalog/modern/bmc-mod-003-c04-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-003-c04-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-003-c04-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-003-C05",
+        "originalCode": "1007D_RM133_D BEIGE",
+        "name": {
+          "ar": "بيج داكن",
+          "tr": "Koyu Bej",
+          "en": "Dark Beige"
+        },
+        "image": "/catalog/modern/bmc-mod-003-c05-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-003-c05-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-003-c05-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 0,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم تضاريس من مجموعة تضاريس، بطابع عضوي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Yeryüzü koleksiyonundan Katman. Organik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Contours from Landforms. A organic design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MOD-004",
+    "binMansoorCode": "BMC-MOD-004",
+    "originalCode": "1008A",
+    "slug": "bmc-mod-004",
+    "name": {
+      "ar": "ضفاف",
+      "tr": "Nehir Kıyısı",
+      "en": "Riverbank"
+    },
+    "categoryKey": "modern",
+    "category": {
+      "ar": "مودرن",
+      "tr": "Modern",
+      "en": "Modern"
+    },
+    "collection": {
+      "ar": "تضاريس",
+      "tr": "Yeryüzü",
+      "en": "Landforms"
+    },
+    "style": {
+      "ar": "عضوي",
+      "tr": "Organik",
+      "en": "Organic"
+    },
+    "styles": [
+      {
+        "ar": "عضوي",
+        "tr": "Organik",
+        "en": "Organic"
+      },
+      {
+        "ar": "ملمسي",
+        "tr": "Dokulu",
+        "en": "Textural"
+      }
+    ],
+    "heroImage": "/catalog/modern/bmc-mod-004-c04-639.webp",
+    "heroColorwayCode": "BMC-MOD-004-C04",
+    "galleryImages": [
+      "/catalog/modern/bmc-mod-004-c01-639.webp",
+      "/catalog/modern/bmc-mod-004-c02-639.webp",
+      "/catalog/modern/bmc-mod-004-c03-639.webp",
+      "/catalog/modern/bmc-mod-004-c05-639.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MOD-004-C01",
+        "originalCode": "1008A_CX644_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern/bmc-mod-004-c01-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-004-c01-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-004-c01-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-004-C02",
+        "originalCode": "1008A_CX666_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern/bmc-mod-004-c02-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-004-c02-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-004-c02-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-004-C03",
+        "originalCode": "1008A_CX677_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern/bmc-mod-004-c03-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-004-c03-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-004-c03-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-004-C04",
+        "originalCode": "1008A_RM122_BLUE",
+        "name": {
+          "ar": "أزرق",
+          "tr": "Mavi",
+          "en": "Blue"
+        },
+        "image": "/catalog/modern/bmc-mod-004-c04-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-004-c04-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-004-c04-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-004-C05",
+        "originalCode": "1008A_RM133_D BEIGE",
+        "name": {
+          "ar": "بيج داكن",
+          "tr": "Koyu Bej",
+          "en": "Dark Beige"
+        },
+        "image": "/catalog/modern/bmc-mod-004-c05-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-004-c05-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-004-c05-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 1,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم ضفاف من مجموعة تضاريس، بطابع عضوي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Yeryüzü koleksiyonundan Nehir Kıyısı. Organik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Riverbank from Landforms. A organic design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MOD-005",
+    "binMansoorCode": "BMC-MOD-005",
+    "originalCode": "1009A",
+    "slug": "bmc-mod-005",
+    "name": {
+      "ar": "أثر",
+      "tr": "İz",
+      "en": "Trace"
+    },
+    "categoryKey": "modern",
+    "category": {
+      "ar": "مودرن",
+      "tr": "Modern",
+      "en": "Modern"
+    },
+    "collection": {
+      "ar": "تضاريس",
+      "tr": "Yeryüzü",
+      "en": "Landforms"
+    },
+    "style": {
+      "ar": "تجريدي",
+      "tr": "Soyut",
+      "en": "Abstract"
+    },
+    "styles": [
+      {
+        "ar": "تجريدي",
+        "tr": "Soyut",
+        "en": "Abstract"
+      },
+      {
+        "ar": "ملمسي",
+        "tr": "Dokulu",
+        "en": "Textural"
+      }
+    ],
+    "heroImage": "/catalog/modern/bmc-mod-005-c04-639.webp",
+    "heroColorwayCode": "BMC-MOD-005-C04",
+    "galleryImages": [
+      "/catalog/modern/bmc-mod-005-c01-639.webp",
+      "/catalog/modern/bmc-mod-005-c02-639.webp",
+      "/catalog/modern/bmc-mod-005-c03-639.webp",
+      "/catalog/modern/bmc-mod-005-c05-639.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MOD-005-C01",
+        "originalCode": "1009A_CX644_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern/bmc-mod-005-c01-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-005-c01-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-005-c01-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-005-C02",
+        "originalCode": "1009A_CX666_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern/bmc-mod-005-c02-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-005-c02-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-005-c02-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-005-C03",
+        "originalCode": "1009A_CX677_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern/bmc-mod-005-c03-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-005-c03-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-005-c03-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-005-C04",
+        "originalCode": "1009A_RM122_BLUE",
+        "name": {
+          "ar": "أزرق",
+          "tr": "Mavi",
+          "en": "Blue"
+        },
+        "image": "/catalog/modern/bmc-mod-005-c04-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-005-c04-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-005-c04-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-005-C05",
+        "originalCode": "1009A_RM133_D BEIGE",
+        "name": {
+          "ar": "بيج داكن",
+          "tr": "Koyu Bej",
+          "en": "Dark Beige"
+        },
+        "image": "/catalog/modern/bmc-mod-005-c05-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-005-c05-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-005-c05-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 2,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم أثر من مجموعة تضاريس، بطابع تجريدي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Yeryüzü koleksiyonundan İz. Soyut tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Trace from Landforms. A abstract design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-001",
+    "binMansoorCode": "BMC-MCL-001",
+    "originalCode": "0100A",
+    "slug": "bmc-mcl-001",
+    "name": {
+      "ar": "شبكة",
+      "tr": "Kafes",
+      "en": "Lattice"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "هندسة الإطار",
+      "tr": "Çerçeve Sanatı",
+      "en": "Frame Studies"
+    },
+    "style": {
+      "ar": "إطار",
+      "tr": "Bordürlü",
+      "en": "Border"
+    },
+    "styles": [
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      },
+      {
+        "ar": "هندسي",
+        "tr": "Geometrik",
+        "en": "Geometric"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-001-c04-799.webp",
+    "heroColorwayCode": "BMC-MCL-001-C04",
+    "galleryImages": [
+      "/catalog/modern-classic/bmc-mcl-001-c01-799.webp",
+      "/catalog/modern-classic/bmc-mcl-001-c02-799.webp",
+      "/catalog/modern-classic/bmc-mcl-001-c03-799.webp",
+      "/catalog/modern-classic/bmc-mcl-001-c05-799.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MCL-001-C01",
+        "originalCode": "0100A_BLACK",
+        "name": {
+          "ar": "أسود",
+          "tr": "Siyah",
+          "en": "Black"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-001-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c01-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c01-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c01-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-001-C02",
+        "originalCode": "0100A_CREAM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-001-c02-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c02-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c02-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c02-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-001-C03",
+        "originalCode": "0100A_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-001-c03-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c03-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c03-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c03-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-001-C04",
+        "originalCode": "0100A_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-001-c04-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c04-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c04-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c04-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-001-C05",
+        "originalCode": "0100A_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-001-c05-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c05-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c05-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-001-c05-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 3,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم شبكة من مجموعة هندسة الإطار، بطابع إطار. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Çerçeve Sanatı koleksiyonundan Kafes. Bordürlü tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Lattice from Frame Studies. A border design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-002",
+    "binMansoorCode": "BMC-MCL-002",
+    "originalCode": "0101A",
+    "slug": "bmc-mcl-002",
+    "name": {
+      "ar": "تشابك",
+      "tr": "Geçme",
+      "en": "Interlace"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "هندسة الإطار",
+      "tr": "Çerçeve Sanatı",
+      "en": "Frame Studies"
+    },
+    "style": {
+      "ar": "إطار",
+      "tr": "Bordürlü",
+      "en": "Border"
+    },
+    "styles": [
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      },
+      {
+        "ar": "هندسي",
+        "tr": "Geometrik",
+        "en": "Geometric"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-002-c04-799.webp",
+    "heroColorwayCode": "BMC-MCL-002-C04",
+    "galleryImages": [
+      "/catalog/modern-classic/bmc-mcl-002-c01-799.webp",
+      "/catalog/modern-classic/bmc-mcl-002-c02-799.webp",
+      "/catalog/modern-classic/bmc-mcl-002-c03-799.webp",
+      "/catalog/modern-classic/bmc-mcl-002-c05-799.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MCL-002-C01",
+        "originalCode": "0101A_BLACK",
+        "name": {
+          "ar": "أسود",
+          "tr": "Siyah",
+          "en": "Black"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-002-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c01-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c01-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c01-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-002-C02",
+        "originalCode": "0101A_CREAM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-002-c02-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c02-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c02-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c02-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-002-C03",
+        "originalCode": "0101A_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-002-c03-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c03-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c03-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c03-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-002-C04",
+        "originalCode": "0101A_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-002-c04-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c04-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c04-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c04-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-002-C05",
+        "originalCode": "0101A_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-002-c05-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c05-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c05-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-002-c05-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 4,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم تشابك من مجموعة هندسة الإطار، بطابع إطار. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Çerçeve Sanatı koleksiyonundan Geçme. Bordürlü tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Interlace from Frame Studies. A border design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-006",
+    "binMansoorCode": "BMC-MCL-006",
+    "originalCode": "0105A",
+    "slug": "bmc-mcl-006",
+    "name": {
+      "ar": "رواق",
+      "tr": "Revak",
+      "en": "Arcade"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "هندسة الإطار",
+      "tr": "Çerçeve Sanatı",
+      "en": "Frame Studies"
+    },
+    "style": {
+      "ar": "إطار",
+      "tr": "Bordürlü",
+      "en": "Border"
+    },
+    "styles": [
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      },
+      {
+        "ar": "بسيط",
+        "tr": "Yalın",
+        "en": "Minimal"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-006-c04-799.webp",
+    "heroColorwayCode": "BMC-MCL-006-C04",
+    "galleryImages": [
+      "/catalog/modern-classic/bmc-mcl-006-c01-799.webp",
+      "/catalog/modern-classic/bmc-mcl-006-c02-799.webp",
+      "/catalog/modern-classic/bmc-mcl-006-c03-799.webp",
+      "/catalog/modern-classic/bmc-mcl-006-c05-799.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MCL-006-C01",
+        "originalCode": "0105A_BLACK",
+        "name": {
+          "ar": "أسود",
+          "tr": "Siyah",
+          "en": "Black"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-006-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c01-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c01-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c01-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-006-C02",
+        "originalCode": "0105A_CREAM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-006-c02-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c02-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c02-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c02-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-006-C03",
+        "originalCode": "0105A_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-006-c03-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c03-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c03-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c03-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-006-C04",
+        "originalCode": "0105A_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-006-c04-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c04-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c04-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c04-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-006-C05",
+        "originalCode": "0105A_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-006-c05-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c05-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c05-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-006-c05-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 5,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم رواق من مجموعة هندسة الإطار، بطابع إطار. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Çerçeve Sanatı koleksiyonundan Revak. Bordürlü tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Arcade from Frame Studies. A border design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-029",
+    "binMansoorCode": "BMC-CLS-029",
+    "originalCode": "HA37050C / HA57050G",
+    "slug": "bmc-cls-029",
+    "name": {
+      "ar": "سلطاني",
+      "tr": "Sultan",
+      "en": "Sovereign"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "قصري",
+        "tr": "Saray",
+        "en": "Palace"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-029-c01-1000.webp",
+    "heroColorwayCode": "BMC-CLS-029-C01",
+    "galleryImages": [
+      "/catalog/classic-heritage/bmc-cls-029-c02-1000.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-CLS-029-C01",
+        "originalCode": "HA37050C_MDL44_200_0300R",
+        "name": {
+          "ar": "أحمر",
+          "tr": "Kırmızı",
+          "en": "Red"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-029-c01-1000.webp",
+        "imageKind": "design-preview",
+        "width": 1000,
+        "height": 1505,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-029-c01-320.webp",
+            "width": 320,
+            "height": 482
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-029-c01-640.webp",
+            "width": 640,
+            "height": 963
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-029-c01-1000.webp",
+            "width": 1000,
+            "height": 1505
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-CLS-029-C02",
+        "originalCode": "HA57050G_MDL33_200_0300R",
+        "name": {
+          "ar": "بيج",
+          "tr": "Bej",
+          "en": "Beige"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-029-c02-1000.webp",
+        "imageKind": "design-preview",
+        "width": 1000,
+        "height": 1505,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-029-c02-320.webp",
+            "width": 320,
+            "height": 482
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-029-c02-640.webp",
+            "width": 640,
+            "height": 963
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-029-c02-1000.webp",
+            "width": 1000,
+            "height": 1505
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 6,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم سلطاني من مجموعة إرث الزخرفة، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Sultan. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Sovereign from Ornamental Heritage. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-002",
+    "binMansoorCode": "BMC-CLS-002",
+    "originalCode": "0534A",
+    "slug": "bmc-cls-002",
+    "name": {
+      "ar": "تراث",
+      "tr": "Miras",
+      "en": "Legacy"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "تقليدي",
+        "tr": "Geleneksel",
+        "en": "Traditional"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-002-c01-959.webp",
+    "heroColorwayCode": "BMC-CLS-002-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-002-C01",
+        "originalCode": "0534A",
+        "name": {
+          "ar": "ذهبي",
+          "tr": "Altın",
+          "en": "Gold"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-002-c01-959.webp",
+        "imageKind": "design-preview",
+        "width": 959,
+        "height": 1425,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-002-c01-320.webp",
+            "width": 320,
+            "height": 475
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-002-c01-640.webp",
+            "width": 640,
+            "height": 951
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-002-c01-959.webp",
+            "width": 959,
+            "height": 1425
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 7,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم تراث من مجموعة إرث الزخرفة، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Miras. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Legacy from Ornamental Heritage. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-024",
+    "binMansoorCode": "BMC-CLS-024",
+    "originalCode": "672",
+    "slug": "bmc-cls-024",
+    "name": {
+      "ar": "بهاء",
+      "tr": "İhtişam",
+      "en": "Splendour"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "نباتي",
+      "tr": "Botanik",
+      "en": "Botanical"
+    },
+    "styles": [
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-024-c01-500.webp",
+    "heroColorwayCode": "BMC-CLS-024-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-024-C01",
+        "originalCode": "672_red",
+        "name": {
+          "ar": "أحمر",
+          "tr": "Kırmızı",
+          "en": "Red"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-024-c01-500.webp",
+        "imageKind": "design-preview",
+        "width": 500,
+        "height": 707,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-024-c01-320.webp",
+            "width": 320,
+            "height": 452
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-024-c01-500.webp",
+            "width": 500,
+            "height": 707
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 8,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم بهاء من مجموعة إرث الزخرفة، بطابع نباتي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan İhtişam. Botanik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Splendour from Ornamental Heritage. A botanical design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-028",
+    "binMansoorCode": "BMC-CLS-028",
+    "originalCode": "C0423",
+    "slug": "bmc-cls-028",
+    "name": {
+      "ar": "خاتم",
+      "tr": "Mühür",
+      "en": "Seal"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "تقليدي",
+        "tr": "Geleneksel",
+        "en": "Traditional"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-028-c01-999.webp",
+    "heroColorwayCode": "BMC-CLS-028-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-028-C01",
+        "originalCode": "C0423",
+        "name": {
+          "ar": "ذهبي",
+          "tr": "Altın",
+          "en": "Gold"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-028-c01-999.webp",
+        "imageKind": "design-preview",
+        "width": 999,
+        "height": 1452,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-028-c01-320.webp",
+            "width": 320,
+            "height": 465
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-028-c01-640.webp",
+            "width": 640,
+            "height": 930
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-028-c01-999.webp",
+            "width": 999,
+            "height": 1452
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": true,
+    "sortOrder": 9,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم خاتم من مجموعة إرث الزخرفة، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Mühür. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Seal from Ornamental Heritage. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-003",
+    "binMansoorCode": "BMC-MCL-003",
+    "originalCode": "0102A",
+    "slug": "bmc-mcl-003",
+    "name": {
+      "ar": "درجات",
+      "tr": "Basamak",
+      "en": "Steps"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "هندسة الإطار",
+      "tr": "Çerçeve Sanatı",
+      "en": "Frame Studies"
+    },
+    "style": {
+      "ar": "إطار",
+      "tr": "Bordürlü",
+      "en": "Border"
+    },
+    "styles": [
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      },
+      {
+        "ar": "هندسي",
+        "tr": "Geometrik",
+        "en": "Geometric"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-003-c04-799.webp",
+    "heroColorwayCode": "BMC-MCL-003-C04",
+    "galleryImages": [
+      "/catalog/modern-classic/bmc-mcl-003-c01-799.webp",
+      "/catalog/modern-classic/bmc-mcl-003-c02-799.webp",
+      "/catalog/modern-classic/bmc-mcl-003-c03-799.webp",
+      "/catalog/modern-classic/bmc-mcl-003-c05-799.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MCL-003-C01",
+        "originalCode": "0102A_BLACK",
+        "name": {
+          "ar": "أسود",
+          "tr": "Siyah",
+          "en": "Black"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-003-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c01-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c01-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c01-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-003-C02",
+        "originalCode": "0102A_CREAM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-003-c02-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c02-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c02-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c02-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-003-C03",
+        "originalCode": "0102A_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-003-c03-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c03-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c03-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c03-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-003-C04",
+        "originalCode": "0102A_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-003-c04-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c04-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c04-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c04-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-003-C05",
+        "originalCode": "0102A_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-003-c05-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c05-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c05-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-003-c05-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 102,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم درجات من مجموعة هندسة الإطار، بطابع إطار. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Çerçeve Sanatı koleksiyonundan Basamak. Bordürlü tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Steps from Frame Studies. A border design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-004",
+    "binMansoorCode": "BMC-MCL-004",
+    "originalCode": "0103A",
+    "slug": "bmc-mcl-004",
+    "name": {
+      "ar": "أفق",
+      "tr": "Ufuk",
+      "en": "Horizon"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "هندسة الإطار",
+      "tr": "Çerçeve Sanatı",
+      "en": "Frame Studies"
+    },
+    "style": {
+      "ar": "إطار",
+      "tr": "Bordürlü",
+      "en": "Border"
+    },
+    "styles": [
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      },
+      {
+        "ar": "بسيط",
+        "tr": "Yalın",
+        "en": "Minimal"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-004-c04-799.webp",
+    "heroColorwayCode": "BMC-MCL-004-C04",
+    "galleryImages": [
+      "/catalog/modern-classic/bmc-mcl-004-c01-799.webp",
+      "/catalog/modern-classic/bmc-mcl-004-c02-799.webp",
+      "/catalog/modern-classic/bmc-mcl-004-c03-799.webp",
+      "/catalog/modern-classic/bmc-mcl-004-c05-799.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MCL-004-C01",
+        "originalCode": "0103A_BLACK",
+        "name": {
+          "ar": "أسود",
+          "tr": "Siyah",
+          "en": "Black"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-004-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c01-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c01-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c01-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-004-C02",
+        "originalCode": "0103A_CREAM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-004-c02-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c02-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c02-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c02-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-004-C03",
+        "originalCode": "0103A_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-004-c03-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c03-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c03-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c03-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-004-C04",
+        "originalCode": "0103A_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-004-c04-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c04-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c04-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c04-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-004-C05",
+        "originalCode": "0103A_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-004-c05-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c05-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c05-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-004-c05-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 103,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم أفق من مجموعة هندسة الإطار، بطابع إطار. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Çerçeve Sanatı koleksiyonundan Ufuk. Bordürlü tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Horizon from Frame Studies. A border design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-005",
+    "binMansoorCode": "BMC-MCL-005",
+    "originalCode": "0104A",
+    "slug": "bmc-mcl-005",
+    "name": {
+      "ar": "نقاط",
+      "tr": "Noktalar",
+      "en": "Dotted Frame"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "هندسة الإطار",
+      "tr": "Çerçeve Sanatı",
+      "en": "Frame Studies"
+    },
+    "style": {
+      "ar": "إطار",
+      "tr": "Bordürlü",
+      "en": "Border"
+    },
+    "styles": [
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      },
+      {
+        "ar": "هندسي",
+        "tr": "Geometrik",
+        "en": "Geometric"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-005-c04-799.webp",
+    "heroColorwayCode": "BMC-MCL-005-C04",
+    "galleryImages": [
+      "/catalog/modern-classic/bmc-mcl-005-c01-799.webp",
+      "/catalog/modern-classic/bmc-mcl-005-c02-799.webp",
+      "/catalog/modern-classic/bmc-mcl-005-c03-799.webp",
+      "/catalog/modern-classic/bmc-mcl-005-c05-799.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MCL-005-C01",
+        "originalCode": "0104A_BLACK",
+        "name": {
+          "ar": "أسود",
+          "tr": "Siyah",
+          "en": "Black"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-005-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c01-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c01-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c01-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-005-C02",
+        "originalCode": "0104A_CREAM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-005-c02-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c02-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c02-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c02-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-005-C03",
+        "originalCode": "0104A_GREY",
+        "name": {
+          "ar": "رمادي",
+          "tr": "Gri",
+          "en": "Grey"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-005-c03-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c03-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c03-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c03-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-005-C04",
+        "originalCode": "0104A_L BEIGE",
+        "name": {
+          "ar": "بيج فاتح",
+          "tr": "Açık Bej",
+          "en": "Light Beige"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-005-c04-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c04-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c04-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c04-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MCL-005-C05",
+        "originalCode": "0104A_VIZON",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-005-c05-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1449,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c05-320.webp",
+            "width": 320,
+            "height": 580
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c05-640.webp",
+            "width": 640,
+            "height": 1161
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-005-c05-799.webp",
+            "width": 799,
+            "height": 1449
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 104,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم نقاط من مجموعة هندسة الإطار، بطابع إطار. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Çerçeve Sanatı koleksiyonundan Noktalar. Bordürlü tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Dotted Frame from Frame Studies. A border design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-001",
+    "binMansoorCode": "BMC-CLS-001",
+    "originalCode": "012",
+    "slug": "bmc-cls-001",
+    "name": {
+      "ar": "غصون",
+      "tr": "Dallar",
+      "en": "Boughs"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "نباتي",
+      "tr": "Botanik",
+      "en": "Botanical"
+    },
+    "styles": [
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-001-c01-731.webp",
+    "heroColorwayCode": "BMC-CLS-001-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-001-C01",
+        "originalCode": "012_160x230____________",
+        "name": {
+          "ar": "بيج",
+          "tr": "Bej",
+          "en": "Beige"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-001-c01-731.webp",
+        "imageKind": "design-preview",
+        "width": 731,
+        "height": 1265,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-001-c01-320.webp",
+            "width": 320,
+            "height": 554
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-001-c01-640.webp",
+            "width": 640,
+            "height": 1108
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-001-c01-731.webp",
+            "width": 731,
+            "height": 1265
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 106,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم غصون من مجموعة حدائق، بطابع نباتي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Dallar. Botanik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Boughs from Gardens. A botanical design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-003",
+    "binMansoorCode": "BMC-CLS-003",
+    "originalCode": "055JQ7194 / 060044A1500233",
+    "slug": "bmc-cls-003",
+    "name": {
+      "ar": "أكاليل",
+      "tr": "Çelenk",
+      "en": "Garland"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "زهري",
+      "tr": "Çiçekli",
+      "en": "Floral"
+    },
+    "styles": [
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-003-c01-709.webp",
+    "heroColorwayCode": "BMC-CLS-003-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-003-C01",
+        "originalCode": "055JQ7194_060044A1500233",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-003-c01-709.webp",
+        "imageKind": "design-preview",
+        "width": 709,
+        "height": 1165,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-003-c01-320.webp",
+            "width": 320,
+            "height": 526
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-003-c01-640.webp",
+            "width": 640,
+            "height": 1052
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-003-c01-709.webp",
+            "width": 709,
+            "height": 1165
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 108,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم أكاليل من مجموعة حدائق، بطابع زهري. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Çelenk. Çiçekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Garland from Gardens. A floral design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-004",
+    "binMansoorCode": "BMC-CLS-004",
+    "originalCode": "05811",
+    "slug": "bmc-cls-004",
+    "name": {
+      "ar": "ندى",
+      "tr": "Çiy",
+      "en": "Dew"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "زهري",
+      "tr": "Çiçekli",
+      "en": "Floral"
+    },
+    "styles": [
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      },
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-004-c01-672.webp",
+    "heroColorwayCode": "BMC-CLS-004-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-004-C01",
+        "originalCode": "05811_BEYAZ_AAK",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-004-c01-672.webp",
+        "imageKind": "design-preview",
+        "width": 672,
+        "height": 966,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-004-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-004-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-004-c01-672.webp",
+            "width": 672,
+            "height": 966
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 109,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم ندى من مجموعة حدائق، بطابع زهري. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Çiy. Çiçekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Dew from Gardens. A floral design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-005",
+    "binMansoorCode": "BMC-CLS-005",
+    "originalCode": "05812",
+    "slug": "bmc-cls-005",
+    "name": {
+      "ar": "ياسمين",
+      "tr": "Yasemin",
+      "en": "Jasmine"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "زهري",
+      "tr": "Çiçekli",
+      "en": "Floral"
+    },
+    "styles": [
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-005-c01-672.webp",
+    "heroColorwayCode": "BMC-CLS-005-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-005-C01",
+        "originalCode": "05812_BEYAZ_AAK",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-005-c01-672.webp",
+        "imageKind": "design-preview",
+        "width": 672,
+        "height": 966,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-005-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-005-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-005-c01-672.webp",
+            "width": 672,
+            "height": 966
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 110,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم ياسمين من مجموعة حدائق، بطابع زهري. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Yasemin. Çiçekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Jasmine from Gardens. A floral design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-006",
+    "binMansoorCode": "BMC-CLS-006",
+    "originalCode": "05813",
+    "slug": "bmc-cls-006",
+    "name": {
+      "ar": "زهر",
+      "tr": "Çiçek",
+      "en": "Bloom"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-006-c01-672.webp",
+    "heroColorwayCode": "BMC-CLS-006-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-006-C01",
+        "originalCode": "05813_BEYAZ_AAK",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-006-c01-672.webp",
+        "imageKind": "design-preview",
+        "width": 672,
+        "height": 966,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-006-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-006-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-006-c01-672.webp",
+            "width": 672,
+            "height": 966
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 111,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم زهر من مجموعة حدائق، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Çiçek. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Bloom from Gardens. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-007",
+    "binMansoorCode": "BMC-CLS-007",
+    "originalCode": "05815",
+    "slug": "bmc-cls-007",
+    "name": {
+      "ar": "بستان",
+      "tr": "Bostan",
+      "en": "Orchard"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "نباتي",
+      "tr": "Botanik",
+      "en": "Botanical"
+    },
+    "styles": [
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      },
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-007-c01-671.webp",
+    "heroColorwayCode": "BMC-CLS-007-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-007-C01",
+        "originalCode": "05815_BEYAZ_AAK",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-007-c01-671.webp",
+        "imageKind": "design-preview",
+        "width": 671,
+        "height": 966,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-007-c01-320.webp",
+            "width": 320,
+            "height": 461
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-007-c01-640.webp",
+            "width": 640,
+            "height": 921
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-007-c01-671.webp",
+            "width": 671,
+            "height": 966
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 112,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم بستان من مجموعة حدائق، بطابع نباتي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Bostan. Botanik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Orchard from Gardens. A botanical design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-008",
+    "binMansoorCode": "BMC-CLS-008",
+    "originalCode": "05818",
+    "slug": "bmc-cls-008",
+    "name": {
+      "ar": "وشاح",
+      "tr": "Şal",
+      "en": "Shawl"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "إطار",
+      "tr": "Bordürlü",
+      "en": "Border"
+    },
+    "styles": [
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      },
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-008-c01-672.webp",
+    "heroColorwayCode": "BMC-CLS-008-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-008-C01",
+        "originalCode": "05818_BEYAZ_AAK (2)",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-008-c01-672.webp",
+        "imageKind": "design-preview",
+        "width": 672,
+        "height": 966,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-008-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-008-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-008-c01-672.webp",
+            "width": 672,
+            "height": 966
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 113,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم وشاح من مجموعة إرث الزخرفة، بطابع إطار. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Şal. Bordürlü tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Shawl from Ornamental Heritage. A border design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-009",
+    "binMansoorCode": "BMC-CLS-009",
+    "originalCode": "062",
+    "slug": "bmc-cls-009",
+    "name": {
+      "ar": "أوراق",
+      "tr": "Yaprak",
+      "en": "Foliage"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "نباتي",
+      "tr": "Botanik",
+      "en": "Botanical"
+    },
+    "styles": [
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-009-c01-731.webp",
+    "heroColorwayCode": "BMC-CLS-009-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-009-C01",
+        "originalCode": "062_160X230",
+        "name": {
+          "ar": "بيج",
+          "tr": "Bej",
+          "en": "Beige"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-009-c01-731.webp",
+        "imageKind": "design-preview",
+        "width": 731,
+        "height": 1265,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-009-c01-320.webp",
+            "width": 320,
+            "height": 554
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-009-c01-640.webp",
+            "width": 640,
+            "height": 1108
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-009-c01-731.webp",
+            "width": 731,
+            "height": 1265
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 114,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم أوراق من مجموعة حدائق، بطابع نباتي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Yaprak. Botanik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Foliage from Gardens. A botanical design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-010",
+    "binMansoorCode": "BMC-CLS-010",
+    "originalCode": "070JQ7615 / 060B50A1500233",
+    "slug": "bmc-cls-010",
+    "name": {
+      "ar": "باقة",
+      "tr": "Buket",
+      "en": "Bouquet"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "زهري",
+      "tr": "Çiçekli",
+      "en": "Floral"
+    },
+    "styles": [
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      },
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-010-c01-709.webp",
+    "heroColorwayCode": "BMC-CLS-010-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-010-C01",
+        "originalCode": "070JQ7615_060B50A1500233 binnur",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-010-c01-709.webp",
+        "imageKind": "design-preview",
+        "width": 709,
+        "height": 1165,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-010-c01-320.webp",
+            "width": 320,
+            "height": 526
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-010-c01-640.webp",
+            "width": 640,
+            "height": 1052
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-010-c01-709.webp",
+            "width": 709,
+            "height": 1165
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 115,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم باقة من مجموعة حدائق، بطابع زهري. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Buket. Çiçekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Bouquet from Gardens. A floral design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-011",
+    "binMansoorCode": "BMC-CLS-011",
+    "originalCode": "1003",
+    "slug": "bmc-cls-011",
+    "name": {
+      "ar": "ديوان",
+      "tr": "Divan",
+      "en": "Salon"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "زخرفي",
+      "tr": "Bezeme",
+      "en": "Ornamental"
+    },
+    "styles": [
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      },
+      {
+        "ar": "تقليدي",
+        "tr": "Geleneksel",
+        "en": "Traditional"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-011-c01-767.webp",
+    "heroColorwayCode": "BMC-CLS-011-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-011-C01",
+        "originalCode": "1003_16_bej",
+        "name": {
+          "ar": "بيج",
+          "tr": "Bej",
+          "en": "Beige"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-011-c01-767.webp",
+        "imageKind": "design-preview",
+        "width": 767,
+        "height": 1079,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-011-c01-320.webp",
+            "width": 320,
+            "height": 450
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-011-c01-640.webp",
+            "width": 640,
+            "height": 900
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-011-c01-767.webp",
+            "width": 767,
+            "height": 1079
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 116,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم ديوان من مجموعة إرث الزخرفة، بطابع زخرفي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Divan. Bezeme tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Salon from Ornamental Heritage. A ornamental design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-007",
+    "binMansoorCode": "BMC-MCL-007",
+    "originalCode": "1739A",
+    "slug": "bmc-mcl-007",
+    "name": {
+      "ar": "همس",
+      "tr": "Fısıltı",
+      "en": "Whisper"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "زهري",
+      "tr": "Çiçekli",
+      "en": "Floral"
+    },
+    "styles": [
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      },
+      {
+        "ar": "ملمسي",
+        "tr": "Dokulu",
+        "en": "Textural"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-007-c01-625.webp",
+    "heroColorwayCode": "BMC-MCL-007-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-MCL-007-C01",
+        "originalCode": "1739A_A3_VZ_BJ",
+        "name": {
+          "ar": "بني رمادي",
+          "tr": "Vizon",
+          "en": "Taupe"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-007-c01-625.webp",
+        "imageKind": "design-preview",
+        "width": 625,
+        "height": 1315,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-007-c01-320.webp",
+            "width": 320,
+            "height": 673
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-007-c01-625.webp",
+            "width": 625,
+            "height": 1315
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 117,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم همس من مجموعة حدائق، بطابع زهري. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Fısıltı. Çiçekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Whisper from Gardens. A floral design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-012",
+    "binMansoorCode": "BMC-CLS-012",
+    "originalCode": "23",
+    "slug": "bmc-cls-012",
+    "name": {
+      "ar": "إكليل",
+      "tr": "Taç",
+      "en": "Wreath"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "إطار",
+      "tr": "Bordürlü",
+      "en": "Border"
+    },
+    "styles": [
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      },
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-012-c01-767.webp",
+    "heroColorwayCode": "BMC-CLS-012-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-012-C01",
+        "originalCode": "23",
+        "name": {
+          "ar": "أحمر",
+          "tr": "Kırmızı",
+          "en": "Red"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-012-c01-767.webp",
+        "imageKind": "design-preview",
+        "width": 767,
+        "height": 1128,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-012-c01-320.webp",
+            "width": 320,
+            "height": 471
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-012-c01-640.webp",
+            "width": 640,
+            "height": 941
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-012-c01-767.webp",
+            "width": 767,
+            "height": 1128
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 118,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم إكليل من مجموعة إرث الزخرفة، بطابع إطار. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Taç. Bordürlü tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Wreath from Ornamental Heritage. A border design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-013",
+    "binMansoorCode": "BMC-CLS-013",
+    "originalCode": "2363",
+    "slug": "bmc-cls-013",
+    "name": {
+      "ar": "روضة",
+      "tr": "Çiçeklik",
+      "en": "Parterre"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "زهري",
+      "tr": "Çiçekli",
+      "en": "Floral"
+    },
+    "styles": [
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      },
+      {
+        "ar": "هندسي",
+        "tr": "Geometrik",
+        "en": "Geometric"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-013-c01-671.webp",
+    "heroColorwayCode": "BMC-CLS-013-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-013-C01",
+        "originalCode": "2363_KEMİK_8RX",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-013-c01-671.webp",
+        "imageKind": "design-preview",
+        "width": 671,
+        "height": 965,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-013-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-013-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-013-c01-671.webp",
+            "width": 671,
+            "height": 965
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 119,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم روضة من مجموعة حدائق، بطابع زهري. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Çiçeklik. Çiçekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Parterre from Gardens. A floral design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-014",
+    "binMansoorCode": "BMC-CLS-014",
+    "originalCode": "2372",
+    "slug": "bmc-cls-014",
+    "name": {
+      "ar": "بتلات",
+      "tr": "Taç Yaprak",
+      "en": "Petals"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "زهري",
+      "tr": "Çiçekli",
+      "en": "Floral"
+    },
+    "styles": [
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-014-c01-671.webp",
+    "heroColorwayCode": "BMC-CLS-014-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-014-C01",
+        "originalCode": "2372_KEMİK_8RX",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-014-c01-671.webp",
+        "imageKind": "design-preview",
+        "width": 671,
+        "height": 965,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-014-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-014-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-014-c01-671.webp",
+            "width": 671,
+            "height": 965
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 120,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم بتلات من مجموعة حدائق، بطابع زهري. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Taç Yaprak. Çiçekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Petals from Gardens. A floral design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-015",
+    "binMansoorCode": "BMC-CLS-015",
+    "originalCode": "2602S / 1804P",
+    "slug": "bmc-cls-015",
+    "name": {
+      "ar": "دانتيل",
+      "tr": "Dantel",
+      "en": "Lace"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "زخرفي",
+      "tr": "Bezeme",
+      "en": "Ornamental"
+    },
+    "styles": [
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-015-c01-835.webp",
+    "heroColorwayCode": "BMC-CLS-015-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-015-C01",
+        "originalCode": "2602S_1804P_AUN32_200X290",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-015-c01-835.webp",
+        "imageKind": "design-preview",
+        "width": 835,
+        "height": 1275,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-015-c01-320.webp",
+            "width": 320,
+            "height": 489
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-015-c01-640.webp",
+            "width": 640,
+            "height": 977
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-015-c01-835.webp",
+            "width": 835,
+            "height": 1275
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 121,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم دانتيل من مجموعة إرث الزخرفة، بطابع زخرفي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Dantel. Bezeme tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Lace from Ornamental Heritage. A ornamental design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-016",
+    "binMansoorCode": "BMC-CLS-016",
+    "originalCode": "3689A",
+    "slug": "bmc-cls-016",
+    "name": {
+      "ar": "ربيع",
+      "tr": "Bahar",
+      "en": "Spring"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "زهري",
+      "tr": "Çiçekli",
+      "en": "Floral"
+    },
+    "styles": [
+      {
+        "ar": "زهري",
+        "tr": "Çiçekli",
+        "en": "Floral"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-016-c01-765.webp",
+    "heroColorwayCode": "BMC-CLS-016-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-016-C01",
+        "originalCode": "3689A_M0522_CREAM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-016-c01-765.webp",
+        "imageKind": "design-preview",
+        "width": 765,
+        "height": 920,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-016-c01-320.webp",
+            "width": 320,
+            "height": 385
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-016-c01-640.webp",
+            "width": 640,
+            "height": 770
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-016-c01-765.webp",
+            "width": 765,
+            "height": 920
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 122,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم ربيع من مجموعة حدائق، بطابع زهري. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Bahar. Çiçekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Spring from Gardens. A floral design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-017",
+    "binMansoorCode": "BMC-CLS-017",
+    "originalCode": "3760A",
+    "slug": "bmc-cls-017",
+    "name": {
+      "ar": "زخارف",
+      "tr": "Nakış",
+      "en": "Filigree"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "زخرفي",
+      "tr": "Bezeme",
+      "en": "Ornamental"
+    },
+    "styles": [
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      },
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-017-c01-671.webp",
+    "heroColorwayCode": "BMC-CLS-017-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-017-C01",
+        "originalCode": "3760A_BONE_G0X                        (02302)",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-017-c01-671.webp",
+        "imageKind": "design-preview",
+        "width": 671,
+        "height": 965,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-017-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-017-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-017-c01-671.webp",
+            "width": 671,
+            "height": 965
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 123,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم زخارف من مجموعة إرث الزخرفة، بطابع زخرفي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Nakış. Bezeme tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Filigree from Ornamental Heritage. A ornamental design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MOD-001",
+    "binMansoorCode": "BMC-MOD-001",
+    "originalCode": "3762B",
+    "slug": "bmc-mod-001",
+    "name": {
+      "ar": "معيّنات",
+      "tr": "Baklava",
+      "en": "Diamonds"
+    },
+    "categoryKey": "modern",
+    "category": {
+      "ar": "مودرن",
+      "tr": "Modern",
+      "en": "Modern"
+    },
+    "collection": {
+      "ar": "إيقاعات",
+      "tr": "Ritimler",
+      "en": "Rhythms"
+    },
+    "style": {
+      "ar": "هندسي",
+      "tr": "Geometrik",
+      "en": "Geometric"
+    },
+    "styles": [
+      {
+        "ar": "هندسي",
+        "tr": "Geometrik",
+        "en": "Geometric"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/modern/bmc-mod-001-c01-671.webp",
+    "heroColorwayCode": "BMC-MOD-001-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-MOD-001-C01",
+        "originalCode": "3762B_BONE_G3X                        (02325)",
+        "name": {
+          "ar": "بيج",
+          "tr": "Bej",
+          "en": "Beige"
+        },
+        "image": "/catalog/modern/bmc-mod-001-c01-671.webp",
+        "imageKind": "design-preview",
+        "width": 671,
+        "height": 965,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-001-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-001-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-001-c01-671.webp",
+            "width": 671,
+            "height": 965
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 124,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم معيّنات من مجموعة إيقاعات، بطابع هندسي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Ritimler koleksiyonundan Baklava. Geometrik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Diamonds from Rhythms. A geometric design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-018",
+    "binMansoorCode": "BMC-CLS-018",
+    "originalCode": "3768A",
+    "slug": "bmc-cls-018",
+    "name": {
+      "ar": "ستائر",
+      "tr": "Perde",
+      "en": "Drapery"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "زخرفي",
+      "tr": "Bezeme",
+      "en": "Ornamental"
+    },
+    "styles": [
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-018-c01-671.webp",
+    "heroColorwayCode": "BMC-CLS-018-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-018-C01",
+        "originalCode": "3768A_BONE_G2X                        (02339)",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-018-c01-671.webp",
+        "imageKind": "design-preview",
+        "width": 671,
+        "height": 965,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-018-c01-320.webp",
+            "width": 320,
+            "height": 460
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-018-c01-640.webp",
+            "width": 640,
+            "height": 920
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-018-c01-671.webp",
+            "width": 671,
+            "height": 965
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 125,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم ستائر من مجموعة إرث الزخرفة، بطابع زخرفي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Perde. Bezeme tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Drapery from Ornamental Heritage. A ornamental design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-019",
+    "binMansoorCode": "BMC-CLS-019",
+    "originalCode": "4159",
+    "slug": "bmc-cls-019",
+    "name": {
+      "ar": "كرمة",
+      "tr": "Asma",
+      "en": "Vine"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "نباتي",
+      "tr": "Botanik",
+      "en": "Botanical"
+    },
+    "styles": [
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      },
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-019-c01-957.webp",
+    "heroColorwayCode": "BMC-CLS-019-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-019-C01",
+        "originalCode": "4159_Red",
+        "name": {
+          "ar": "أحمر",
+          "tr": "Kırmızı",
+          "en": "Red"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-019-c01-957.webp",
+        "imageKind": "design-preview",
+        "width": 957,
+        "height": 1392,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-019-c01-320.webp",
+            "width": 320,
+            "height": 465
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-019-c01-640.webp",
+            "width": 640,
+            "height": 931
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-019-c01-957.webp",
+            "width": 957,
+            "height": 1392
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 126,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم كرمة من مجموعة حدائق، بطابع نباتي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Asma. Botanik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Vine from Gardens. A botanical design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-020",
+    "binMansoorCode": "BMC-CLS-020",
+    "originalCode": "4743B",
+    "slug": "bmc-cls-020",
+    "name": {
+      "ar": "فسيفساء",
+      "tr": "Mozaik",
+      "en": "Mosaic"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-020-c01-783.webp",
+    "heroColorwayCode": "BMC-CLS-020-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-020-C01",
+        "originalCode": "4743B_ACR73",
+        "name": {
+          "ar": "فيروزي",
+          "tr": "Turkuaz",
+          "en": "Turquoise"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-020-c01-783.webp",
+        "imageKind": "design-preview",
+        "width": 783,
+        "height": 1725,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-020-c01-320.webp",
+            "width": 320,
+            "height": 705
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-020-c01-640.webp",
+            "width": 640,
+            "height": 1410
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-020-c01-783.webp",
+            "width": 783,
+            "height": 1725
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 127,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم فسيفساء من مجموعة إرث الزخرفة، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Mozaik. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Mosaic from Ornamental Heritage. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-021",
+    "binMansoorCode": "BMC-CLS-021",
+    "originalCode": "4744A",
+    "slug": "bmc-cls-021",
+    "name": {
+      "ar": "القصر",
+      "tr": "Saray",
+      "en": "Palace"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "قصري",
+        "tr": "Saray",
+        "en": "Palace"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-021-c01-799.webp",
+    "heroColorwayCode": "BMC-CLS-021-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-021-C01",
+        "originalCode": "4744A_POL_CREAM",
+        "name": {
+          "ar": "متعدد الألوان",
+          "tr": "Çok Renkli",
+          "en": "Multicolor"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-021-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1875,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-021-c01-320.webp",
+            "width": 320,
+            "height": 751
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-021-c01-640.webp",
+            "width": 640,
+            "height": 1502
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-021-c01-799.webp",
+            "width": 799,
+            "height": 1875
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 128,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم القصر من مجموعة إرث الزخرفة، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Saray. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Palace from Ornamental Heritage. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-008",
+    "binMansoorCode": "BMC-MCL-008",
+    "originalCode": "48x40-NEW-03",
+    "slug": "bmc-mcl-008",
+    "name": {
+      "ar": "رقع",
+      "tr": "Kırkyama",
+      "en": "Patchwork"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "هندسة الإطار",
+      "tr": "Çerçeve Sanatı",
+      "en": "Frame Studies"
+    },
+    "style": {
+      "ar": "هندسي",
+      "tr": "Geometrik",
+      "en": "Geometric"
+    },
+    "styles": [
+      {
+        "ar": "هندسي",
+        "tr": "Geometrik",
+        "en": "Geometric"
+      },
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-008-c01-767.webp",
+    "heroColorwayCode": "BMC-MCL-008-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-MCL-008-C01",
+        "originalCode": "48x40-NEW-03 KREM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-008-c01-767.webp",
+        "imageKind": "design-preview",
+        "width": 767,
+        "height": 921,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-008-c01-320.webp",
+            "width": 320,
+            "height": 384
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-008-c01-640.webp",
+            "width": 640,
+            "height": 769
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-008-c01-767.webp",
+            "width": 767,
+            "height": 921
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 129,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم رقع من مجموعة هندسة الإطار، بطابع هندسي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Çerçeve Sanatı koleksiyonundan Kırkyama. Geometrik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Patchwork from Frame Studies. A geometric design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MCL-009",
+    "binMansoorCode": "BMC-MCL-009",
+    "originalCode": "48x40-NEW_14",
+    "slug": "bmc-mcl-009",
+    "name": {
+      "ar": "نسيم",
+      "tr": "Meltem",
+      "en": "Breeze"
+    },
+    "categoryKey": "modern-classic",
+    "category": {
+      "ar": "مودرن كلاسيك",
+      "tr": "Modern Klasik",
+      "en": "Modern Classic"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "نباتي",
+      "tr": "Botanik",
+      "en": "Botanical"
+    },
+    "styles": [
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/modern-classic/bmc-mcl-009-c01-767.webp",
+    "heroColorwayCode": "BMC-MCL-009-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-MCL-009-C01",
+        "originalCode": "48x40-NEW_14_MAVİ-2",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/modern-classic/bmc-mcl-009-c01-767.webp",
+        "imageKind": "design-preview",
+        "width": 767,
+        "height": 921,
+        "sources": [
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-009-c01-320.webp",
+            "width": 320,
+            "height": 384
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-009-c01-640.webp",
+            "width": 640,
+            "height": 769
+          },
+          {
+            "src": "/catalog/modern-classic/bmc-mcl-009-c01-767.webp",
+            "width": 767,
+            "height": 921
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 130,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم نسيم من مجموعة حدائق، بطابع نباتي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Meltem. Botanik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Breeze from Gardens. A botanical design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-022",
+    "binMansoorCode": "BMC-CLS-022",
+    "originalCode": "48X40NEW-04",
+    "slug": "bmc-cls-022",
+    "name": {
+      "ar": "زهرية",
+      "tr": "Çiçek Göbeği",
+      "en": "Floral Crest"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-022-c01-767.webp",
+    "heroColorwayCode": "BMC-CLS-022-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-022-C01",
+        "originalCode": "48X40NEW-04-KREM",
+        "name": {
+          "ar": "كريمي",
+          "tr": "Krem",
+          "en": "Cream"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-022-c01-767.webp",
+        "imageKind": "design-preview",
+        "width": 767,
+        "height": 921,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-022-c01-320.webp",
+            "width": 320,
+            "height": 384
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-022-c01-640.webp",
+            "width": 640,
+            "height": 769
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-022-c01-767.webp",
+            "width": 767,
+            "height": 921
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 131,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم زهرية من مجموعة إرث الزخرفة، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Çiçek Göbeği. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Floral Crest from Ornamental Heritage. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-023",
+    "binMansoorCode": "BMC-CLS-023",
+    "originalCode": "648",
+    "slug": "bmc-cls-023",
+    "name": {
+      "ar": "وسام",
+      "tr": "Nişan",
+      "en": "Emblem"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-023-c01-799.webp",
+    "heroColorwayCode": "BMC-CLS-023-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-023-C01",
+        "originalCode": "648_beige",
+        "name": {
+          "ar": "بيج",
+          "tr": "Bej",
+          "en": "Beige"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-023-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1159,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-023-c01-320.webp",
+            "width": 320,
+            "height": 464
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-023-c01-640.webp",
+            "width": 640,
+            "height": 928
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-023-c01-799.webp",
+            "width": 799,
+            "height": 1159
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 132,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم وسام من مجموعة إرث الزخرفة، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Nişan. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Emblem from Ornamental Heritage. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-025",
+    "binMansoorCode": "BMC-CLS-025",
+    "originalCode": "700",
+    "slug": "bmc-cls-025",
+    "name": {
+      "ar": "شعاع",
+      "tr": "Işın",
+      "en": "Radiance"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "ميداليون",
+      "tr": "Göbekli",
+      "en": "Medallion"
+    },
+    "styles": [
+      {
+        "ar": "ميداليون",
+        "tr": "Göbekli",
+        "en": "Medallion"
+      },
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-025-c01-919.webp",
+    "heroColorwayCode": "BMC-CLS-025-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-025-C01",
+        "originalCode": "700_k",
+        "name": {
+          "ar": "عاجي",
+          "tr": "Fildişi",
+          "en": "Ivory"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-025-c01-919.webp",
+        "imageKind": "design-preview",
+        "width": 919,
+        "height": 1451,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-025-c01-320.webp",
+            "width": 320,
+            "height": 505
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-025-c01-640.webp",
+            "width": 640,
+            "height": 1010
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-025-c01-919.webp",
+            "width": 919,
+            "height": 1451
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 134,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم شعاع من مجموعة إرث الزخرفة، بطابع ميداليون. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Işın. Göbekli tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Radiance from Ornamental Heritage. A medallion design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-026",
+    "binMansoorCode": "BMC-CLS-026",
+    "originalCode": "844",
+    "slug": "bmc-cls-026",
+    "name": {
+      "ar": "مرجان",
+      "tr": "Mercan",
+      "en": "Coral"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "حدائق",
+      "tr": "Bahçeler",
+      "en": "Gardens"
+    },
+    "style": {
+      "ar": "نباتي",
+      "tr": "Botanik",
+      "en": "Botanical"
+    },
+    "styles": [
+      {
+        "ar": "نباتي",
+        "tr": "Botanik",
+        "en": "Botanical"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-026-c01-799.webp",
+    "heroColorwayCode": "BMC-CLS-026-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-026-C01",
+        "originalCode": "844_CHERRY",
+        "name": {
+          "ar": "أحمر",
+          "tr": "Kırmızı",
+          "en": "Red"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-026-c01-799.webp",
+        "imageKind": "design-preview",
+        "width": 799,
+        "height": 1321,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-026-c01-320.webp",
+            "width": 320,
+            "height": 529
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-026-c01-640.webp",
+            "width": 640,
+            "height": 1058
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-026-c01-799.webp",
+            "width": 799,
+            "height": 1321
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 135,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم مرجان من مجموعة حدائق، بطابع نباتي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bahçeler koleksiyonundan Mercan. Botanik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Coral from Gardens. A botanical design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-CLS-027",
+    "binMansoorCode": "BMC-CLS-027",
+    "originalCode": "9137B",
+    "slug": "bmc-cls-027",
+    "name": {
+      "ar": "وقار",
+      "tr": "Asalet",
+      "en": "Dignity"
+    },
+    "categoryKey": "classic-heritage",
+    "category": {
+      "ar": "كلاسيك وتراثي",
+      "tr": "Klasik ve Miras",
+      "en": "Classic & Heritage"
+    },
+    "collection": {
+      "ar": "إرث الزخرفة",
+      "tr": "Bezeme Mirası",
+      "en": "Ornamental Heritage"
+    },
+    "style": {
+      "ar": "زخرفي",
+      "tr": "Bezeme",
+      "en": "Ornamental"
+    },
+    "styles": [
+      {
+        "ar": "زخرفي",
+        "tr": "Bezeme",
+        "en": "Ornamental"
+      },
+      {
+        "ar": "إطار",
+        "tr": "Bordürlü",
+        "en": "Border"
+      }
+    ],
+    "heroImage": "/catalog/classic-heritage/bmc-cls-027-c01-639.webp",
+    "heroColorwayCode": "BMC-CLS-027-C01",
+    "galleryImages": [],
+    "colorways": [
+      {
+        "code": "BMC-CLS-027-C01",
+        "originalCode": "9137b",
+        "name": {
+          "ar": "بني",
+          "tr": "Kahverengi",
+          "en": "Brown"
+        },
+        "image": "/catalog/classic-heritage/bmc-cls-027-c01-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1321,
+        "sources": [
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-027-c01-320.webp",
+            "width": 320,
+            "height": 662
+          },
+          {
+            "src": "/catalog/classic-heritage/bmc-cls-027-c01-639.webp",
+            "width": 639,
+            "height": 1321
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 136,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم وقار من مجموعة إرث الزخرفة، بطابع زخرفي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Bezeme Mirası koleksiyonundan Asalet. Bezeme tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Dignity from Ornamental Heritage. A ornamental design; enquire about colour and order details."
+    }
+  },
+  {
+    "id": "BMC-MOD-002",
+    "binMansoorCode": "BMC-MOD-002",
+    "originalCode": "1007A",
+    "slug": "bmc-mod-002",
+    "name": {
+      "ar": "ساحل",
+      "tr": "Kıyı",
+      "en": "Coast"
+    },
+    "categoryKey": "modern",
+    "category": {
+      "ar": "مودرن",
+      "tr": "Modern",
+      "en": "Modern"
+    },
+    "collection": {
+      "ar": "تضاريس",
+      "tr": "Yeryüzü",
+      "en": "Landforms"
+    },
+    "style": {
+      "ar": "عضوي",
+      "tr": "Organik",
+      "en": "Organic"
+    },
+    "styles": [
+      {
+        "ar": "عضوي",
+        "tr": "Organik",
+        "en": "Organic"
+      },
+      {
+        "ar": "تجريدي",
+        "tr": "Soyut",
+        "en": "Abstract"
+      }
+    ],
+    "heroImage": "/catalog/modern/bmc-mod-002-c01-639.webp",
+    "heroColorwayCode": "BMC-MOD-002-C01",
+    "galleryImages": [
+      "/catalog/modern/bmc-mod-002-c02-639.webp"
+    ],
+    "colorways": [
+      {
+        "code": "BMC-MOD-002-C01",
+        "originalCode": "1007A_RM122",
+        "name": {
+          "ar": "أزرق",
+          "tr": "Mavi",
+          "en": "Blue"
+        },
+        "image": "/catalog/modern/bmc-mod-002-c01-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-002-c01-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-002-c01-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      },
+      {
+        "code": "BMC-MOD-002-C02",
+        "originalCode": "1007A_RM133",
+        "name": {
+          "ar": "بيج داكن",
+          "tr": "Koyu Bej",
+          "en": "Dark Beige"
+        },
+        "image": "/catalog/modern/bmc-mod-002-c02-639.webp",
+        "imageKind": "design-preview",
+        "width": 639,
+        "height": 1081,
+        "sources": [
+          {
+            "src": "/catalog/modern/bmc-mod-002-c02-320.webp",
+            "width": 320,
+            "height": 541
+          },
+          {
+            "src": "/catalog/modern/bmc-mod-002-c02-639.webp",
+            "width": 639,
+            "height": 1081
+          }
+        ],
+        "productionConfirmed": false
+      }
+    ],
+    "featured": false,
+    "sortOrder": 138,
+    "technicalSpecs": {
+      "material": null,
+      "construction": null,
+      "pileHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "availableSizes": null,
+      "width": null,
+      "customColors": null,
+      "customDesign": null,
+      "application": null,
+      "leadTime": null
+    },
+    "documents": {
+      "catalogPdf": null,
+      "technicalSheetPdf": null
+    },
+    "availability": {
+      "minimumOrderQuantity": 8000,
+      "minimumOrderScope": "total-order"
+    },
+    "classificationStatus": "approved",
+    "imageKind": "design-preview",
+    "description": {
+      "ar": "تصميم ساحل من مجموعة تضاريس، بطابع عضوي. استفسر عن تفاصيل الطلب والألوان.",
+      "tr": "Yeryüzü koleksiyonundan Kıyı. Organik tasarım; sipariş ve renk detayları için iletişime geçin.",
+      "en": "Coast from Landforms. A organic design; enquire about colour and order details."
+    }
+  }
+]

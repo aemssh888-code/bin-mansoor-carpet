@@ -20,12 +20,12 @@ export const dictionaries = {
       eyebrow: 'صناعة سجاد • غازي عنتاب',
       title: 'سجاد معاصر، مصنوع لشركاء الأعمال.',
       body: 'مجموعات مدروسة تجمع بين الحس المعاصر وإرث الزخرفة، مع تنسيق مباشر لطلبات الجملة والمشاريع.',
-      note: 'نموذج تجريبي — الإصدار 1',
+      note: 'تصاميم السجاد | غازي عنتاب، تركيا',
     },
     home: {
-      collectionsEyebrow: 'ثلاث لغات تصميم', collectionsTitle: 'مجموعة لكل نوع من المساحات.',
+      collectionsEyebrow: 'ثلاثة اتجاهات تصميمية', collectionsTitle: 'تفاصيل مختلفة. رؤية واحدة.',
       featuredEyebrow: 'مختارات', featuredTitle: 'موديلات بارزة من الكتالوج.',
-      factoryEyebrow: 'قدرة إنتاجية', factoryTitle: 'شريك تصنيع واضح ومباشر.',
+      factoryEyebrow: 'حقائق عن المصنع', factoryTitle: 'شريك تصنيع واضح ومباشر.',
       factoryBody: 'من غازي عنتاب، ننسّق استفسارات الأعمال واختيار الموديلات ومتطلبات الطلب ضمن مسار واضح.',
       machines: 'ماكينات', moq: 'الحد الأدنى للطلب', established: 'تأسست', sqm: 'م²',
       ctaTitle: 'لديك طلب جملة أو مشروع؟', ctaBody: 'أرسل الموديلات والكميات المطلوبة لبدء المحادثة.',
@@ -35,11 +35,11 @@ export const dictionaries = {
       body: 'تصفّح الموديلات المعتمدة، ثم افتح صفحة الموديل لرؤية الألوان المتاحة وإرسال استفسار مباشر.',
       count: 'موديلًا', empty: 'لا توجد موديلات ضمن هذا التصنيف.',
     },
-    categories: { modern: 'مودرن', 'modern-classic': 'مودرن كلاسيك', classic: 'كلاسيك وتراثي' },
+    categories: { modern: 'مودرن', 'modern-classic': 'مودرن كلاسيك', 'classic-heritage': 'كلاسيك وتراثي' },
     categoryDescriptions: {
       modern: 'أشكال تجريدية وخطوط هادئة للمساحات المعاصرة.',
       'modern-classic': 'توازن بين البنية الحديثة وتفاصيل الإطار الكلاسيكي.',
-      classic: 'زخارف متوارثة وميداليات وتفاصيل غنية.',
+      'classic-heritage': 'زخارف متوارثة وميداليات وتفاصيل غنية.',
     },
     detail: {
       enquiryTitle: 'استفسر عن هذا الموديل', enquiryBody: 'أرسل الكود واللون والكمية التقريبية، وسنرتّب الخطوة التالية.',
@@ -56,7 +56,7 @@ export const dictionaries = {
       eyebrow: 'تواصل', title: 'لنبدأ بطلبك.', body: 'أرسل أكواد الموديلات والكميات التقريبية والوجهة المطلوبة. نرد عبر الهاتف أو واتساب.',
       phone: 'الهاتف وواتساب', address: 'العنوان', legal: 'الاسم القانوني',
     },
-    footer: { line: 'سجاد للأعمال والمشاريع، من غازي عنتاب.', rights: 'BIN MANSOOR CARPET', prototype: 'نموذج تجريبي — الإصدار 1' },
+    footer: { line: 'سجاد للأعمال والمشاريع، من غازي عنتاب.', rights: 'BIN MANSOOR CARPET' },
   },
   en: {
     a11y: { skip: 'Skip to content', primaryNav: 'Primary navigation', language: 'Language', openMenu: 'Open menu', mobileNav: 'Mobile navigation', closeMenu: 'Close menu' },
@@ -70,12 +70,12 @@ export const dictionaries = {
     hero: {
       eyebrow: 'Carpet manufacturing • Gaziantep', title: 'Contemporary carpets, made for business.',
       body: 'Considered collections unite a modern sensibility with ornamental heritage, supported by direct coordination for wholesale and project enquiries.',
-      note: 'Experimental prototype — Version 1',
+      note: 'Carpet designs | Gaziantep, Türkiye',
     },
     home: {
-      collectionsEyebrow: 'Three design languages', collectionsTitle: 'A collection for every kind of space.',
+      collectionsEyebrow: 'Three design directions', collectionsTitle: 'Distinct details. One perspective.',
       featuredEyebrow: 'Selected works', featuredTitle: 'Featured models from the catalogue.',
-      factoryEyebrow: 'Manufacturing capacity', factoryTitle: 'A clear, direct production partner.',
+      factoryEyebrow: 'Factory facts', factoryTitle: 'A clear, direct production partner.',
       factoryBody: 'From Gaziantep, we coordinate business enquiries, model selection and order requirements through a straightforward process.',
       machines: 'Machines', moq: 'Minimum order', established: 'Established', sqm: 'm²',
       ctaTitle: 'Planning a wholesale or project order?', ctaBody: 'Send your preferred models and target quantities to begin.',
@@ -85,11 +85,11 @@ export const dictionaries = {
       body: 'Browse approved models, open any product for colourways, and send a direct enquiry.',
       count: 'models', empty: 'No models in this category yet.',
     },
-    categories: { modern: 'Modern', 'modern-classic': 'Modern Classic', classic: 'Classic & Heritage' },
+    categories: { modern: 'Modern', 'modern-classic': 'Modern Classic', 'classic-heritage': 'Classic & Heritage' },
     categoryDescriptions: {
       modern: 'Abstract forms and quieter lines for contemporary interiors.',
       'modern-classic': 'Modern structure balanced with a classic framed language.',
-      classic: 'Inherited ornament, medallions and richly detailed compositions.',
+      'classic-heritage': 'Inherited ornament, medallions and richly detailed compositions.',
     },
     detail: {
       enquiryTitle: 'Enquire about this model', enquiryBody: 'Send the code, colour and approximate quantity, and we will coordinate the next step.',
@@ -106,7 +106,7 @@ export const dictionaries = {
       eyebrow: 'Contact', title: 'Let’s begin with your brief.', body: 'Send model codes, approximate quantities and the required destination. Reach us by phone or WhatsApp.',
       phone: 'Phone & WhatsApp', address: 'Address', legal: 'Legal name',
     },
-    footer: { line: 'Carpets for business and projects, from Gaziantep.', rights: 'BIN MANSOOR CARPET', prototype: 'Experimental prototype — Version 1' },
+    footer: { line: 'Carpets for business and projects, from Gaziantep.', rights: 'BIN MANSOOR CARPET' },
   },
   tr: {
     a11y: { skip: 'İçeriğe geç', primaryNav: 'Ana navigasyon', language: 'Dil', openMenu: 'Menüyü aç', mobileNav: 'Mobil navigasyon', closeMenu: 'Menüyü kapat' },
@@ -120,12 +120,12 @@ export const dictionaries = {
     hero: {
       eyebrow: 'Halı üretimi • Gaziantep', title: 'İş ortakları için çağdaş halılar.',
       body: 'Modern duyarlılığı dekoratif mirasla buluşturan koleksiyonlar; toptan ve proje talepleri için doğrudan koordinasyon.',
-      note: 'Deneysel prototip — Sürüm 1',
+      note: 'Halı tasarımları | Gaziantep, Türkiye',
     },
     home: {
-      collectionsEyebrow: 'Üç tasarım dili', collectionsTitle: 'Her mekân için bir koleksiyon.',
+      collectionsEyebrow: 'Üç tasarım yaklaşımı', collectionsTitle: 'Farklı detaylar. Ortak bir bakış.',
       featuredEyebrow: 'Seçkiler', featuredTitle: 'Katalogdan öne çıkan modeller.',
-      factoryEyebrow: 'Üretim kapasitesi', factoryTitle: 'Açık ve doğrudan bir üretim ortağı.',
+      factoryEyebrow: 'Fabrika bilgileri', factoryTitle: 'Açık ve doğrudan bir üretim ortağı.',
       factoryBody: 'Gaziantep’ten iş taleplerini, model seçimini ve sipariş ihtiyaçlarını anlaşılır bir süreçle koordine ediyoruz.',
       machines: 'Makine', moq: 'Minimum sipariş', established: 'Kuruluş', sqm: 'm²',
       ctaTitle: 'Toptan veya proje siparişi mi planlıyorsunuz?', ctaBody: 'Başlamak için tercih ettiğiniz modelleri ve hedef miktarı gönderin.',
@@ -135,11 +135,11 @@ export const dictionaries = {
       body: 'Onaylı modelleri inceleyin, renk seçeneklerini görün ve doğrudan talep gönderin.',
       count: 'model', empty: 'Bu kategoride henüz model yok.',
     },
-    categories: { modern: 'Modern', 'modern-classic': 'Modern Klasik', classic: 'Klasik & Miras' },
+    categories: { modern: 'Modern', 'modern-classic': 'Modern Klasik', 'classic-heritage': 'Klasik & Miras' },
     categoryDescriptions: {
       modern: 'Çağdaş iç mekânlar için soyut formlar ve sakin çizgiler.',
       'modern-classic': 'Modern strüktür ile klasik çerçeve dilinin dengesi.',
-      classic: 'Geleneksel motifler, madalyonlar ve zengin detaylar.',
+      'classic-heritage': 'Geleneksel motifler, madalyonlar ve zengin detaylar.',
     },
     detail: {
       enquiryTitle: 'Bu model için bilgi alın', enquiryBody: 'Kod, renk ve yaklaşık miktarı gönderin; sonraki adımı birlikte planlayalım.',
@@ -156,7 +156,7 @@ export const dictionaries = {
       eyebrow: 'İletişim', title: 'Talebinizle başlayalım.', body: 'Model kodlarını, yaklaşık miktarları ve hedef ülkeyi gönderin. Telefon veya WhatsApp üzerinden bize ulaşın.',
       phone: 'Telefon & WhatsApp', address: 'Adres', legal: 'Ticari unvan',
     },
-    footer: { line: 'Gaziantep’ten iş ve proje halıları.', rights: 'BIN MANSOOR CARPET', prototype: 'Deneysel prototip — Sürüm 1' },
+    footer: { line: 'Gaziantep’ten iş ve proje halıları.', rights: 'BIN MANSOOR CARPET' },
   },
 } as const;
 

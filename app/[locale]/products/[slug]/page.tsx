@@ -1,44 +1,13 @@
-import type { Metadata } from 'next';
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check } from 'lucide-react';
-import { notFound } from 'next/navigation';
-import { ProductGallery } from '@/components/product-gallery';
-import { getDictionary, isLocale, locales, whatsappUrl } from '@/lib/i18n';
-import { getProduct, products } from '@/lib/products';
-
-export function generateStaticParams() {
-  return locales.flatMap((locale) => products.map((product) => ({ locale, slug: product.slug })));
-}
-
-export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
-  const { locale, slug } = await params;
-  const product = getProduct(slug);
-  if (!product || !isLocale(locale)) return {};
-  return { title: `${product.name[locale]} ${product.code}`, description: product.description[locale] };
-}
-
-export default async function ProductPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
-  const { locale, slug } = await params;
-  if (!isLocale(locale)) notFound();
-  const product = getProduct(slug);
-  if (!product) notFound();
-  const dictionary = getDictionary(locale);
-  const BackArrow = locale === 'ar' ? ArrowRight : ArrowLeft;
-  return (
-    <main id="main-content">
-      <section className="site-shell py-10 sm:py-16">
-        <a href={`/${locale}/products`} className="mb-10 inline-flex items-center gap-2 text-sm text-black/55 hover:text-black"><BackArrow className="size-4" />{dictionary.common.back}</a>
-        <div className="grid gap-12 lg:grid-cols-[1.08fr_.92fr] lg:gap-20">
-          <ProductGallery variants={product.variants} locale={locale} label={dictionary.common.variants} />
-          <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="eyebrow mb-8"><span>{product.code}</span>{dictionary.categories[product.category]}</p>
-            <h1 className="display-title">{product.name[locale]}</h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-black/58">{product.description[locale]}</p>
-            <dl className="mt-10 grid grid-cols-2 border-y border-black/12 py-6 text-sm"><div><dt className="text-xs text-black/45">{dictionary.common.code}</dt><dd className="mt-2 font-mono tracking-[.12em]">{product.code}</dd></div><div><dt className="text-xs text-black/45">{dictionary.common.category}</dt><dd className="mt-2">{dictionary.categories[product.category]}</dd></div></dl>
-            <div className="mt-10 bg-white p-7 sm:p-9"><p className="eyebrow mb-5">B2B</p><h2 className="text-3xl tracking-[-.04em]">{dictionary.detail.enquiryTitle}</h2><p className="mt-4 leading-7 text-black/55">{dictionary.detail.enquiryBody}</p><a href={whatsappUrl(locale, product.code)} target="_blank" rel="noreferrer" className="btn-primary mt-7 w-full sm:w-auto">{dictionary.common.whatsapp}<ArrowUpRight className="size-4" /></a></div>
-            <div className="mt-10"><p className="eyebrow mb-5">{dictionary.detail.specs}</p><ul className="space-y-4 text-sm text-black/65">{[dictionary.detail.spec1, dictionary.detail.spec2, dictionary.detail.spec3].map((item) => <li key={item} className="flex items-center gap-3"><span className="grid size-5 place-items-center rounded-full bg-[#c8b088]/35"><Check className="size-3" /></span>{item}</li>)}</ul></div>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
+import {notFound} from 'next/navigation';
+import {ProductGallery} from '@/components/product-gallery';
+import {getDictionary,isLocale,locales} from '@/lib/i18n';
+import {getProduct,products,productAliases,type Locale,type TechnicalSpecs} from '@/lib/products';
+import {catalogText} from '@/lib/catalog-i18n';
+import {pageMetadata} from '@/lib/seo';
+export function generateStaticParams(){return locales.flatMap(locale=>[...products.map(p=>p.slug),...Object.keys(productAliases)].map(slug=>({locale,slug})));}
+export async function generateMetadata({params}:{params:Promise<{locale:string;slug:string}>}){const {locale,slug}=await params;const p=getProduct(slug);return p&&isLocale(locale)?pageMetadata(locale,`/products/${p.slug}`,`${p.name[locale]} ${p.binMansoorCode}`,p.description[locale],p.heroImage):{};}
+const specLabels:Record<keyof TechnicalSpecs,Record<Locale,string>>={material:{ar:'الخامة',tr:'Malzeme',en:'Material'},construction:{ar:'طريقة التصنيع',tr:'Üretim tekniği',en:'Construction'},pileHeight:{ar:'ارتفاع الوبر',tr:'Hav yüksekliği',en:'Pile height'},pileWeight:{ar:'وزن الوبر',tr:'Hav ağırlığı',en:'Pile weight'},totalWeight:{ar:'الوزن الكلي',tr:'Toplam ağırlık',en:'Total weight'},density:{ar:'الكثافة',tr:'Yoğunluk',en:'Density'},backing:{ar:'الظهر',tr:'Taban',en:'Backing'},availableSizes:{ar:'المقاسات',tr:'Ölçüler',en:'Sizes'},width:{ar:'العرض',tr:'En',en:'Width'},customColors:{ar:'ألوان حسب الطلب',tr:'Özel renkler',en:'Custom colours'},customDesign:{ar:'تصميم حسب الطلب',tr:'Özel tasarım',en:'Custom design'},application:{ar:'الاستخدام',tr:'Kullanım alanı',en:'Application'},leadTime:{ar:'مدة التجهيز',tr:'Teslim süresi',en:'Lead time'}};
+export default async function ProductPage({params}:{params:Promise<{locale:string;slug:string}>}) {
+ const {locale,slug}=await params;if(!isLocale(locale))notFound();const p=getProduct(slug);if(!p)notFound();const t=catalogText[locale];const d=getDictionary(locale);const specs=Object.entries(p.technicalSpecs).filter(([,v])=>v!==null&&v!==''&&(!Array.isArray(v)||v.length>0));
+ return <main id="main-content" className="site-shell py-10 sm:py-16"><a className="inline-block mb-10 text-sm underline" href={`/${locale}/products`}>{d.common.back}</a><div className="grid gap-12 lg:grid-cols-[1.08fr_.92fr] lg:gap-16"><ProductGallery product={p} locale={locale}/><div className="min-w-0 lg:sticky lg:top-28 lg:self-start"><p className="eyebrow mb-7">{p.category[locale]}</p><h1 className="display-title">{p.name[locale]}</h1><p dir="ltr" className="mt-7 font-mono text-xl">{p.binMansoorCode}</p><p className="mt-5 text-lg leading-8 text-black/65">{p.description[locale]}</p><dl className="product-specs mt-8"><div><dt>{t.factoryRef}</dt><dd><bdi>{p.originalCode}</bdi></dd></div><div><dt>{t.collection}</dt><dd>{p.collection[locale]}</dd></div><div><dt>{t.style}</dt><dd>{p.styles.map(s=>s[locale]).join(' / ')}</dd></div></dl>{p.availability.minimumOrderQuantity!==null&&<p className="mt-8 border-s-2 border-[#a4875a] ps-5">{t.moq}</p>}{specs.length>0&&<section className="mt-10"><h2 className="text-2xl">{t.specs}</h2><dl className="product-specs">{specs.map(([key,value])=><div key={key}><dt>{specLabels[key as keyof TechnicalSpecs][locale]}</dt><dd>{Array.isArray(value)?value.join(', '):typeof value==='object'?value?.[locale]:typeof value==='boolean'?value?t.yes:t.no:value}</dd></div>)}</dl></section>}{p.documents.catalogPdf&&<a className="btn-secondary mt-6" href={p.documents.catalogPdf}>{t.catalogPdf}</a>}{p.documents.technicalSheetPdf&&<a className="btn-secondary mt-6" href={p.documents.technicalSheetPdf}>{t.technicalPdf}</a>}</div></div></main>;
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { CatalogTabs } from '@/components/catalog-tabs';
 import { getDictionary, isLocale, locales } from '@/lib/i18n';
 import { products } from '@/lib/products';
+import {pageMetadata} from '@/lib/seo';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -11,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   const dictionary = getDictionary(locale);
-  return { title: dictionary.products.title, description: dictionary.products.body };
+  return pageMetadata(locale,'/products',dictionary.products.title,dictionary.products.body);
 }
 
 export default async function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {

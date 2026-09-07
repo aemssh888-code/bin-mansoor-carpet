@@ -4,7 +4,7 @@ import type { Locale } from '@/lib/products';
 export function SiteFooter({
   locale, text, nav,
 }: {
-  locale: Locale; text: { line: string; rights: string; prototype: string };
+  locale: Locale; text: { line: string; rights: string };
   nav: { products: string; contact: string };
 }) {
   return (
@@ -20,7 +20,7 @@ export function SiteFooter({
             <address className="not-italic leading-7 text-white/65">{company.address}</address>
           </div>
           <div className="flex flex-col items-start gap-3">
-            <a href={`tel:${company.phoneHref}`} className="text-lg hover:text-[#c8b088]">{company.phoneDisplay}</a>
+            <a href={`tel:${company.phoneHref}`} dir="ltr" className="text-lg hover:text-[#c8b088]">{company.phoneDisplay}</a>
             <a href={`/${locale}/products`} className="text-white/60 hover:text-white">{nav.products}</a>
             <a href={`/${locale}/contact`} className="text-white/60 hover:text-white">{nav.contact}</a>
           </div>
@@ -29,7 +29,7 @@ export function SiteFooter({
       <div className="border-t border-white/10">
         <div className="site-shell flex flex-wrap items-center justify-between gap-3 py-5 text-xs text-white/45">
           <span>© {new Date().getFullYear()} {text.rights}</span>
-          <span>{text.prototype}</span>
+          <span>Gaziantep, Türkiye</span>
         </div>
       </div>
     </footer>

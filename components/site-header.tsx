@@ -4,6 +4,7 @@ import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { languageNames, locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/products';
+import {catalogText} from '@/lib/catalog-i18n';
 import {
   Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger,
 } from '@/components/ui/sheet';
@@ -25,6 +26,7 @@ export function SiteHeader({
     { label: nav.products, href: `/${locale}/products`, path: '/products' },
     { label: nav.about, href: `/${locale}/about`, path: '/about' },
     { label: nav.contact, href: `/${locale}/contact`, path: '/contact' },
+    { label: catalogText[locale].quote, href: `/${locale}/quote`, path: '/quote' },
   ];
   const isActive = (path: string) => path === '' ? resolvedPath === '' || resolvedPath === '/' : resolvedPath.startsWith(path);
 
