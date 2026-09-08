@@ -69,7 +69,7 @@ export const dictionaries = {
       review: 'Needs review', approved: 'Approved', learnMore: 'Learn more',
     },
     hero: {
-      eyebrow: 'Carpet manufacturing • Gaziantep', title: 'Carpet design for business and projects, from Gaziantep.',
+      eyebrow: 'Carpet manufacturing • Gaziantep', title: 'Carpet designs for business and projects, from Gaziantep.',
       body: 'An approved catalogue for wholesale and project enquiries, with direct coordination on model selection and order details.',
       note: 'Carpet designs | Gaziantep, Türkiye',
     },
@@ -119,7 +119,7 @@ export const dictionaries = {
       review: 'İncelenmeli', approved: 'Onaylı', learnMore: 'Daha fazla',
     },
     hero: {
-      eyebrow: 'Halı üretimi • Gaziantep', title: 'Gaziantep’ten iş ve projeler için halı tasarımları.',
+      eyebrow: 'Halı üretimi • Gaziantep', title: "Gaziantep'ten iş ve projeler için halı tasarımları.",
       body: 'Toptan ve proje talepleri için onaylı katalog; model seçimi ve sipariş detaylarında doğrudan koordinasyon.',
       note: 'Halı tasarımları | Gaziantep, Türkiye',
     },

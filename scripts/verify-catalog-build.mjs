@@ -44,6 +44,16 @@ for (const locale of locales) {
     }
   }
 }
+const robots=await readFile(path.join(output,'robots.txt'),'utf8');
+assert.match(robots,/User-agent: \*/);
+assert.match(robots,/Allow: \//);
+assert.match(robots,/https:\/\/bin-mansoor-carpet\.vercel\.app\/sitemap\.xml/);
+const sitemap=await readFile(path.join(output,'sitemap.xml'),'utf8');
+const sitemapLocations=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
+const productLocations=sitemapLocations.filter(url=>/\/(ar|en|tr)\/products\/bmc-(mod|mcl|cls)-\d+$/.test(url));
+assert.equal(productLocations.length,129,'Sitemap must contain 129 localized product routes');
+assert.equal(sitemapLocations.length,locales.length*(5+products.length),'Sitemap route count mismatch');
+for(const p of products)for(const locale of locales)assert.ok(productLocations.includes(`https://bin-mansoor-carpet.vercel.app/${locale}/products/${p.slug}`),`Sitemap missing ${locale}/${p.slug}`);
 const commit = process.env.VERCEL_GIT_COMMIT_SHA || execFileSync('git', ['rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
 const identity = {
   repository: 'aemssh888-code/bin-mansoor-carpet',

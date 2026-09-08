@@ -17,11 +17,11 @@ specs=['material','construction','pileHeight','pileWeight','totalWeight','densit
 def joined(values, locale):
     conjunction={'ar':' و','tr':' ve ','en':' and '}[locale]
     return values[0] if len(values)==1 else f"{', '.join(values[:-1])}{conjunction}{values[-1]}"
-def description(m):
+def description(m, collection):
     ar=joined([s['ar'] for s in m['styles']],'ar')
     en=joined([s['en'].lower() for s in m['styles']],'en').capitalize()
     tr=joined([s['tr'].lower() for s in m['styles']],'tr').capitalize()
-    return {'ar':f'تصميم بطابع {ar}. تواصل معنا لتأكيد الألوان وتفاصيل الطلب.','en':f'{en} design. Contact us to confirm colour and order details.','tr':f'{tr} karakterli bir tasarım. Renk ve sipariş detaylarını teyit etmek için bizimle iletişime geçin.'}
+    return {'ar':f"تصميم {m['name']['ar']} من مجموعة {collection['ar']} بطابع {ar}. تواصل معنا لتأكيد الألوان وتفاصيل الطلب.",'en':f"{m['name']['en']}, a {en.lower()} design from the {collection['en']} collection. Contact us to confirm colour and order details.",'tr':f"{m['name']['tr']}, {collection['tr']} koleksiyonundan {tr.lower()} karakterli bir tasarım. Renk ve sipariş detaylarını teyit etmek için bizimle iletişime geçin."}
 master=[]; public=[]; rows=[]
 for m in approved:
     code=m['binMansoorCode']; key=category[m['categoryKey']]
@@ -45,7 +45,7 @@ for m in approved:
         rows.append({'BIN Mansoor Code':code,'Original Source Code':m['originalCode'],'Arabic Name':m['name']['ar'],'Turkish Name':m['name']['tr'],'English Name':m['name']['en'],'Category':m['category']['en'],'Collection':m['collection']['en'],'Style':'; '.join(s['en'] for s in m['styles']),'Colorway Code':c['code'],'Colorway Name':c['name']['en'],'Arabic Colorway':c['name']['ar'],'Turkish Colorway':c['name']['tr'],'Original Filename':src.name,'Original Folder':str(src.parent),'Website Image':asset['src'],'Publication Status':'Approved for integration; deployment pending','Notes':m['notes']})
     hero=next(colors[i] for i,c in enumerate(m['colorways']) if c['image']==m['heroImage'])
     collection={**m['collection'],'ar':'تكوينات أرضية'} if m['collection']['en']=='Landforms' else m['collection']
-    p={'id':code,'binMansoorCode':code,'originalCode':m['originalCode'],'slug':code.lower(),'name':m['name'],'categoryKey':key,'category':m['category'],'collection':collection,'style':m['style'],'styles':m['styles'],'heroImage':hero['image'],'heroColorwayCode':hero['code'],'galleryImages':[c['image'] for c in colors if c!=hero],'colorways':colors,'featured':code in data['homepageTop10'],'sortOrder':data['homepageTop10'].index(code) if code in data['homepageTop10'] else 100+len(public),'technicalSpecs':dict.fromkeys(specs),'documents':{'catalogPdf':None,'technicalSheetPdf':None},'availability':{'minimumOrderQuantity':8000,'minimumOrderScope':'total-order'},'classificationStatus':'approved','imageKind':'design-preview','description':description(m)}
+    p={'id':code,'binMansoorCode':code,'originalCode':m['originalCode'],'slug':code.lower(),'name':m['name'],'categoryKey':key,'category':m['category'],'collection':collection,'style':m['style'],'styles':m['styles'],'heroImage':hero['image'],'heroColorwayCode':hero['code'],'galleryImages':[c['image'] for c in colors if c!=hero],'colorways':colors,'featured':code in data['homepageTop10'],'sortOrder':data['homepageTop10'].index(code) if code in data['homepageTop10'] else 100+len(public),'technicalSpecs':dict.fromkeys(specs),'documents':{'catalogPdf':None,'technicalSheetPdf':None},'availability':{'minimumOrderQuantity':8000,'minimumOrderScope':'total-order'},'classificationStatus':'approved','imageKind':'design-preview','description':description(m,collection)}
     public.append(p)
     master.append({**p,'sourceReference':next(r for r in refs if r['colorwayCode']==hero['code']),'sourceReferences':refs,'allOriginalReferences':[{'originalFilename':files[i]['filename'],'originalPath':files[i]['path']} for i in m['sourceFileIds']]})
 public.sort(key=lambda p:p['sortOrder'])
