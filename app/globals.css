@@ -139,9 +139,16 @@ select{min-width:0}
 .colorway-thumb.selected{border:2px solid #665039;background:#f3efe6}
 .quote-form{display:grid;gap:1.25rem;grid-template-columns:1fr}
 .quote-form label{display:grid;gap:.6rem;min-width:0;font-size:.9375rem}
+.quote-list,.quote-add{border:1px solid #d8d4cc;padding:1.25rem;background:#fff}
+.quote-item{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.7fr) auto;align-items:end;gap:1rem;border-top:1px solid #dedbd5;padding-top:1rem}
+.quote-item legend{grid-column:1/-1;width:100%;padding-top:1rem}
+.quote-item button{min-height:48px;padding:.75rem}
+.mobile-product-actions{display:none}
 .quote-dialog{width:min(760px,calc(100vw - 2rem));max-width:760px!important;max-height:90dvh;overflow-y:auto;background:white;padding:1.5rem}
 @media(min-width:640px){.quote-form{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:767px){.desktop-filters{display:none}.mobile-filters{display:block}.hero-gallery{min-height:480px!important}}
+@media(max-width:767px){.desktop-filters{display:none}.mobile-filters{display:block}.hero-gallery{min-height:480px!important}.product-detail{padding-bottom:calc(6rem + env(safe-area-inset-bottom))}.mobile-product-actions{position:fixed;z-index:45;display:grid;grid-template-columns:1.35fr .65fr;bottom:0;left:0;right:0;gap:1px;padding:.65rem max(1rem,env(safe-area-inset-left)) calc(.65rem + env(safe-area-inset-bottom)) max(1rem,env(safe-area-inset-right));background:#fff;border-top:1px solid #d8d4cc;box-shadow:0 -8px 30px rgba(29,28,25,.1)}.mobile-product-actions button,.mobile-product-actions a{display:flex;min-height:48px;align-items:center;justify-content:center;padding:.75rem;font-size:.8rem;font-weight:700}.mobile-product-actions button{background:#1d1c19;color:#fff}.mobile-product-actions a{border:1px solid #1d1c19;background:#fff;color:#1d1c19}}
+@media(max-width:639px){.quote-item{grid-template-columns:1fr}.quote-item legend{grid-column:1}.quote-list,.quote-add{padding:1rem}}
+button:disabled{cursor:not-allowed;opacity:.45}
 [dir="rtl"] .lucide-arrow-up-right{transform:scaleX(-1)}
 address{overflow-wrap:anywhere}
 .contact-row strong {direction:ltr;unicode-bidi:isolate}

@@ -1,4 +1,5 @@
 import type { Locale } from './products';
+import { business } from './business';
 
 export const locales: Locale[] = ['ar', 'en', 'tr'];
 
@@ -12,14 +13,14 @@ export const dictionaries = {
     nav: { home: 'الرئيسية', products: 'المنتجات', about: 'المصنع', contact: 'تواصل معنا' },
     common: {
       explore: 'استكشف المجموعة', enquire: 'اطلب عرضًا', view: 'عرض الموديل', all: 'الكل',
-      code: 'كود الموديل', category: 'التصنيف', variants: 'الألوان المتاحة', back: 'العودة للمنتجات',
-      whatsapp: 'تواصل عبر واتساب', directions: 'الاتجاهات على الخريطة', call: 'اتصل بنا',
+      code: 'كود الموديل', category: 'التصنيف', variants: 'المعاينات اللونية', back: 'العودة للمنتجات',
+      whatsapp: 'تواصل عبر واتساب', directions: 'الاتجاهات على الخريطة', call: 'اتصل بالمصنع',
       review: 'بحاجة للمراجعة', approved: 'معتمد', learnMore: 'اعرف المزيد',
     },
     hero: {
       eyebrow: 'صناعة سجاد • غازي عنتاب',
-      title: 'سجاد معاصر، مصنوع لشركاء الأعمال.',
-      body: 'مجموعات مدروسة تجمع بين الحس المعاصر وإرث الزخرفة، مع تنسيق مباشر لطلبات الجملة والمشاريع.',
+      title: 'تصاميم سجاد للأعمال والمشاريع، من غازي عنتاب.',
+      body: 'كتالوج معتمد لطلبات الجملة والمشاريع، مع تنسيق مباشر لاختيار الموديلات وتفاصيل الطلب.',
       note: 'تصاميم السجاد | غازي عنتاب، تركيا',
     },
     home: {
@@ -32,7 +33,7 @@ export const dictionaries = {
     },
     products: {
       eyebrow: 'الكتالوج', title: 'مجموعات السجاد',
-      body: 'تصفّح الموديلات المعتمدة، ثم افتح صفحة الموديل لرؤية الألوان المتاحة وإرسال استفسار مباشر.',
+      body: 'تصفّح الموديلات المعتمدة، ثم افتح صفحة الموديل لرؤية المعاينات اللونية وإرسال استفسار مباشر.',
       count: 'موديلًا', empty: 'لا توجد موديلات ضمن هذا التصنيف.',
     },
     categories: { modern: 'مودرن', 'modern-classic': 'مودرن كلاسيك', 'classic-heritage': 'كلاسيك وتراثي' },
@@ -63,13 +64,13 @@ export const dictionaries = {
     nav: { home: 'Home', products: 'Products', about: 'Factory', contact: 'Contact' },
     common: {
       explore: 'Explore the collection', enquire: 'Request a quote', view: 'View model', all: 'All',
-      code: 'Model code', category: 'Category', variants: 'Available colours', back: 'Back to products',
-      whatsapp: 'Chat on WhatsApp', directions: 'Open in Maps', call: 'Call us',
+      code: 'Model code', category: 'Category', variants: 'Colour previews', back: 'Back to products',
+      whatsapp: 'Chat on WhatsApp', directions: 'Open in Maps', call: 'Call the factory',
       review: 'Needs review', approved: 'Approved', learnMore: 'Learn more',
     },
     hero: {
-      eyebrow: 'Carpet manufacturing • Gaziantep', title: 'Contemporary carpets, made for business.',
-      body: 'Considered collections unite a modern sensibility with ornamental heritage, supported by direct coordination for wholesale and project enquiries.',
+      eyebrow: 'Carpet manufacturing • Gaziantep', title: 'Carpet design for business and projects, from Gaziantep.',
+      body: 'An approved catalogue for wholesale and project enquiries, with direct coordination on model selection and order details.',
       note: 'Carpet designs | Gaziantep, Türkiye',
     },
     home: {
@@ -82,7 +83,7 @@ export const dictionaries = {
     },
     products: {
       eyebrow: 'Catalogue', title: 'Carpet collections',
-      body: 'Browse approved models, open any product for colourways, and send a direct enquiry.',
+      body: 'Browse approved models, open any product for colour previews, and send a direct enquiry.',
       count: 'models', empty: 'No models in this category yet.',
     },
     categories: { modern: 'Modern', 'modern-classic': 'Modern Classic', 'classic-heritage': 'Classic & Heritage' },
@@ -113,13 +114,13 @@ export const dictionaries = {
     nav: { home: 'Ana sayfa', products: 'Ürünler', about: 'Fabrika', contact: 'İletişim' },
     common: {
       explore: 'Koleksiyonu keşfet', enquire: 'Teklif iste', view: 'Modeli incele', all: 'Tümü',
-      code: 'Model kodu', category: 'Kategori', variants: 'Mevcut renkler', back: 'Ürünlere dön',
-      whatsapp: 'WhatsApp’tan yazın', directions: 'Haritada aç', call: 'Bizi arayın',
+      code: 'Model kodu', category: 'Kategori', variants: 'Renk ön izlemeleri', back: 'Ürünlere dön',
+      whatsapp: 'WhatsApp’tan yazın', directions: 'Haritada aç', call: 'Fabrikayı ara',
       review: 'İncelenmeli', approved: 'Onaylı', learnMore: 'Daha fazla',
     },
     hero: {
-      eyebrow: 'Halı üretimi • Gaziantep', title: 'İş ortakları için çağdaş halılar.',
-      body: 'Modern duyarlılığı dekoratif mirasla buluşturan koleksiyonlar; toptan ve proje talepleri için doğrudan koordinasyon.',
+      eyebrow: 'Halı üretimi • Gaziantep', title: 'Gaziantep’ten iş ve projeler için halı tasarımları.',
+      body: 'Toptan ve proje talepleri için onaylı katalog; model seçimi ve sipariş detaylarında doğrudan koordinasyon.',
       note: 'Halı tasarımları | Gaziantep, Türkiye',
     },
     home: {
@@ -132,7 +133,7 @@ export const dictionaries = {
     },
     products: {
       eyebrow: 'Katalog', title: 'Halı koleksiyonları',
-      body: 'Onaylı modelleri inceleyin, renk seçeneklerini görün ve doğrudan talep gönderin.',
+      body: 'Onaylı modelleri inceleyin, renk ön izlemelerini görün ve doğrudan talep gönderin.',
       count: 'model', empty: 'Bu kategoride henüz model yok.',
     },
     categories: { modern: 'Modern', 'modern-classic': 'Modern Klasik', 'classic-heritage': 'Klasik & Miras' },
@@ -168,13 +169,7 @@ export function getDictionary(locale: Locale) {
   return dictionaries[locale];
 }
 
-export const company = {
-  legalName: 'BINMANSOOR HALI TEKSTİL İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ',
-  address: 'OSB 5. Bölge, 83523 Nolu Cd. No:19, 27620 Şehitkamil, Gaziantep, Türkiye',
-  phoneDisplay: '+90 530 351 30 37',
-  phoneHref: '+905303513037',
-  maps: 'https://www.google.com/maps/search/OSB+5.+Bolge+83523+Nolu+Cd.+19,+27620+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%BA%D8%A7%D8%B2%D9%8A+%D8%B9%D9%8A%D9%86%D8%AA%D8%A7%D8%A8,+Sehitkamil+%D8%AA%D8%B1%D9%83%D9%8A%D8%A7%E2%80%AD/@37.1993,37.3054,17z?hl=ar&entry=ttu',
-};
+export const company = business;
 
 export function whatsappUrl(locale: Locale, code?: string) {
   const messages = {

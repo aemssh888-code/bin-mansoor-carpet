@@ -5,6 +5,8 @@ import { usePathname } from 'next/navigation';
 import { languageNames, locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/products';
 import {catalogText} from '@/lib/catalog-i18n';
+import {useQuoteList} from '@/lib/quote-list';
+import {saveLanguagePreference} from '@/lib/language-preference';
 import {
   Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger,
 } from '@/components/ui/sheet';
@@ -20,6 +22,7 @@ export function SiteHeader({
   a11y: { primaryNav: string; language: string; openMenu: string; mobileNav: string; closeMenu: string };
 }) {
   const pathname = usePathname();
+  const {items:quoteItems}=useQuoteList();
   const resolvedPath = currentPath ?? pathname.replace(new RegExp(`^/${locale}`), '');
   const items = [
     { label: nav.home, href: `/${locale}`, path: '' },
@@ -51,7 +54,7 @@ export function SiteHeader({
               aria-current={isActive(item.path) ? 'page' : undefined}
               className="nav-link"
             >
-              {item.label}
+              {item.label}{item.path==='/quote'&&quoteItems.length>0?<span className="ms-1 font-mono text-[10px]">({quoteItems.length})</span>:null}
             </a>
           ))}
         </nav>
@@ -61,6 +64,7 @@ export function SiteHeader({
             <a
               key={item}
               href={`/${item}${resolvedPath}`}
+              onClick={()=>saveLanguagePreference(item)}
               aria-current={item === locale ? 'true' : undefined}
               className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-wide transition ${item === locale ? 'bg-[#1d1c19] text-white' : 'text-black/55 hover:text-black'}`}
             >
@@ -82,13 +86,13 @@ export function SiteHeader({
               <nav className="flex flex-col px-6 py-8" aria-label={a11y.mobileNav}>
                 {items.map((item, index) => (
                   <a key={item.href} href={item.href} className="flex items-center justify-between border-b border-black/10 py-5 text-xl">
-                    <span>{item.label}</span><span className="text-xs text-[#9b8059]">0{index + 1}</span>
+                    <span>{item.label}{item.path==='/quote'&&quoteItems.length>0?` (${quoteItems.length})`:''}</span><span className="text-xs text-[#9b8059]">0{index + 1}</span>
                   </a>
                 ))}
               </nav>
               <div className="mt-auto flex gap-2 border-t border-black/10 p-6">
                 {locales.map((item) => (
-                  <a key={item} href={`/${item}${resolvedPath}`} className={`border px-3 py-2 text-xs ${item === locale ? 'border-black bg-black text-white' : 'border-black/15'}`}>
+                  <a key={item} href={`/${item}${resolvedPath}`} onClick={()=>saveLanguagePreference(item)} className={`border px-3 py-2 text-xs ${item === locale ? 'border-black bg-black text-white' : 'border-black/15'}`}>
                     {languageNames[item]}
                   </a>
                 ))}

@@ -6,6 +6,7 @@ import {CatalogImage} from '@/components/catalog-image';
 import {catalogText} from '@/lib/catalog-i18n';
 import {pageMetadata} from '@/lib/seo';
 import {FutureSections} from '@/components/future-sections';
+import {business} from '@/lib/business';
 
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}) {const {locale}=await params;if(!isLocale(locale))return {};const d=getDictionary(locale);return pageMetadata(locale,'',d.hero.title,d.hero.body);}
 
@@ -26,6 +27,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     'modern-classic': heroVariant(accent),
     'classic-heritage': heroVariant(products.find(p=>p.binMansoorCode==='BMC-CLS-024')!),
   };
+  const whyItems=[`${products.length} ${t.whyItems[0]}`,...t.whyItems.slice(1)];
 
   return (
     <main id="main-content">
@@ -74,7 +76,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="site-shell py-16"><h2 className="text-3xl">{t.why}</h2><div className="mt-8 grid gap-8 md:grid-cols-3">{t.whyItems.map((item,i)=><p key={item} className="border-t border-black/15 pt-6 text-lg"><span className="mb-4 block font-mono text-sm text-[#8b724e]">0{i+1}</span>{item}</p>)}</div></section>
+      <section className="site-shell py-16"><h2 className="text-3xl">{t.why}</h2><div className="mt-8 grid gap-8 md:grid-cols-3">{whyItems.map((item,i)=><p key={item} className="border-t border-black/15 pt-6 text-lg"><span className="mb-4 block font-mono text-sm text-[#8b724e]">0{i+1}</span>{item}</p>)}</div></section>
       <FutureSections locale={locale}/>
       <section className="site-shell py-16"><h2 className="text-3xl">{t.workflow}</h2><ol className="mt-8 grid gap-8 md:grid-cols-4">{dictionary.about.workflow.map((item,i)=><li key={item} className="border-t border-black/15 pt-6"><span className="block mb-4 font-mono text-sm">0{i+1}</span>{item}</li>)}</ol></section>
       <section className="bg-[#1d1c19] py-24 text-white sm:py-32">
@@ -82,7 +84,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div><p className="eyebrow mb-7 text-[#c8b088]"><span>04</span>{dictionary.home.factoryEyebrow}</p><h2 className="max-w-[12ch] text-4xl leading-tight tracking-[-.04em] sm:text-6xl">{dictionary.home.factoryTitle}</h2><p className="mt-7 max-w-lg leading-8 text-white/55">{dictionary.home.factoryBody}</p><a href={`/${locale}/about`} className="mt-9 inline-flex items-center gap-2 border-b border-[#c8b088] pb-2 text-sm text-[#d5c29f]">{dictionary.common.learnMore}<ArrowUpRight className="size-4" /></a></div>
           <div className="grid self-end gap-px bg-white/12 sm:grid-cols-3">
             {[
-              ['04', dictionary.home.machines], ['8,000', `${dictionary.home.moq} · ${dictionary.home.sqm}`], ['2023', dictionary.home.established],
+              [String(business.machines), dictionary.home.machines], [business.minimumOrderQuantity.toLocaleString('en-US'), `${dictionary.home.moq} · ${dictionary.home.sqm}`], [String(business.established), dictionary.home.established],
             ].map(([value, label]) => <div key={label} className="bg-[#1d1c19] p-7 sm:min-h-52 sm:p-9"><p className="text-4xl tracking-[-.05em] sm:text-5xl">{value}</p><p className="mt-4 text-xs uppercase tracking-[.14em] text-white/45">{label}</p></div>)}
           </div>
         </div>
