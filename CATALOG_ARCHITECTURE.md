@@ -32,6 +32,8 @@ Verified facts: established 2023, four machines and total order MOQ 8,000 m². N
 
 The existing Vinext static export is retained. Run the existing build and `scripts/prepare-github-pages.mjs` to create clean-URL directories and localized HTML language/direction attributes. `NEXT_PUBLIC_SITE_URL` controls canonical/hreflang/Open Graph URLs; default remains the existing Vercel domain for future public publication.
 
-The user requested private review first. Do not push to either GitHub remote or update public Vercel until authorized. The existing owner-only Sites project is the private review destination.
+Public publication was subsequently authorized. The verified production destination is `bin-mansoor-carpet.vercel.app`, connected in Vercel to `aemssh888-code/bin-mansoor-carpet`, branch `main`. Push explicitly to `vercel-github main`; the other remotes are not this Vercel production repository.
+
+`pnpm pages:prepare` validates the approved release contract (43 unique models, 81 unique colorways), all 129 localized product pages, image files and absence of prototype copy. A failure stops the Vercel build. It also emits `/deployment-info.json` with the actual build commit, branch and catalog checksum, allowing direct verification of the live alias without relying solely on a GitHub success status. Intentional future catalog expansion must update the approved release contract together with the approved data.
 
 Legacy website derivatives were moved to ignored `work/legacy-media-products`, not destroyed. No original catalog files were moved, deleted or renamed. Additional archive candidates and the 73 non-approved design groups remain excluded.
