@@ -23,9 +23,9 @@ export const sitePresentation = {
 export const heroCandidateCodes = [
   'BMC-MOD-004',
   'BMC-MOD-005',
+  'BMC-MOD-003',
   'BMC-MOD-002',
   'BMC-MOD-001',
-  'BMC-MCL-007',
   'BMC-MCL-008',
   'BMC-MCL-009',
   'BMC-CLS-019',

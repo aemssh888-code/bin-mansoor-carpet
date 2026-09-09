@@ -35,8 +35,8 @@ export function SiteHeader({
   const isActive = (path: string) => path === '' ? resolvedPath === '' || resolvedPath === '/' : resolvedPath.startsWith(path);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-black/8 bg-[#f7f5f0]/94 backdrop-blur-xl">
-      <div className="site-shell flex h-[5.75rem] items-center justify-between gap-4 lg:h-24">
+    <header className="site-header sticky top-0 z-40 border-b border-black/8 bg-[#f7f5f0]/94 backdrop-blur-xl">
+      <div className="site-header-inner site-shell flex items-center justify-between gap-4">
         <a href={`/${locale}`} aria-label={jointBrand.name[locale]} className="dual-brand-lockup shrink-0" dir="ltr">
           <img src={jointBrand.panelLogos.tayyam} alt="TAYYAM CARPET" width="785" height="514"/>
           <span aria-hidden="true"/>
@@ -56,7 +56,7 @@ export function SiteHeader({
           ))}
         </nav>
 
-        <div className="hidden items-center gap-1 border-s border-black/12 ps-4 md:flex" aria-label={a11y.language}>
+        <div className="header-language hidden items-center gap-1 border-s border-black/12 ps-4 md:flex" aria-label={a11y.language}>
           {locales.map((item) => (
             <a
               key={item}
@@ -72,7 +72,7 @@ export function SiteHeader({
 
         <div className="xl:hidden">
           <Sheet>
-            <SheetTrigger className="grid size-11 place-items-center border border-black/10 bg-white" aria-label={a11y.openMenu}>
+            <SheetTrigger className="menu-trigger grid size-11 place-items-center border border-black/10 bg-white" aria-label={a11y.openMenu}>
               <Menu className="size-5" />
             </SheetTrigger>
             <SheetContent side={locale === 'ar' ? 'left' : 'right'} closeLabel={a11y.closeMenu} className="bg-[#f7f5f0] p-0">

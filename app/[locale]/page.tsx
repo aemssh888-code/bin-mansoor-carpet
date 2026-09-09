@@ -42,6 +42,7 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
       </div>
       <a href={`/${locale}/products/${hero.slug}`} className="hero-art group" aria-label={`${dictionary.common.view}: ${hero.name[locale]}`}>
         <CatalogImage asset={heroVariant(hero)} alt={`${hero.name[locale]} — ${t.preview}`} priority sizes="(max-width:1023px) 100vw, 60vw" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.015]"/>
+        <span className="hero-art-index" aria-hidden="true">01 / 43</span>
         <div className="hero-art-caption"><span>{hero.name[locale]}</span><bdi>{hero.binMansoorCode}</bdi></div>
       </a>
     </section>
@@ -56,7 +57,7 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
     <section className="collection-worlds site-shell">
       <header className="editorial-section-header"><p className="eyebrow">{dictionary.home.collectionsEyebrow}</p><h2 className="editorial-heading">{dictionary.home.collectionsTitle}</h2></header>
       <div className="collection-world-list">
-        {collectionProducts.map(({category,product},index)=><article key={category} className="collection-world">
+        {collectionProducts.map(({category,product},index)=><article key={category} className={`collection-world collection-world-${index+1}`}>
           <a href={`/${locale}/products?category=${category}`} className="collection-world-art group"><CatalogImage asset={heroVariant(product)} alt={`${dictionary.categories[category]} — ${t.preview}`} sizes="(max-width:1023px) 100vw, 58vw" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.02]"/></a>
           <div className="collection-world-copy"><p className="eyebrow">0{index+1}</p><h3>{dictionary.categories[category]}</h3><p>{dictionary.categoryDescriptions[category]}</p><a href={`/${locale}/products?category=${category}`} className="btn-text">{dictionary.common.explore}<ArrowUpRight className="size-4"/></a></div>
         </article>)}

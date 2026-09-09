@@ -27,7 +27,7 @@ export function ProductDetailExperience({product,locale}:{product:Product;locale
 
   return <>
     <div className="product-experience">
-      <div className="product-main-art"><CatalogImage asset={active} alt={`${product.name[locale]} — ${active.name[locale]} — ${t.preview}`} priority sizes="(max-width:1023px) 100vw, 66vw" className="h-full w-full object-contain"/><span className="design-preview-note">{t.preview}</span></div>
+      <div className="product-main-art"><div className="product-art-canvas"><CatalogImage asset={active} alt={`${product.name[locale]} — ${active.name[locale]} — ${t.preview}`} priority sizes="(max-width:1023px) 100vw, 66vw" className="h-full w-full object-contain"/></div><span className="product-art-index" aria-hidden="true">01 / {String(product.colorways.length).padStart(2,'0')}</span><span className="design-preview-note">{t.preview}</span></div>
       <aside className="product-information">
         <p className="eyebrow">{product.category[locale]}</p>
         <h1>{product.name[locale]}</h1>
