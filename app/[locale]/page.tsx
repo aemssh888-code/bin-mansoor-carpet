@@ -1,100 +1,92 @@
-import { ArrowUpRight } from 'lucide-react';
-import { ProductCard } from '@/components/product-card';
-import { getDictionary, isLocale, locales, whatsappUrl } from '@/lib/i18n';
-import { categories, products, heroVariant } from '@/lib/products';
+import {ArrowUpRight} from 'lucide-react';
+import {ProductCard} from '@/components/product-card';
+import {getDictionary,isLocale,locales} from '@/lib/i18n';
+import {categories,products,heroVariant} from '@/lib/products';
 import {CatalogImage} from '@/components/catalog-image';
 import {catalogText} from '@/lib/catalog-i18n';
 import {pageMetadata} from '@/lib/seo';
-import {FutureSections} from '@/components/future-sections';
-import {business,jointBrand} from '@/lib/business';
+import {jointBrand,partnerCompanies,verifiedFacts} from '@/lib/business';
+import {sitePresentation} from '@/lib/presentation';
 
-export async function generateMetadata({params}:{params:Promise<{locale:string}>}) {const {locale}=await params;if(!isLocale(locale))return {};const d=getDictionary(locale);return pageMetadata(locale,'',d.hero.title,d.hero.body);}
-
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+export async function generateMetadata({params}:{params:Promise<{locale:string}>}) {
+  const {locale}=await params;
+  if(!isLocale(locale)) return {};
+  const dictionary=getDictionary(locale);
+  return pageMetadata(locale,'',dictionary.hero.title.replace('\n',' '),dictionary.hero.body);
 }
 
-export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  if (!isLocale(locale)) return null;
-  const dictionary = getDictionary(locale);
-  const featured = products.filter((product) => product.featured);
+export function generateStaticParams(){return locales.map(locale=>({locale}));}
+
+export default async function HomePage({params}:{params:Promise<{locale:string}>}) {
+  const {locale}=await params;
+  if(!isLocale(locale)) return null;
+  const dictionary=getDictionary(locale);
   const t=catalogText[locale];
-  const hero=products[0];
-  const accent=products.find(p=>p.binMansoorCode==='BMC-MCL-006')!;
-  const categoryImages = {
-    modern: heroVariant(products.find(p=>p.binMansoorCode==='BMC-MOD-004')!),
-    'modern-classic': heroVariant(accent),
-    'classic-heritage': heroVariant(products.find(p=>p.binMansoorCode==='BMC-CLS-024')!),
-  };
-  const whyItems=[`${products.length} ${t.whyItems[0]}`,...t.whyItems.slice(1)];
+  const byCode=(code:string)=>products.find(product=>product.binMansoorCode===code)!;
+  const hero=byCode(sitePresentation.heroProductCode);
+  const editorial=byCode(sitePresentation.editorialProductCode);
+  const selected=sitePresentation.homepageProductCodes.map(byCode);
+  const collectionProducts=categories.map(category=>({category,product:byCode(sitePresentation.collectionProductCodes[category])}));
+  const factLabels={established:dictionary.home.established,machines:dictionary.home.machines,minimumOrderQuantity:dictionary.home.moq};
 
-  return (
-    <main id="main-content">
-      <section className="site-shell grid min-h-[calc(100vh-5rem)] items-center gap-12 py-12 lg:grid-cols-[.86fr_1.14fr] lg:py-16">
-        <div className="relative z-10 max-w-2xl">
-          <img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="mb-9 h-auto w-full max-w-xl" />
-          <p className="eyebrow mb-7"><span>01</span>{dictionary.hero.eyebrow}</p>
-          <h1 className="display-title max-w-[12ch]">{dictionary.hero.title}</h1>
-          <p className="mt-7 max-w-xl text-lg leading-8 text-black/60">{dictionary.hero.body}</p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a href={`/${locale}/products`} className="btn-primary">{dictionary.common.explore}<ArrowUpRight className="size-4" /></a>
-            <a href={`/${locale}/quote`} className="btn-secondary">{dictionary.common.enquire}</a>
-          </div>
-          <p className="mt-10 font-mono text-[10px] uppercase tracking-[.2em] text-black/40">{dictionary.hero.note}</p>
+  return <main id="main-content">
+    <section className="home-hero site-shell">
+      <div className="hero-copy">
+        <p className="eyebrow hero-kicker">{dictionary.hero.eyebrow}</p>
+        <h1 className="hero-title whitespace-pre-line">{dictionary.hero.title}</h1>
+        <p className="hero-support">{locale === 'ar' ? <>شراكة <bdi dir="ltr">TAYYAM CARPET</bdi> و <bdi dir="ltr">BIN MANSOOR CARPET</bdi> من غازي عنتاب.</> : dictionary.hero.body}</p>
+        <div className="mt-9 flex flex-wrap gap-3">
+          <a href={`/${locale}/products`} className="btn-primary">{dictionary.common.explore}<ArrowUpRight className="size-4"/></a>
+          <a href={`/${locale}/quote`} className="btn-text">{dictionary.common.enquire}<ArrowUpRight className="size-4"/></a>
         </div>
-        <div className="hero-gallery relative min-h-[560px] lg:min-h-[690px]">
-          <div className="absolute inset-y-0 end-0 w-[78%] overflow-hidden bg-[#181a19]">
-            <CatalogImage asset={heroVariant(hero)} alt={`${hero.name[locale]} — ${t.preview}`} priority sizes="(max-width:1023px) 78vw, 44vw" className="h-full w-full object-contain p-8" />
-          </div>
-          <div className="absolute bottom-[8%] start-0 w-[38%] border-[10px] border-[#f7f5f0] bg-white shadow-[0_28px_80px_rgba(24,22,18,.18)]">
-            <CatalogImage asset={heroVariant(accent)} alt={`${accent.name[locale]} — ${t.preview}`} sizes="25vw" className="aspect-[3/4] h-full w-full object-contain p-3" />
-          </div>
-          <div className="absolute end-3 top-5 border-s border-white/45 py-4 ps-4 text-white">
-            <p dir="ltr" className="font-mono text-sm">{hero.binMansoorCode}</p><p className="mt-2 text-sm text-white/80">{hero.name[locale]} / {t.preview}</p>
-          </div>
-        </div>
-      </section>
+      </div>
+      <a href={`/${locale}/products/${hero.slug}`} className="hero-art group" aria-label={`${dictionary.common.view}: ${hero.name[locale]}`}>
+        <CatalogImage asset={heroVariant(hero)} alt={`${hero.name[locale]} — ${t.preview}`} priority sizes="(max-width:1023px) 100vw, 60vw" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.015]"/>
+        <div className="hero-art-caption"><span>{hero.name[locale]}</span><bdi>{hero.binMansoorCode}</bdi></div>
+      </a>
+    </section>
 
-      <section className="border-y border-black/10 bg-white py-24 sm:py-32">
-        <div className="site-shell">
-          <div className="section-heading"><p className="eyebrow"><span>02</span>{dictionary.home.collectionsEyebrow}</p><h2>{dictionary.home.collectionsTitle}</h2></div>
-          <div className="mt-14 grid gap-5 lg:grid-cols-3">
-            {categories.map((category, index) => (
-              <a key={category} href={`/${locale}/products?category=${category}`} className="collection-card group">
-                <div className="aspect-[5/6] overflow-hidden"><CatalogImage asset={categoryImages[category]} alt={`${dictionary.categories[category]} — ${t.preview}`} className="h-full w-full object-contain p-6 transition duration-700 group-hover:scale-[1.03]" /></div>
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-7 pt-24 text-white"><span className="font-mono text-[10px] tracking-[.2em] text-white/55">0{index + 1}</span><h3 className="mt-2 text-2xl">{dictionary.categories[category]}</h3><p className="mt-2 max-w-sm text-sm leading-6 text-white/65">{dictionary.categoryDescriptions[category]}</p></div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+    <section className="partnership-intro">
+      <div className="site-shell grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
+        <div><p className="eyebrow mb-6">{dictionary.home.partnerEyebrow}</p><h2 className="editorial-heading">{dictionary.home.partnerTitle}</h2><p className="mt-7 max-w-2xl text-lg leading-8 text-black/58">{dictionary.home.partnerBody}</p><a href={`/${locale}/about`} className="btn-text mt-8">{dictionary.common.learnMore}<ArrowUpRight className="size-4"/></a></div>
+        <img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="joint-logo-display"/>
+      </div>
+    </section>
 
-      <section className="py-24 sm:py-32">
-        <div className="site-shell">
-          <div className="section-heading"><p className="eyebrow"><span>03</span>{dictionary.home.featuredEyebrow}</p><h2>{dictionary.home.featuredTitle}</h2></div>
-          <div className="featured-grid mt-14">{featured.map((product) => <ProductCard key={product.slug} product={product} locale={locale} viewLabel={dictionary.common.view} />)}</div>
-        </div>
-      </section>
+    <section className="collection-worlds site-shell">
+      <header className="editorial-section-header"><p className="eyebrow">{dictionary.home.collectionsEyebrow}</p><h2 className="editorial-heading">{dictionary.home.collectionsTitle}</h2></header>
+      <div className="collection-world-list">
+        {collectionProducts.map(({category,product},index)=><article key={category} className="collection-world">
+          <a href={`/${locale}/products?category=${category}`} className="collection-world-art group"><CatalogImage asset={heroVariant(product)} alt={`${dictionary.categories[category]} — ${t.preview}`} sizes="(max-width:1023px) 100vw, 58vw" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.02]"/></a>
+          <div className="collection-world-copy"><p className="eyebrow">0{index+1}</p><h3>{dictionary.categories[category]}</h3><p>{dictionary.categoryDescriptions[category]}</p><a href={`/${locale}/products?category=${category}`} className="btn-text">{dictionary.common.explore}<ArrowUpRight className="size-4"/></a></div>
+        </article>)}
+      </div>
+    </section>
 
-      <section className="site-shell py-16"><h2 className="text-3xl">{t.why}</h2><div className="mt-8 grid gap-8 md:grid-cols-3">{whyItems.map((item,i)=><p key={item} className="border-t border-black/15 pt-6 text-lg"><span className="mb-4 block font-mono text-sm text-[#8b724e]">0{i+1}</span>{item}</p>)}</div></section>
-      <FutureSections locale={locale}/>
-      <section className="site-shell py-16"><h2 className="text-3xl">{t.workflow}</h2><ol className="mt-8 grid gap-8 md:grid-cols-4">{dictionary.about.workflow.map((item,i)=><li key={item} className="border-t border-black/15 pt-6"><span className="block mb-4 font-mono text-sm">0{i+1}</span>{item}</li>)}</ol></section>
-      <section className="bg-[#1d1c19] py-24 text-white sm:py-32">
-        <div className="site-shell grid gap-16 lg:grid-cols-[.8fr_1.2fr]">
-          <div><p className="eyebrow mb-7 text-[#c8b088]"><span>04</span>{dictionary.home.factoryEyebrow}</p><h2 className="max-w-[12ch] text-4xl leading-tight tracking-[-.04em] sm:text-6xl">{dictionary.home.factoryTitle}</h2><p className="mt-7 max-w-lg leading-8 text-white/55">{dictionary.home.factoryBody}</p><a href={`/${locale}/about`} className="mt-9 inline-flex items-center gap-2 border-b border-[#c8b088] pb-2 text-sm text-[#d5c29f]">{dictionary.common.learnMore}<ArrowUpRight className="size-4" /></a></div>
-          <div className="grid self-end gap-px bg-white/12 sm:grid-cols-3">
-            {[
-              [String(business.machines), dictionary.home.machines], [business.minimumOrderQuantity.toLocaleString('en-US'), `${dictionary.home.moq} · ${dictionary.home.sqm}`], [String(business.established), dictionary.home.established],
-            ].map(([value, label]) => <div key={label} className="bg-[#1d1c19] p-7 sm:min-h-52 sm:p-9"><p className="text-4xl tracking-[-.05em] sm:text-5xl">{value}</p><p className="mt-4 text-xs uppercase tracking-[.14em] text-white/45">{label}</p></div>)}
-          </div>
-        </div>
-      </section>
+    <section className="editorial-feature">
+      <div className="site-shell editorial-feature-grid">
+        <a href={`/${locale}/products/${editorial.slug}`} className="editorial-feature-art group"><CatalogImage asset={heroVariant(editorial)} alt={`${editorial.name[locale]} — ${t.preview}`} sizes="(max-width:1023px) 100vw, 68vw" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.015]"/></a>
+        <div className="editorial-feature-copy"><p className="eyebrow">{dictionary.home.editorialEyebrow}</p><h2>{editorial.name[locale]}</h2><p className="mt-5 text-lg text-white/60">{dictionary.home.editorialTitle}</p><dl className="mt-10 border-t border-white/20 pt-6 text-sm"><div><dt>{t.collection}</dt><dd>{editorial.collection[locale]}</dd></div><div><dt>{t.style}</dt><dd>{editorial.styles.map(style=>style[locale]).join(' · ')}</dd></div></dl><a href={`/${locale}/products/${editorial.slug}`} className="btn-text light mt-10">{dictionary.common.exploreDesign}<ArrowUpRight className="size-4"/></a><bdi className="mt-auto block pt-12 font-mono text-sm text-[#c8b088]">{editorial.binMansoorCode}</bdi></div>
+      </div>
+    </section>
 
-      <section className="border-b border-black/10 bg-[#c8b088] py-20 text-[#1d1c19]">
-        <div className="site-shell flex flex-col items-start justify-between gap-8 md:flex-row md:items-end"><div><p className="eyebrow mb-5">B2B</p><h2 className="max-w-3xl text-4xl tracking-[-.04em] sm:text-5xl">{dictionary.home.ctaTitle}</h2><p className="mt-4 text-black/60">{dictionary.home.ctaBody}</p></div><a href={`/${locale}/quote`} className="btn-primary shrink-0">{t.quote}<ArrowUpRight className="size-4" /></a></div>
-      </section>
-      <section className="site-shell py-16 flex flex-wrap items-center justify-between gap-6"><h2 className="text-3xl">{t.contact}</h2><a className="btn-secondary" href={`/${locale}/contact`}>{dictionary.nav.contact}</a><a href={whatsappUrl(locale)} target="_blank" rel="noreferrer" className="underline" dir="ltr">+90 530 351 30 37</a></section>
-    </main>
-  );
+    <section className="selected-designs site-shell">
+      <header className="editorial-section-header"><p className="eyebrow">{dictionary.home.featuredEyebrow}</p><h2 className="editorial-heading">{dictionary.home.featuredTitle}</h2></header>
+      <div className="selected-design-grid">{selected.map(product=><ProductCard key={product.id} product={product} locale={locale} viewLabel={dictionary.common.view}/>)}</div>
+      <a href={`/${locale}/products`} className="btn-text mt-14">{dictionary.common.explore}<ArrowUpRight className="size-4"/></a>
+    </section>
+
+    <section className="partnership-story">
+      <div className="site-shell grid gap-14 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
+        <div><p className="eyebrow mb-7">{dictionary.home.factoryEyebrow}</p><h2 className="editorial-heading">{dictionary.home.factoryTitle}</h2></div>
+        <div><p className="text-xl leading-9 text-black/60">{dictionary.home.factoryBody}</p><div className="mt-8 grid gap-4 sm:grid-cols-2"><p className="brand-wordmark">{partnerCompanies.tayyam.brandName}</p><p className="brand-wordmark">{partnerCompanies.binMansoor.brandName}</p></div></div>
+      </div>
+    </section>
+
+    <section className="verified-facts">
+      <div className="site-shell"><header className="max-w-3xl"><p className="eyebrow mb-6 text-[#c8b088]">{dictionary.home.factsEyebrow}</p><h2 className="text-4xl leading-tight tracking-[-.04em] sm:text-6xl">{dictionary.home.factsTitle}</h2></header><div className="fact-lineup">{verifiedFacts.map(fact=><div key={fact.key} className="fact-line"><p className="fact-value">{fact.value.toLocaleString('en-US')} {fact.unit}</p><p className="fact-label">{factLabels[fact.key]}<span>BIN MANSOOR CARPET</span></p></div>)}</div></div>
+    </section>
+
+    <section className="project-cta"><div className="site-shell flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end"><div><p className="eyebrow mb-6">B2B · PROJECT ENQUIRY</p><h2>{dictionary.home.ctaTitle}</h2><p>{dictionary.home.ctaBody}</p></div><a href={`/${locale}/quote`} className="btn-primary shrink-0">{t.quote}<ArrowUpRight className="size-4"/></a></div></section>
+  </main>;
 }

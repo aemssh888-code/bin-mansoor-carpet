@@ -21,8 +21,8 @@ export default async function ProductsPage({ params }: { params: Promise<{ local
   const dictionary = getDictionary(locale);
   return (
     <main id="main-content">
-      <section className="border-b border-black/10 py-20 sm:py-28"><div className="site-shell grid gap-10 lg:grid-cols-[.7fr_1.3fr]"><p className="eyebrow"><span>01</span>{dictionary.products.eyebrow}</p><div><h1 className="display-title max-w-[10ch]">{dictionary.products.title}</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-black/55">{dictionary.products.body}</p><p className="mt-8 font-mono text-xs tracking-[.15em] text-[#8b724e]">{products.length} {dictionary.products.count}</p></div></div></section>
-      <section className="site-shell py-16 sm:py-24"><CatalogTabs products={products} locale={locale} labels={{ all: dictionary.common.all, ...dictionary.categories }} viewLabel={dictionary.common.view} /></section>
+      <section className="catalog-hero"><div className="site-shell grid gap-10 lg:grid-cols-[.45fr_1.55fr] lg:items-end"><p className="eyebrow">{dictionary.products.eyebrow}</p><div><h1 className="catalog-title">{dictionary.products.title}</h1><div className="mt-8 flex flex-col gap-5 border-t border-black/12 pt-6 sm:flex-row sm:items-end sm:justify-between"><p className="max-w-2xl text-lg leading-8 text-black/55">{dictionary.products.body}</p><p className="shrink-0 font-mono text-sm tracking-[.1em] text-[#8b724e]">{products.length} {dictionary.products.count}</p></div></div></div></section>
+      <section className="site-shell py-12 sm:py-20"><CatalogTabs products={products} locale={locale} labels={{ all: dictionary.common.all, ...dictionary.categories }} viewLabel={dictionary.common.view} /></section>
     </main>
   );
 }

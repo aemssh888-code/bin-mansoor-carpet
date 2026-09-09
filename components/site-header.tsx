@@ -35,15 +35,15 @@ export function SiteHeader({
   const isActive = (path: string) => path === '' ? resolvedPath === '' || resolvedPath === '/' : resolvedPath.startsWith(path);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-black/8 bg-[#f7f5f0]/90 backdrop-blur-xl">
-      <div className="site-shell flex h-20 items-center justify-between gap-6">
-        <a href={`/${locale}`} aria-label={jointBrand.name[locale]} className="shrink-0 text-[#1d1c19]">
-          <span dir="ltr" className="flex max-w-[12.5rem] flex-col text-[10px] font-bold leading-tight tracking-[.055em] sm:max-w-none sm:flex-row sm:items-center sm:gap-2 sm:text-xs xl:text-sm">
-            <span>TAYYAM CARPET</span><span className="text-[#9b8059]">&amp;</span><span>BIN MANSOOR CARPET</span>
-          </span>
+    <header className="sticky top-0 z-40 border-b border-black/8 bg-[#f7f5f0]/94 backdrop-blur-xl">
+      <div className="site-shell flex h-[5.75rem] items-center justify-between gap-4 lg:h-24">
+        <a href={`/${locale}`} aria-label={jointBrand.name[locale]} className="dual-brand-lockup shrink-0" dir="ltr">
+          <img src={jointBrand.panelLogos.tayyam} alt="TAYYAM CARPET" width="785" height="514"/>
+          <span aria-hidden="true"/>
+          <img src={jointBrand.panelLogos.binMansoor} alt="BIN MANSOOR CARPET" width="785" height="514"/>
         </a>
 
-        <nav aria-label={a11y.primaryNav} className="hidden items-center gap-7 lg:flex">
+        <nav aria-label={a11y.primaryNav} className="hidden items-center gap-6 xl:flex">
           {items.map((item) => (
             <a
               key={item.href}
@@ -56,21 +56,21 @@ export function SiteHeader({
           ))}
         </nav>
 
-        <div className="hidden items-center gap-1 rounded-full border border-black/10 bg-white/70 p-1 md:flex" aria-label={a11y.language}>
+        <div className="hidden items-center gap-1 border-s border-black/12 ps-4 md:flex" aria-label={a11y.language}>
           {locales.map((item) => (
             <a
               key={item}
               href={`/${item}${resolvedPath}`}
               onClick={()=>saveLanguagePreference(item)}
               aria-current={item === locale ? 'true' : undefined}
-              className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-wide transition ${item === locale ? 'bg-[#1d1c19] text-white' : 'text-black/55 hover:text-black'}`}
+              className={`px-2 py-1.5 text-xs font-semibold tracking-wide transition ${item === locale ? 'text-[#8b724e] underline decoration-1 underline-offset-8' : 'text-black/45 hover:text-black'}`}
             >
               {item.toUpperCase()}
             </a>
           ))}
         </div>
 
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           <Sheet>
             <SheetTrigger className="grid size-11 place-items-center border border-black/10 bg-white" aria-label={a11y.openMenu}>
               <Menu className="size-5" />
