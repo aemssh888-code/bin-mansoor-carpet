@@ -22,9 +22,11 @@ function list(values:string[],locale:Locale) {
   return values.length<2?values[0]??'':`${values.slice(0,-1).join(locale==='ar'?'، ':', ')}${conjunction}${values.at(-1)}`;
 }
 function verifiedDescription(product:Product,collection:LocalizedText):LocalizedText {
+  const englishStyles=list(product.styles.map(s=>s.en.toLowerCase()),'en');
+  const englishArticle=/^[aeiou]/i.test(englishStyles)?'an':'a';
   return {
     ar:`تصميم ${product.name.ar} من مجموعة ${collection.ar} بطابع ${list(product.styles.map(s=>s.ar),'ar')}. تواصل معنا لتأكيد الألوان وتفاصيل الطلب.`,
-    en:`${product.name.en}, a ${list(product.styles.map(s=>s.en.toLowerCase()),'en')} design from the ${collection.en} collection. Contact us to confirm colour and order details.`,
+    en:`${product.name.en}, ${englishArticle} ${englishStyles} design from the ${collection.en} collection. Contact us to confirm colour and order details.`,
     tr:`${product.name.tr}, ${collection.tr} koleksiyonundan ${list(product.styles.map(s=>s.tr.toLocaleLowerCase('tr-TR')),'tr')} karakterli bir tasarım. Renk ve sipariş detaylarını teyit etmek için bizimle iletişime geçin.`,
   };
 }
