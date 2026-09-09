@@ -37,11 +37,7 @@ export function SiteHeader({
   return (
     <header className="site-header sticky top-0 z-40 border-b border-black/8 bg-[#f7f5f0]/94 backdrop-blur-xl">
       <div className="site-header-inner site-shell flex items-center justify-between gap-4">
-        <a href={`/${locale}`} aria-label={jointBrand.name[locale]} className="dual-brand-lockup shrink-0" dir="ltr">
-          <img src={jointBrand.panelLogos.tayyam} alt="TAYYAM CARPET" width="785" height="514"/>
-          <span aria-hidden="true"/>
-          <img src={jointBrand.panelLogos.binMansoor} alt="BIN MANSOOR CARPET" width="785" height="514"/>
-        </a>
+        <a href={`/${locale}`} aria-label={jointBrand.name[locale]} className="joint-brand-lockup shrink-0" dir="ltr"><img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514"/></a>
 
         <nav aria-label={a11y.primaryNav} className="hidden items-center gap-6 xl:flex">
           {items.map((item) => (

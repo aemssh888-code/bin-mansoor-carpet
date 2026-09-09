@@ -200,7 +200,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -411,7 +411,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -622,7 +622,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -858,7 +858,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -1094,7 +1094,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -1330,7 +1330,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -1470,7 +1470,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -1577,7 +1577,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -1679,7 +1679,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -1786,7 +1786,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -2022,7 +2022,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -2258,7 +2258,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -2494,7 +2494,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -2601,7 +2601,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -2708,7 +2708,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -2815,7 +2815,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -2922,7 +2922,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3029,7 +3029,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3136,7 +3136,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3243,7 +3243,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3350,7 +3350,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3457,7 +3457,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3564,7 +3564,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3666,7 +3666,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3773,7 +3773,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3880,7 +3880,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -3987,7 +3987,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4094,7 +4094,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4201,7 +4201,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4308,7 +4308,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4415,7 +4415,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4522,7 +4522,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4629,7 +4629,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4736,7 +4736,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4843,7 +4843,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -4950,7 +4950,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -5057,7 +5057,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -5164,7 +5164,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -5271,7 +5271,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -5378,7 +5378,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -5485,7 +5485,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -5587,7 +5587,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",
@@ -5717,7 +5717,7 @@
     },
     "availability": {
       "minimumOrderQuantity": 8000,
-      "minimumOrderScope": "total-order"
+      "minimumOrderScope": "per-item"
     },
     "classificationStatus": "approved",
     "imageKind": "design-preview",

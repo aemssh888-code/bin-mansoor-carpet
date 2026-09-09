@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://bin-mansoor-carpet.vercel.app'),
   title: { default: 'TAYYAM CARPET & BIN MANSOOR CARPET', template: '%s — TAYYAM CARPET & BIN MANSOOR CARPET' },
-  description: 'Two partner carpet companies in Gaziantep, Türkiye, presenting modern, modern classic and heritage carpet collections for business and projects.',
+  description: 'Carpet design and manufacturing from Gaziantep, Türkiye, with modern, modern classic and heritage collections for business and projects.',
   applicationName: 'TAYYAM CARPET & BIN MANSOOR CARPET',
 };
 

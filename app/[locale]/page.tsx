@@ -5,7 +5,7 @@ import {categories,products,heroVariant} from '@/lib/products';
 import {CatalogImage} from '@/components/catalog-image';
 import {catalogText} from '@/lib/catalog-i18n';
 import {pageMetadata} from '@/lib/seo';
-import {jointBrand,partnerCompanies,verifiedFacts} from '@/lib/business';
+import {jointBrand} from '@/lib/business';
 import {sitePresentation} from '@/lib/presentation';
 
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}) {
@@ -27,14 +27,13 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
   const editorial=byCode(sitePresentation.editorialProductCode);
   const selected=sitePresentation.homepageProductCodes.map(byCode);
   const collectionProducts=categories.map(category=>({category,product:byCode(sitePresentation.collectionProductCodes[category])}));
-  const factLabels={established:dictionary.home.established,machines:dictionary.home.machines,minimumOrderQuantity:dictionary.home.moq};
 
   return <main id="main-content">
     <section className="home-hero site-shell">
       <div className="hero-copy">
         <p className="eyebrow hero-kicker">{dictionary.hero.eyebrow}</p>
         <h1 className="hero-title whitespace-pre-line">{dictionary.hero.title}</h1>
-        <p className="hero-support">{locale === 'ar' ? <>شراكة <bdi dir="ltr">TAYYAM CARPET</bdi> و <bdi dir="ltr">BIN MANSOOR CARPET</bdi> من غازي عنتاب.</> : dictionary.hero.body}</p>
+        <p className="hero-support">{dictionary.hero.body}</p>
         <div className="mt-9 flex flex-wrap gap-3">
           <a href={`/${locale}/products`} className="btn-primary">{dictionary.common.explore}<ArrowUpRight className="size-4"/></a>
           <a href={`/${locale}/quote`} className="btn-text">{dictionary.common.enquire}<ArrowUpRight className="size-4"/></a>
@@ -47,7 +46,7 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
       </a>
     </section>
 
-    <section className="partnership-intro">
+    <section className="brand-intro">
       <div className="site-shell grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
         <div><p className="eyebrow mb-6">{dictionary.home.partnerEyebrow}</p><h2 className="editorial-heading">{dictionary.home.partnerTitle}</h2><p className="mt-7 max-w-2xl text-lg leading-8 text-black/58">{dictionary.home.partnerBody}</p><a href={`/${locale}/about`} className="btn-text mt-8">{dictionary.common.learnMore}<ArrowUpRight className="size-4"/></a></div>
         <img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="joint-logo-display"/>
@@ -77,15 +76,11 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
       <a href={`/${locale}/products`} className="btn-text mt-14">{dictionary.common.explore}<ArrowUpRight className="size-4"/></a>
     </section>
 
-    <section className="partnership-story">
+    <section className="brand-story">
       <div className="site-shell grid gap-14 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
         <div><p className="eyebrow mb-7">{dictionary.home.factoryEyebrow}</p><h2 className="editorial-heading">{dictionary.home.factoryTitle}</h2></div>
-        <div><p className="text-xl leading-9 text-black/60">{dictionary.home.factoryBody}</p><div className="mt-8 grid gap-4 sm:grid-cols-2"><p className="brand-wordmark">{partnerCompanies.tayyam.brandName}</p><p className="brand-wordmark">{partnerCompanies.binMansoor.brandName}</p></div></div>
+        <div><p className="text-xl leading-9 text-black/60">{dictionary.home.factoryBody}</p><img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="brand-story-logo"/></div>
       </div>
-    </section>
-
-    <section className="verified-facts">
-      <div className="site-shell"><header className="max-w-3xl"><p className="eyebrow mb-6 text-[#c8b088]">{dictionary.home.factsEyebrow}</p><h2 className="text-4xl leading-tight tracking-[-.04em] sm:text-6xl">{dictionary.home.factsTitle}</h2></header><div className="fact-lineup">{verifiedFacts.map(fact=><div key={fact.key} className="fact-line"><p className="fact-value">{fact.value.toLocaleString('en-US')} {fact.unit}</p><p className="fact-label">{factLabels[fact.key]}<span>BIN MANSOOR CARPET</span></p></div>)}</div></div>
     </section>
 
     <section className="project-cta"><div className="site-shell flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end"><div><p className="eyebrow mb-6">B2B · PROJECT ENQUIRY</p><h2>{dictionary.home.ctaTitle}</h2><p>{dictionary.home.ctaBody}</p></div><a href={`/${locale}/quote`} className="btn-primary shrink-0">{t.quote}<ArrowUpRight className="size-4"/></a></div></section>

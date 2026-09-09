@@ -7,6 +7,8 @@ parser.add_argument('analysis',type=Path)
 parser.add_argument('owner_output',type=Path)
 args=parser.parse_args()
 site=Path(__file__).resolve().parents[1]
+business_constants=json.loads((site/'lib'/'business-constants.json').read_text(encoding='utf-8'))
+minimum_order_m2_per_item=business_constants['minimumOrderM2PerItem']
 data=json.loads(args.analysis.read_text(encoding='utf-8'))
 root=Path(data['sourceRoot']).resolve()
 files={f['id']:f for f in data['files']}
@@ -45,7 +47,7 @@ for m in approved:
         rows.append({'BIN Mansoor Code':code,'Original Source Code':m['originalCode'],'Arabic Name':m['name']['ar'],'Turkish Name':m['name']['tr'],'English Name':m['name']['en'],'Category':m['category']['en'],'Collection':m['collection']['en'],'Style':'; '.join(s['en'] for s in m['styles']),'Colorway Code':c['code'],'Colorway Name':c['name']['en'],'Arabic Colorway':c['name']['ar'],'Turkish Colorway':c['name']['tr'],'Original Filename':src.name,'Original Folder':str(src.parent),'Website Image':asset['src'],'Publication Status':'Approved for integration; deployment pending','Notes':m['notes']})
     hero=next(colors[i] for i,c in enumerate(m['colorways']) if c['image']==m['heroImage'])
     collection={**m['collection'],'ar':'تكوينات أرضية'} if m['collection']['en']=='Landforms' else m['collection']
-    p={'id':code,'binMansoorCode':code,'originalCode':m['originalCode'],'slug':code.lower(),'name':m['name'],'categoryKey':key,'category':m['category'],'collection':collection,'style':m['style'],'styles':m['styles'],'heroImage':hero['image'],'heroColorwayCode':hero['code'],'galleryImages':[c['image'] for c in colors if c!=hero],'colorways':colors,'featured':code in data['homepageTop10'],'sortOrder':data['homepageTop10'].index(code) if code in data['homepageTop10'] else 100+len(public),'technicalSpecs':dict.fromkeys(specs),'documents':{'catalogPdf':None,'technicalSheetPdf':None},'availability':{'minimumOrderQuantity':8000,'minimumOrderScope':'total-order'},'classificationStatus':'approved','imageKind':'design-preview','description':description(m,collection)}
+    p={'id':code,'binMansoorCode':code,'originalCode':m['originalCode'],'slug':code.lower(),'name':m['name'],'categoryKey':key,'category':m['category'],'collection':collection,'style':m['style'],'styles':m['styles'],'heroImage':hero['image'],'heroColorwayCode':hero['code'],'galleryImages':[c['image'] for c in colors if c!=hero],'colorways':colors,'featured':code in data['homepageTop10'],'sortOrder':data['homepageTop10'].index(code) if code in data['homepageTop10'] else 100+len(public),'technicalSpecs':dict.fromkeys(specs),'documents':{'catalogPdf':None,'technicalSheetPdf':None},'availability':{'minimumOrderQuantity':minimum_order_m2_per_item,'minimumOrderScope':'per-item'},'classificationStatus':'approved','imageKind':'design-preview','description':description(m,collection)}
     public.append(p)
     master.append({**p,'sourceReference':next(r for r in refs if r['colorwayCode']==hero['code']),'sourceReferences':refs,'allOriginalReferences':[{'originalFilename':files[i]['filename'],'originalPath':files[i]['path']} for i in m['sourceFileIds']]})
 public.sort(key=lambda p:p['sortOrder'])
