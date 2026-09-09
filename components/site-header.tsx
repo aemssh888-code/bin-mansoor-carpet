@@ -7,6 +7,7 @@ import type { Locale } from '@/lib/products';
 import {catalogText} from '@/lib/catalog-i18n';
 import {useQuoteList} from '@/lib/quote-list';
 import {saveLanguagePreference} from '@/lib/language-preference';
+import {jointBrand} from '@/lib/business';
 import {
   Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger,
 } from '@/components/ui/sheet';
@@ -36,14 +37,10 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-40 border-b border-black/8 bg-[#f7f5f0]/90 backdrop-blur-xl">
       <div className="site-shell flex h-20 items-center justify-between gap-6">
-        <a href={`/${locale}`} aria-label="BIN MANSOOR CARPET" className="shrink-0">
-          <img
-            src="/media/brand/bin-mansoor-logo.webp"
-            alt="BIN MANSOOR CARPET"
-            width="180"
-            height="105"
-            className="h-12 w-auto mix-blend-multiply"
-          />
+        <a href={`/${locale}`} aria-label={jointBrand.name[locale]} className="shrink-0 text-[#1d1c19]">
+          <span dir="ltr" className="flex max-w-[12.5rem] flex-col text-[10px] font-bold leading-tight tracking-[.055em] sm:max-w-none sm:flex-row sm:items-center sm:gap-2 sm:text-xs xl:text-sm">
+            <span>TAYYAM CARPET</span><span className="text-[#9b8059]">&amp;</span><span>BIN MANSOOR CARPET</span>
+          </span>
         </a>
 
         <nav aria-label={a11y.primaryNav} className="hidden items-center gap-7 lg:flex">
@@ -80,7 +77,7 @@ export function SiteHeader({
             </SheetTrigger>
             <SheetContent side={locale === 'ar' ? 'left' : 'right'} closeLabel={a11y.closeMenu} className="bg-[#f7f5f0] p-0">
               <SheetHeader className="border-b border-black/10 p-6">
-                <SheetTitle>BIN MANSOOR CARPET</SheetTitle>
+                <SheetTitle>{jointBrand.name[locale]}</SheetTitle>
                 <SheetDescription>{languageNames[locale]}</SheetDescription>
               </SheetHeader>
               <nav className="flex flex-col px-6 py-8" aria-label={a11y.mobileNav}>

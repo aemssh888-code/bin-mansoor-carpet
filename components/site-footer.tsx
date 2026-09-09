@@ -2,6 +2,7 @@ import { company } from '@/lib/i18n';
 import type { Locale } from '@/lib/products';
 import {LanguageSwitcher} from './language-switcher';
 import {catalogText} from '@/lib/catalog-i18n';
+import {jointBrand,partnerCompanies} from '@/lib/business';
 
 export function SiteFooter({
   locale, text, nav,
@@ -13,7 +14,8 @@ export function SiteFooter({
     <footer className="border-t border-white/12 bg-[#191815] text-white">
       <div className="site-shell grid gap-12 py-14 md:grid-cols-[1.15fr_.85fr]">
         <div>
-          <img src="/media/brand/bin-mansoor-logo.webp" alt="BIN MANSOOR CARPET" width="200" height="115" className="mb-7 h-14 w-auto bg-white object-contain" />
+          <img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="mb-6 h-auto w-full max-w-md bg-white object-contain" />
+          <p className="mb-5 flex flex-wrap gap-x-3 gap-y-1 text-xs font-semibold tracking-[.08em] text-white/80"><span>{partnerCompanies.tayyam.brandName}</span><span aria-hidden="true" className="text-[#c8b088]">&amp;</span><span>{partnerCompanies.binMansoor.brandName}</span></p>
           <p className="max-w-md text-lg text-white/65">{text.line}</p>
         </div>
         <div className="grid gap-8 text-sm sm:grid-cols-2">

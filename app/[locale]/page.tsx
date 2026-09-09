@@ -6,7 +6,7 @@ import {CatalogImage} from '@/components/catalog-image';
 import {catalogText} from '@/lib/catalog-i18n';
 import {pageMetadata} from '@/lib/seo';
 import {FutureSections} from '@/components/future-sections';
-import {business} from '@/lib/business';
+import {business,jointBrand} from '@/lib/business';
 
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}) {const {locale}=await params;if(!isLocale(locale))return {};const d=getDictionary(locale);return pageMetadata(locale,'',d.hero.title,d.hero.body);}
 
@@ -33,6 +33,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <main id="main-content">
       <section className="site-shell grid min-h-[calc(100vh-5rem)] items-center gap-12 py-12 lg:grid-cols-[.86fr_1.14fr] lg:py-16">
         <div className="relative z-10 max-w-2xl">
+          <img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="mb-9 h-auto w-full max-w-xl" />
           <p className="eyebrow mb-7"><span>01</span>{dictionary.hero.eyebrow}</p>
           <h1 className="display-title max-w-[12ch]">{dictionary.hero.title}</h1>
           <p className="mt-7 max-w-xl text-lg leading-8 text-black/60">{dictionary.hero.body}</p>

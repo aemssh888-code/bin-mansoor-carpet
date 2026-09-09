@@ -3,9 +3,9 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://bin-mansoor-carpet.vercel.app'),
-  title: { default: 'BIN MANSOOR CARPET', template: '%s — BIN MANSOOR CARPET' },
-  description: 'B2B carpet manufacturer in Gaziantep, Türkiye. Modern, modern classic and heritage carpet collections.',
-  applicationName: 'BIN MANSOOR CARPET',
+  title: { default: 'TAYYAM CARPET & BIN MANSOOR CARPET', template: '%s — TAYYAM CARPET & BIN MANSOOR CARPET' },
+  description: 'Two partner carpet companies in Gaziantep, Türkiye, presenting modern, modern classic and heritage carpet collections for business and projects.',
+  applicationName: 'TAYYAM CARPET & BIN MANSOOR CARPET',
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

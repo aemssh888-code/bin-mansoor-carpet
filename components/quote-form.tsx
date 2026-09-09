@@ -1,7 +1,7 @@
 'use client';
 import {useMemo,useState,type SyntheticEvent} from 'react';
 import {catalogText} from '@/lib/catalog-i18n';
-import {business} from '@/lib/business';
+import {business,jointBrand} from '@/lib/business';
 import {type Locale,type Product} from '@/lib/products';
 import {useQuoteList} from '@/lib/quote-list';
 
@@ -14,7 +14,7 @@ export function QuoteForm({locale,products}:{locale:Locale;products:Product[]}) 
  function submit(e:SyntheticEvent<HTMLFormElement,SubmitEvent>) {e.preventDefault();const form=e.currentTarget;const f=new FormData(form);const v=(key:string)=>{const value=f.get(key);return typeof value==='string'?value.trim():'';};
   if(items.length===0||!form.checkValidity()||['name','company','country'].some(k=>v(k).length<2)||v('phone').replace(/\D/g,'').length<7){setError(t.required);form.reportValidity();return;}
   const designs=items.flatMap((item,index)=>['',`${index+1}.`,`Model: ${item.name[locale]}`,`BMC Code: ${item.modelCode}`,`Colour Preview: ${item.colorName[locale]} — ${item.colorCode}`,`Quantity: ${item.quantity||'—'}${item.quantity?' m²':''}`]);
-  const message=['BIN MANSOOR CARPET','REQUEST FOR QUOTATION','',`Company: ${v('company')}`,`Name: ${v('name')}`,`Country: ${v('country')}`,`Phone: ${v('phone')}`,v('email')?`Email: ${v('email')}`:'','', 'Requested Designs:',...designs,'',`Total estimated quantity: ${total||'—'}${total?' m²':''}`,v('message')?`Message: ${v('message')}`:''].filter(value=>value!=='').join('\n');
+  const message=[jointBrand.name.en,'REQUEST FOR QUOTATION','',`Company: ${v('company')}`,`Name: ${v('name')}`,`Country: ${v('country')}`,`Phone: ${v('phone')}`,v('email')?`Email: ${v('email')}`:'','', 'Requested Designs:',...designs,'',`Total estimated quantity: ${total||'—'}${total?' m²':''}`,v('message')?`Message: ${v('message')}`:''].filter(value=>value!=='').join('\n');
   const url=`https://wa.me/${business.phoneHref.replace('+','')}?text=${encodeURIComponent(message)}`;setReady(url);setError('');window.open(url,'_blank','noopener,noreferrer');
  }
  const input=(name:string,label:string,type='text',optional=false)=><label>{label}<input name={name} type={type} required={!optional} minLength={type==='text'?2:undefined} maxLength={200} autoComplete={name==='name'?'name':name==='company'?'organization':name==='country'?'country-name':name==='phone'?'tel':name==='email'?'email':'off'} dir={type==='tel'||type==='email'?'ltr':undefined}/></label>;

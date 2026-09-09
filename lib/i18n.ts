@@ -18,7 +18,7 @@ export const dictionaries = {
       review: 'بحاجة للمراجعة', approved: 'معتمد', learnMore: 'اعرف المزيد',
     },
     hero: {
-      eyebrow: 'صناعة سجاد • غازي عنتاب',
+      eyebrow: 'شراكة في صناعة وتصميم السجاد من غازي عنتاب.',
       title: 'تصاميم سجاد للأعمال والمشاريع، من غازي عنتاب.',
       body: 'كتالوج معتمد لطلبات الجملة والمشاريع، مع تنسيق مباشر لاختيار الموديلات وتفاصيل الطلب.',
       note: 'تصاميم السجاد | غازي عنتاب، تركيا',
@@ -28,7 +28,7 @@ export const dictionaries = {
       featuredEyebrow: 'مختارات', featuredTitle: 'موديلات بارزة من الكتالوج.',
       factoryEyebrow: 'حقائق عن المصنع', factoryTitle: 'شريك تصنيع واضح ومباشر.',
       factoryBody: 'من غازي عنتاب، ننسّق استفسارات الأعمال واختيار الموديلات ومتطلبات الطلب ضمن مسار واضح.',
-      machines: 'ماكينات', moq: 'الحد الأدنى للطلب', established: 'تأسست', sqm: 'م²',
+      machines: 'ماكينات', moq: 'الحد الأدنى للطلب', established: 'BIN MANSOOR · تأسست', sqm: 'م²',
       ctaTitle: 'لديك طلب جملة أو مشروع؟', ctaBody: 'أرسل الموديلات والكميات المطلوبة لبدء المحادثة.',
     },
     products: {
@@ -47,17 +47,18 @@ export const dictionaries = {
       specs: 'معلومات الطلب', spec1: 'استفسارات أعمال وجملة', spec2: 'الحد الأدنى الإجمالي 8,000 م²', spec3: 'التفاصيل الفنية مع عرض السعر',
     },
     about: {
-      eyebrow: 'عن الشركة', title: 'مصنّع سجاد من غازي عنتاب.',
-      intro: 'BIN MANSOOR CARPET هي علامة تابعة لشركة BINMANSOOR HALI TEKSTİL İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ، تأسست عام 2023.',
+      eyebrow: 'عن الشراكة', title: 'شراكة في صناعة السجاد من غازي عنتاب.',
+      intro: 'يمثّل هذا الموقع شركتين شريكتين تعملان معًا في تقديم تصاميم السجاد وخدمة طلبات الأعمال والمشاريع.',
+      partnersEyebrow: 'الشركات الشريكة', partnersTitle: 'شركتان. حضور واحد.',
       storyTitle: 'تركيزنا', storyBody: 'نقدّم كتالوجًا متنوعًا لعملاء الأعمال، من التصاميم الحديثة إلى الخطوط الكلاسيكية والتراثية.',
       workflowTitle: 'مسار التعاون', workflow: ['مشاركة الاحتياج', 'اختيار الموديلات', 'تأكيد التفاصيل الفنية', 'تنسيق الطلب والإنتاج'],
       addressTitle: 'المصنع', factsTitle: 'حقائق أساسية',
     },
     contact: {
       eyebrow: 'تواصل', title: 'لنبدأ بطلبك.', body: 'أرسل أكواد الموديلات والكميات التقريبية والوجهة المطلوبة. نرد عبر الهاتف أو واتساب.',
-      phone: 'الهاتف وواتساب', address: 'العنوان', legal: 'الاسم القانوني',
+      phone: 'الهاتف وواتساب', address: 'العنوان', legal: 'الأسماء القانونية', shared: 'بيانات التواصل المشتركة للموقع', partners: 'الشركات الشريكة',
     },
-    footer: { line: 'سجاد للأعمال والمشاريع، من غازي عنتاب.', rights: 'BIN MANSOOR CARPET' },
+    footer: { line: 'شراكة في صناعة وتصميم السجاد من غازي عنتاب.', rights: 'تايام كاربت و بن منصور كاربت' },
   },
   en: {
     a11y: { skip: 'Skip to content', primaryNav: 'Primary navigation', language: 'Language', openMenu: 'Open menu', mobileNav: 'Mobile navigation', closeMenu: 'Close menu' },
@@ -69,7 +70,7 @@ export const dictionaries = {
       review: 'Needs review', approved: 'Approved', learnMore: 'Learn more',
     },
     hero: {
-      eyebrow: 'Carpet manufacturing • Gaziantep', title: 'Carpet designs for business and projects, from Gaziantep.',
+      eyebrow: 'A partnership in carpet design and manufacturing from Gaziantep.', title: 'Carpet designs for business and projects, from Gaziantep.',
       body: 'An approved catalogue for wholesale and project enquiries, with direct coordination on model selection and order details.',
       note: 'Carpet designs | Gaziantep, Türkiye',
     },
@@ -78,7 +79,7 @@ export const dictionaries = {
       featuredEyebrow: 'Selected works', featuredTitle: 'Featured models from the catalogue.',
       factoryEyebrow: 'Factory facts', factoryTitle: 'A clear, direct production partner.',
       factoryBody: 'From Gaziantep, we coordinate business enquiries, model selection and order requirements through a straightforward process.',
-      machines: 'Machines', moq: 'Minimum order', established: 'Established', sqm: 'm²',
+      machines: 'Machines', moq: 'Minimum order', established: 'BIN MANSOOR · Established', sqm: 'm²',
       ctaTitle: 'Planning a wholesale or project order?', ctaBody: 'Send your preferred models and target quantities to begin.',
     },
     products: {
@@ -97,17 +98,18 @@ export const dictionaries = {
       specs: 'Order information', spec1: 'Business and wholesale enquiries', spec2: 'Total MOQ: 8,000 m²', spec3: 'Technical details supplied with quotation',
     },
     about: {
-      eyebrow: 'About the company', title: 'A carpet manufacturer from Gaziantep.',
-      intro: 'BIN MANSOOR CARPET is operated by BINMANSOOR HALI TEKSTİL İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ, established in 2023.',
+      eyebrow: 'About the partnership', title: 'A carpet partnership from Gaziantep.',
+      intro: 'This website represents two partner companies working together to present carpet designs and serve business and project enquiries.',
+      partnersEyebrow: 'Partner companies', partnersTitle: 'Two companies. One presence.',
       storyTitle: 'Our focus', storyBody: 'We present a varied catalogue for business clients, spanning modern compositions and classic heritage lines.',
       workflowTitle: 'Working together', workflow: ['Share your brief', 'Select models', 'Confirm technical details', 'Coordinate order and production'],
       addressTitle: 'Factory', factsTitle: 'Key facts',
     },
     contact: {
       eyebrow: 'Contact', title: 'Let’s begin with your brief.', body: 'Send model codes, approximate quantities and the required destination. Reach us by phone or WhatsApp.',
-      phone: 'Phone & WhatsApp', address: 'Address', legal: 'Legal name',
+      phone: 'Phone & WhatsApp', address: 'Address', legal: 'Legal company names', shared: 'Shared website contact details', partners: 'Partner companies',
     },
-    footer: { line: 'Carpets for business and projects, from Gaziantep.', rights: 'BIN MANSOOR CARPET' },
+    footer: { line: 'A partnership in carpet design and manufacturing from Gaziantep.', rights: 'TAYYAM CARPET & BIN MANSOOR CARPET' },
   },
   tr: {
     a11y: { skip: 'İçeriğe geç', primaryNav: 'Ana navigasyon', language: 'Dil', openMenu: 'Menüyü aç', mobileNav: 'Mobil navigasyon', closeMenu: 'Menüyü kapat' },
@@ -119,7 +121,7 @@ export const dictionaries = {
       review: 'İncelenmeli', approved: 'Onaylı', learnMore: 'Daha fazla',
     },
     hero: {
-      eyebrow: 'Halı üretimi • Gaziantep', title: "Gaziantep'ten iş ve projeler için halı tasarımları.",
+      eyebrow: "Gaziantep'ten halı tasarımı ve üretiminde güçlü bir ortaklık.", title: "Gaziantep'ten iş ve projeler için halı tasarımları.",
       body: 'Toptan ve proje talepleri için onaylı katalog; model seçimi ve sipariş detaylarında doğrudan koordinasyon.',
       note: 'Halı tasarımları | Gaziantep, Türkiye',
     },
@@ -128,7 +130,7 @@ export const dictionaries = {
       featuredEyebrow: 'Seçkiler', featuredTitle: 'Katalogdan öne çıkan modeller.',
       factoryEyebrow: 'Fabrika bilgileri', factoryTitle: 'Açık ve doğrudan bir üretim ortağı.',
       factoryBody: 'Gaziantep’ten iş taleplerini, model seçimini ve sipariş ihtiyaçlarını anlaşılır bir süreçle koordine ediyoruz.',
-      machines: 'Makine', moq: 'Minimum sipariş', established: 'Kuruluş', sqm: 'm²',
+      machines: 'Makine', moq: 'Minimum sipariş', established: 'BIN MANSOOR · Kuruluş', sqm: 'm²',
       ctaTitle: 'Toptan veya proje siparişi mi planlıyorsunuz?', ctaBody: 'Başlamak için tercih ettiğiniz modelleri ve hedef miktarı gönderin.',
     },
     products: {
@@ -147,17 +149,18 @@ export const dictionaries = {
       specs: 'Sipariş bilgisi', spec1: 'Kurumsal ve toptan talepler', spec2: 'Toplam minimum: 8.000 m²', spec3: 'Teknik detaylar teklifle paylaşılır',
     },
     about: {
-      eyebrow: 'Şirket hakkında', title: 'Gaziantep’ten bir halı üreticisi.',
-      intro: 'BIN MANSOOR CARPET, 2023 yılında kurulan BINMANSOOR HALI TEKSTİL İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ tarafından işletilmektedir.',
+      eyebrow: 'Ortaklık hakkında', title: "Gaziantep'ten bir halı ortaklığı.",
+      intro: 'Bu web sitesi, halı tasarımlarını sunmak ve kurumsal proje taleplerine hizmet vermek için birlikte çalışan iki ortak şirketi temsil eder.',
+      partnersEyebrow: 'Ortak şirketler', partnersTitle: 'İki şirket. Tek bir temsil.',
       storyTitle: 'Odağımız', storyBody: 'Kurumsal müşteriler için modern kompozisyonlardan klasik miras çizgilerine uzanan çeşitli bir katalog sunuyoruz.',
       workflowTitle: 'Birlikte çalışma', workflow: ['İhtiyacı paylaşın', 'Modelleri seçin', 'Teknik detayları doğrulayın', 'Sipariş ve üretimi koordine edin'],
       addressTitle: 'Fabrika', factsTitle: 'Temel bilgiler',
     },
     contact: {
       eyebrow: 'İletişim', title: 'Talebinizle başlayalım.', body: 'Model kodlarını, yaklaşık miktarları ve hedef ülkeyi gönderin. Telefon veya WhatsApp üzerinden bize ulaşın.',
-      phone: 'Telefon & WhatsApp', address: 'Adres', legal: 'Ticari unvan',
+      phone: 'Telefon & WhatsApp', address: 'Adres', legal: 'Ticari unvanlar', shared: 'Ortak web sitesi iletişim bilgileri', partners: 'Ortak şirketler',
     },
-    footer: { line: 'Gaziantep’ten iş ve proje halıları.', rights: 'BIN MANSOOR CARPET' },
+    footer: { line: "Gaziantep'ten halı tasarımı ve üretiminde güçlü bir ortaklık.", rights: 'TAYYAM CARPET & BIN MANSOOR CARPET' },
   },
 } as const;
 
@@ -173,9 +176,9 @@ export const company = business;
 
 export function whatsappUrl(locale: Locale, code?: string) {
   const messages = {
-    ar: code ? `مرحباً، أرغب في الاستفسار عن موديل ${code} من BIN MANSOOR CARPET.` : 'مرحباً، أرغب في الاستفسار عن منتجات BIN MANSOOR CARPET.',
-    en: code ? `Hello, I would like to enquire about model ${code} from BIN MANSOOR CARPET.` : 'Hello, I would like to enquire about BIN MANSOOR CARPET products.',
-    tr: code ? `Merhaba, BIN MANSOOR CARPET ${code} modeli hakkında bilgi almak istiyorum.` : 'Merhaba, BIN MANSOOR CARPET ürünleri hakkında bilgi almak istiyorum.',
+    ar: code ? `مرحباً، أرغب في الاستفسار عن موديل ${code} من تايام كاربت و بن منصور كاربت.` : 'مرحباً، أرغب في الاستفسار عن منتجات تايام كاربت و بن منصور كاربت.',
+    en: code ? `Hello, I would like to enquire about model ${code} from TAYYAM CARPET & BIN MANSOOR CARPET.` : 'Hello, I would like to enquire about TAYYAM CARPET & BIN MANSOOR CARPET products.',
+    tr: code ? `Merhaba, TAYYAM CARPET & BIN MANSOOR CARPET ${code} modeli hakkında bilgi almak istiyorum.` : 'Merhaba, TAYYAM CARPET & BIN MANSOOR CARPET ürünleri hakkında bilgi almak istiyorum.',
   };
   return `https://wa.me/${company.phoneHref.replace('+', '')}?text=${encodeURIComponent(messages[locale])}`;
 }
