@@ -71,7 +71,7 @@ main,section,.grid>*{min-width:0}
 
 /* Homepage */
 .home-hero{display:grid;min-height:calc(100svh - 5.25rem);gap:2.5rem;align-items:center;padding-block:2.5rem 4.5rem}
-.hero-copy{position:relative;z-index:2;max-width:37rem}
+.hero-copy{position:relative;z-index:2;width:100%;min-width:0;max-width:37rem}
 .hero-kicker{margin-bottom:2rem}
 .hero-title{max-width:11ch;font-size:clamp(3.1rem,5.6vw,5.25rem);font-weight:500;line-height:.93;letter-spacing:-.065em}
 [lang="ar"] .hero-title{max-width:13ch;line-height:1.18;letter-spacing:-.045em}
@@ -143,7 +143,8 @@ input[readonly]{color:#5d574f}
 .product-breadcrumbs{font-size:.78rem;color:rgba(29,28,25,.54)}
 .product-breadcrumbs ol{display:flex;flex-wrap:wrap;align-items:center;gap:.65rem}
 .product-breadcrumbs a:hover{color:#8b724e}
-.product-experience{width:min(100% - 2rem,88rem);margin:2rem auto 0;display:grid;gap:3rem;padding-bottom:4rem}
+.product-experience{width:min(100% - 2rem,88rem);margin:2rem auto 0;display:grid;grid-template-columns:minmax(0,1fr);gap:3rem;padding-bottom:4rem}
+.product-experience>*{min-width:0}
 .product-main-art{position:relative;height:76svh;min-height:35rem;max-height:59rem;display:grid;place-items:center;overflow:hidden;background:#e8e4dc;padding:2.25rem}
 .product-art-canvas{width:min(82%,48rem);height:100%}
 .product-art-index{position:absolute;inset-inline-end:1.2rem;top:1.2rem;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.68rem;letter-spacing:.12em;color:rgba(29,28,25,.5)}
@@ -303,7 +304,7 @@ address{overflow-wrap:anywhere}
   .site-shell{width:min(100% - 1.5rem,88rem)}
   .site-header-inner{height:4.75rem}
   .joint-brand-lockup{width:10.75rem}.joint-brand-lockup img{height:3.1rem}
-  .home-hero{min-height:0;padding-block:2.25rem 3.25rem;gap:2.5rem}.hero-kicker{margin-bottom:1.25rem}.hero-title{max-width:10ch;font-size:clamp(2.7rem,12.3vw,3.35rem)}.hero-support{margin-top:1.35rem;font-size:1rem;line-height:1.75}.hero-art{height:auto;min-height:0;max-height:none;aspect-ratio:4/5}.hero-art-caption{inset-inline:.85rem;bottom:.85rem}.hero-art-index{inset-inline-start:.85rem;top:.85rem}
+  .home-hero{min-height:0;padding-block:2.25rem 3.25rem;gap:2.5rem}.hero-kicker{margin-bottom:1.25rem;flex-wrap:wrap}.hero-title{max-width:100%;font-size:clamp(2.7rem,12.3vw,3.35rem)}.hero-support{margin-top:1.35rem;font-size:1rem;line-height:1.75}.hero-art{height:auto;min-height:0;max-height:none;aspect-ratio:4/5}.hero-art-caption{inset-inline:.85rem;bottom:.85rem}.hero-art-index{inset-inline-start:.85rem;top:.85rem}
   .brand-intro,.collection-worlds,.selected-designs,.brand-story{padding-block:5rem}
   .brand-intro{padding-block:4.5rem}.joint-logo-display{padding:.45rem}
   .collection-world-list{gap:5rem;margin-top:3.5rem}.collection-world-art{height:auto;aspect-ratio:4/5}.collection-world-copy h3{font-size:2.7rem}
