@@ -5,8 +5,8 @@ import {categories,products,heroVariant} from '@/lib/products';
 import {CatalogImage} from '@/components/catalog-image';
 import {catalogText} from '@/lib/catalog-i18n';
 import {pageMetadata} from '@/lib/seo';
-import {homeHeroAlt,homeHeroMedia,sitePresentation} from '@/lib/presentation';
-import {HomeHeroMedia} from '@/components/home-hero-media';
+import {homeHeroCampaign,sitePresentation} from '@/lib/presentation';
+import {HomeHeroCampaign} from '@/components/home-hero-campaign';
 
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}) {
   const {locale}=await params;
@@ -23,7 +23,10 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
   const dictionary=getDictionary(locale);
   const t=catalogText[locale];
   const byCode=(code:string)=>products.find(product=>product.binMansoorCode===code)!;
-  const hero=byCode(homeHeroMedia.productCode);
+  const heroSlides=homeHeroCampaign.map(slide=>{
+    const product=byCode(slide.productCode);
+    return {...slide,name:product.name[locale],href:`/${locale}/products/${product.slug}`,alt:slide.alt[locale]};
+  });
   const editorial=byCode(sitePresentation.editorialProductCode);
   const selected=sitePresentation.homepageProductCodes.map(byCode);
   const collectionProducts=categories.map(category=>({category,product:byCode(sitePresentation.collectionProductCodes[category])}));
@@ -38,11 +41,12 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
           <a href={`/${locale}/quote`} className="btn-text">{dictionary.common.enquire}<ArrowUpRight className="size-4"/></a>
         </div>
       </div>
-      <a href={`/${locale}/products/${hero.slug}`} className="hero-art group" aria-label={`${dictionary.common.view}: ${hero.name[locale]}`}>
-        <HomeHeroMedia fallback={heroVariant(hero)} alt={homeHeroAlt[locale]}/>
-        <span className="hero-art-index" aria-hidden="true">01 / 43</span>
-        <div className="hero-art-caption"><span>{hero.name[locale]}</span><bdi>{hero.binMansoorCode}</bdi></div>
-      </a>
+      <HomeHeroCampaign slides={heroSlides} labels={{
+        region: locale==='ar'?'حملة التصاميم المختارة':locale==='tr'?'Seçili tasarımlar kampanyası':'Selected design campaign',
+        previous: locale==='ar'?'التصميم السابق':locale==='tr'?'Önceki tasarım':'Previous design',
+        next: locale==='ar'?'التصميم التالي':locale==='tr'?'Sonraki tasarım':'Next design',
+        explore: dictionary.common.exploreDesign,
+      }}/>
     </section>
 
     <section className="brand-intro">
