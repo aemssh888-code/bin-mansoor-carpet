@@ -6,7 +6,8 @@ import {CatalogImage} from '@/components/catalog-image';
 import {catalogText} from '@/lib/catalog-i18n';
 import {pageMetadata} from '@/lib/seo';
 import {jointBrand} from '@/lib/business';
-import {sitePresentation} from '@/lib/presentation';
+import {homeHeroAlt,homeHeroMedia,sitePresentation} from '@/lib/presentation';
+import {HomeHeroMedia} from '@/components/home-hero-media';
 
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}) {
   const {locale}=await params;
@@ -23,7 +24,7 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
   const dictionary=getDictionary(locale);
   const t=catalogText[locale];
   const byCode=(code:string)=>products.find(product=>product.binMansoorCode===code)!;
-  const hero=byCode(sitePresentation.heroProductCode);
+  const hero=byCode(homeHeroMedia.productCode);
   const editorial=byCode(sitePresentation.editorialProductCode);
   const selected=sitePresentation.homepageProductCodes.map(byCode);
   const collectionProducts=categories.map(category=>({category,product:byCode(sitePresentation.collectionProductCodes[category])}));
@@ -31,16 +32,15 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
   return <main id="main-content">
     <section className="home-hero site-shell">
       <div className="hero-copy">
-        <p className="eyebrow hero-kicker">{dictionary.hero.eyebrow}</p>
         <h1 className="hero-title whitespace-pre-line">{dictionary.hero.title}</h1>
         <p className="hero-support">{dictionary.hero.body}</p>
-        <div className="mt-9 flex flex-wrap gap-3">
+        <div className="hero-actions mt-9 flex flex-wrap gap-3">
           <a href={`/${locale}/products`} className="btn-primary">{dictionary.common.explore}<ArrowUpRight className="size-4"/></a>
           <a href={`/${locale}/quote`} className="btn-text">{dictionary.common.enquire}<ArrowUpRight className="size-4"/></a>
         </div>
       </div>
       <a href={`/${locale}/products/${hero.slug}`} className="hero-art group" aria-label={`${dictionary.common.view}: ${hero.name[locale]}`}>
-        <CatalogImage asset={heroVariant(hero)} alt={`${hero.name[locale]} — ${t.preview}`} priority sizes="(max-width:1023px) 100vw, 60vw" className="h-full w-full object-cover transition duration-1000 group-hover:scale-[1.015]"/>
+        <HomeHeroMedia fallback={heroVariant(hero)} alt={homeHeroAlt[locale]}/>
         <span className="hero-art-index" aria-hidden="true">01 / 43</span>
         <div className="hero-art-caption"><span>{hero.name[locale]}</span><bdi>{hero.binMansoorCode}</bdi></div>
       </a>
