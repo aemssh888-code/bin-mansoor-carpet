@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import {ArrowUpRight,MapPin,MessageCircle,Phone} from 'lucide-react';
 import {company,getDictionary,isLocale,locales,whatsappUrl} from '@/lib/i18n';
 import {pageMetadata} from '@/lib/seo';
-import {jointBrand,partnerCompanies} from '@/lib/business';
+import {partnerCompanies} from '@/lib/business';
 
 export function generateStaticParams(){return locales.map(locale=>({locale}));}
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}):Promise<Metadata>{const {locale}=await params;if(!isLocale(locale))return {};const dictionary=getDictionary(locale);return pageMetadata(locale,'/contact',dictionary.contact.title,dictionary.contact.body);}
@@ -18,8 +18,8 @@ export default async function ContactPage({params}:{params:Promise<{locale:strin
     {href:company.maps,label:dictionary.contact.address,value:company.address,Icon:MapPin,external:true},
   ];
   return <main id="main-content">
-    <section className="contact-hero site-shell"><div><img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="contact-joint-logo"/><p className="eyebrow mt-10">{dictionary.contact.eyebrow}</p><h1>{dictionary.contact.title}</h1></div><div className="contact-intro"><p>{dictionary.contact.body}</p><small>{dictionary.contact.shared}</small></div></section>
+    <section className="contact-hero site-shell"><div><p className="eyebrow">{dictionary.contact.eyebrow}</p><h1>{dictionary.contact.title}</h1></div><div className="contact-intro"><p>{dictionary.contact.body}</p><small>{dictionary.contact.shared}</small></div></section>
     <section className="contact-links site-shell">{contactItems.map(({href,label,value,Icon,external})=><a key={label} href={href} {...(external?{target:'_blank',rel:'noreferrer'}:{})}><Icon/><span><small>{label}</small><strong>{value}</strong></span><ArrowUpRight/></a>)}</section>
-    <section className="contact-legal"><div className="site-shell"><p className="eyebrow mb-8">{dictionary.contact.legal}</p><div>{partners.map(partner=><article key={partner.brandName}><h2>{partner.brandName}</h2><p>{partner.legalName}</p></article>)}</div><a href={whatsappUrl(locale)} target="_blank" rel="noreferrer" className="btn-primary mt-12">{dictionary.contact.cta}<ArrowUpRight className="size-4"/></a></div></section>
+    <section className="contact-legal"><div className="site-shell"><p className="eyebrow mb-8">{dictionary.contact.legal}</p><div>{partners.map(partner=><article key={partner.brandName}><p>{partner.legalName}</p></article>)}</div><a href={whatsappUrl(locale)} target="_blank" rel="noreferrer" className="btn-primary mt-12">{dictionary.contact.cta}<ArrowUpRight className="size-4"/></a></div></section>
   </main>;
 }

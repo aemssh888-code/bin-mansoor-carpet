@@ -2,20 +2,19 @@ import { company } from '@/lib/i18n';
 import type { Locale } from '@/lib/products';
 import {LanguageSwitcher} from './language-switcher';
 import {catalogText} from '@/lib/catalog-i18n';
-import {jointBrand,partnerCompanies} from '@/lib/business';
+import {partnerCompanies} from '@/lib/business';
 
 export function SiteFooter({
   locale, text, nav,
 }: {
-  locale: Locale; text: { line: string; rights: string };
+  locale: Locale; text: { line: string };
   nav: { products: string; about: string; contact: string };
 }) {
   return (
     <footer className="border-t border-white/12 bg-[#191815] text-white">
       <div className="site-shell grid gap-16 py-16 lg:grid-cols-[1.2fr_.8fr] lg:py-24">
         <div>
-          <img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="h-auto w-full max-w-2xl bg-white object-contain" />
-          <p className="mt-8 max-w-xl text-lg leading-8 text-white/58">{text.line}</p>
+          <p className="max-w-xl text-2xl leading-10 text-white/72">{text.line}</p>
         </div>
         <div className="grid gap-10 text-sm sm:grid-cols-2">
           <div>
@@ -34,12 +33,12 @@ export function SiteFooter({
         </div>
       </div>
       <div className="site-shell grid gap-7 border-t border-white/10 py-8 text-xs leading-6 text-white/38 md:grid-cols-2">
-        <p><strong className="mb-1 block font-medium text-white/62">{partnerCompanies.tayyam.brandName}</strong>{partnerCompanies.tayyam.legalName}</p>
-        <p><strong className="mb-1 block font-medium text-white/62">{partnerCompanies.binMansoor.brandName}</strong>{partnerCompanies.binMansoor.legalName}</p>
+        <p>{partnerCompanies.tayyam.legalName}</p>
+        <p>{partnerCompanies.binMansoor.legalName}</p>
       </div>
       <div className="border-t border-white/10">
         <div className="site-shell flex flex-wrap items-center justify-between gap-3 py-5 text-xs text-white/45">
-          <span>© {new Date().getFullYear()} {text.rights}</span>
+          <span>© {new Date().getFullYear()}</span>
           <span>Gaziantep, Türkiye</span>
         </div>
       </div>

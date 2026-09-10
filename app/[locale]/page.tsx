@@ -5,7 +5,6 @@ import {categories,products,heroVariant} from '@/lib/products';
 import {CatalogImage} from '@/components/catalog-image';
 import {catalogText} from '@/lib/catalog-i18n';
 import {pageMetadata} from '@/lib/seo';
-import {jointBrand} from '@/lib/business';
 import {homeHeroAlt,homeHeroMedia,sitePresentation} from '@/lib/presentation';
 import {HomeHeroMedia} from '@/components/home-hero-media';
 
@@ -47,9 +46,8 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
     </section>
 
     <section className="brand-intro">
-      <div className="site-shell grid items-center gap-12 lg:grid-cols-[.9fr_1.1fr]">
-        <div><p className="eyebrow mb-6">{dictionary.home.partnerEyebrow}</p><h2 className="editorial-heading">{dictionary.home.partnerTitle}</h2><p className="mt-7 max-w-2xl text-lg leading-8 text-black/58">{dictionary.home.partnerBody}</p><a href={`/${locale}/about`} className="btn-text mt-8">{dictionary.common.learnMore}<ArrowUpRight className="size-4"/></a></div>
-        <img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="joint-logo-display"/>
+      <div className="site-shell">
+        <div className="brand-intro-copy"><p className="eyebrow mb-6">{dictionary.home.partnerEyebrow}</p><h2 className="editorial-heading">{dictionary.home.partnerTitle}</h2><p className="mt-7 max-w-2xl text-lg leading-8 text-black/58">{dictionary.home.partnerBody}</p><a href={`/${locale}/about`} className="btn-text mt-8">{dictionary.common.learnMore}<ArrowUpRight className="size-4"/></a></div>
       </div>
     </section>
 
@@ -79,7 +77,7 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
     <section className="brand-story">
       <div className="site-shell grid gap-14 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
         <div><p className="eyebrow mb-7">{dictionary.home.factoryEyebrow}</p><h2 className="editorial-heading">{dictionary.home.factoryTitle}</h2></div>
-        <div><p className="text-xl leading-9 text-black/60">{dictionary.home.factoryBody}</p><img src={jointBrand.logo} alt={jointBrand.name[locale]} width="1570" height="514" className="brand-story-logo"/></div>
+        <p className="text-xl leading-9 text-black/60">{dictionary.home.factoryBody}</p>
       </div>
     </section>
 

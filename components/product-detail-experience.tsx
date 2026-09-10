@@ -31,7 +31,7 @@ export function ProductDetailExperience({product,locale}:{product:Product;locale
 
   return <>
     <div className="product-experience">
-      <div className="product-main-art"><div className="product-art-canvas"><CatalogImage asset={active} alt={`${product.name[locale]} — ${active.name[locale]} — ${t.preview}`} priority sizes="(max-width:1023px) 100vw, 66vw" className="h-full w-full object-contain"/></div><span className="product-art-index" aria-hidden="true">01 / {String(product.colorways.length).padStart(2,'0')}</span><span className="design-preview-note">{t.preview}</span></div>
+      <div className="product-main-art"><div className="product-art-canvas"><CatalogImage asset={active} alt={`${product.name[locale]} — ${active.name[locale]} — ${t.preview}`} priority sizes="(max-width:1023px) calc(100vw - 4rem), 58vw" className="product-design-image"/></div><span className="product-art-index" aria-hidden="true">01 / {String(product.colorways.length).padStart(2,'0')}</span><span className="design-preview-note">{t.preview}</span></div>
       <aside className="product-information">
         <p className="eyebrow">{product.category[locale]}</p>
         <h1>{product.name[locale]}</h1>
@@ -46,7 +46,7 @@ export function ProductDetailExperience({product,locale}:{product:Product;locale
         {specs.length>0&&<details className="technical-details"><summary>{t.specs}</summary><dl>{specs.map(([key,value])=><div key={key}><dt>{specLabels[key as keyof TechnicalSpecs][locale]}</dt><dd>{formatSpec(value)}</dd></div>)}</dl></details>}
       </aside>
     </div>
-    <section className="design-inspection"><div className="site-shell"><p className="eyebrow mb-6">{inspection}</p><div className="design-inspection-canvas"><CatalogImage asset={active} alt={`${product.name[locale]} — ${active.name[locale]} — ${inspection}`} sizes="100vw" className="h-full w-full object-contain"/></div><p className="mt-4 text-sm leading-7 text-black/52">{t.previewNote}</p></div></section>
+    <section className="design-inspection"><div className="site-shell"><p className="eyebrow mb-6">{inspection}</p><div className="design-inspection-canvas"><CatalogImage asset={active} alt={`${product.name[locale]} — ${active.name[locale]} — ${inspection}`} sizes="(max-width:1023px) calc(100vw - 4rem), 80vw" className="product-design-image"/></div><p className="mt-4 text-sm leading-7 text-black/52">{t.previewNote}</p></div></section>
     <div className="mobile-product-actions"><button type="button" disabled={!quantityValid} onClick={addCurrent}>{added?t.added:t.add}</button><a href={quantityValid?direct:undefined} aria-disabled={!quantityValid} onClick={whatsappClick} target="_blank" rel="noreferrer">WhatsApp</a></div>
   </>;
 }

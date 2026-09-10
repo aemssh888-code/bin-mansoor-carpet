@@ -73,7 +73,7 @@ export function SiteHeader({
             </SheetTrigger>
             <SheetContent side={locale === 'ar' ? 'left' : 'right'} closeLabel={a11y.closeMenu} className="bg-[#f7f5f0] p-0">
               <SheetHeader className="border-b border-black/10 p-6">
-                <SheetTitle>{jointBrand.name[locale]}</SheetTitle>
+                <SheetTitle>{a11y.mobileNav}</SheetTitle>
                 <SheetDescription>{languageNames[locale]}</SheetDescription>
               </SheetHeader>
               <nav className="flex flex-col px-6 py-8" aria-label={a11y.mobileNav}>
