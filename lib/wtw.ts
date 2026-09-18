@@ -1,13 +1,30 @@
 import data from './wtw-catalog-data.json';
+import {wtwFeaturedOrder,wtwPresentation} from './wtw-presentation';
 import type {Locale,LocalizedText} from './products';
 
 export type WTWColourway={code:string;image:string;colourFamily:string};
-export type WTWModel={
+type WTWSourceModel={
  code:string;slug:string;category:string;styles:string[];confidence:string;
  representativeImage:string;colourways:WTWColourway[];
  technicalSpecs:Record<string,null>;minimumOrderQuantityM2:null;
 };
-export const wtwModels=data as WTWModel[];
+export type WTWModel=WTWSourceModel&{representativeColourwayCode:string;displayOrder:number;featured:boolean};
+const sourceModels=data as WTWSourceModel[];
+const sourceByCode=new Map(sourceModels.map(model=>[model.code,model]));
+if(sourceModels.length!==wtwPresentation.length||sourceByCode.size!==wtwPresentation.length||new Set(wtwPresentation.map(item=>item.code)).size!==wtwPresentation.length){
+ throw new Error('WTW presentation must cover each approved active model exactly once.');
+}
+export const wtwModels:WTWModel[]=wtwPresentation.map(item=>{
+ const source=sourceByCode.get(item.code);
+ const representative=source?.colourways.find(colour=>colour.code===item.representativeColourwayCode);
+ if(!source||!representative)throw new Error(`Invalid WTW presentation selection: ${item.code}`);
+ return {...source,...item,representativeImage:representative.image};
+});
+export const wtwFeatured=wtwFeaturedOrder.map(code=>{
+ const model=wtwModels.find(item=>item.code===code);
+ if(!model||!model.featured)throw new Error(`Invalid featured WTW selection: ${code}`);
+ return model;
+});
 export const wtwCounts={models:wtwModels.length,previews:wtwModels.reduce((sum,model)=>sum+model.colourways.length,0)};
 export const wtwCategories=[...new Set(wtwModels.map(model=>model.category))].sort();
 export const wtwStyles=[...new Set(wtwModels.flatMap(model=>model.styles))].sort();

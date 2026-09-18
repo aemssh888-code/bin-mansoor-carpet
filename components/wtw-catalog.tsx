@@ -14,7 +14,19 @@ export function WTWCatalog({locale,models}:{locale:Locale;models:WTWModel[]}){
  const categories=[...new Set(models.map(m=>m.category))].sort();
  const styles=[...new Set(models.flatMap(m=>m.styles))].sort();
  const colours=[...new Set(models.flatMap(m=>m.colourways.map(c=>c.colourFamily)))].sort();
- const filtered=useMemo(()=>models.filter(model=>(!category||model.category===category)&&(!style||model.styles.includes(style))&&(!colour||model.colourways.some(c=>c.colourFamily===colour))&&wtwSearch(model,search)),[models,search,category,style,colour]);
+ const filtered=useMemo(()=>{
+  const matches=models.filter(model=>(!category||model.category===category)&&(!style||model.styles.includes(style))&&(!colour||model.colourways.some(c=>c.colourFamily===colour))&&wtwSearch(model,search));
+  const needle=search.trim().toLowerCase();
+  if(!needle)return matches;
+  const relevance=(model:WTWModel)=>{
+   if(model.code.toLowerCase()===needle)return 0;
+   if(model.colourways.some(preview=>preview.code.toLowerCase()===needle))return 1;
+   if(model.code.toLowerCase().startsWith(needle))return 2;
+   if(model.colourways.some(preview=>preview.code.toLowerCase().startsWith(needle)))return 3;
+   return 4;
+  };
+  return [...matches].sort((a,b)=>relevance(a)-relevance(b)||a.displayOrder-b.displayOrder);
+ },[models,search,category,style,colour]);
  const chooseColour=(model:WTWModel)=>model.colourways.find(c=>c.code.toLowerCase()===search.trim().toLowerCase());
  const resetLimit=()=>setLimit(12);
  return <div className="wtw-catalog site-shell">
@@ -28,7 +40,7 @@ export function WTWCatalog({locale,models}:{locale:Locale;models:WTWModel[]}){
   {filtered.length===0?<p className="wtw-empty">{t.empty}</p>:<div className="wtw-grid">{filtered.slice(0,limit).map(model=>{
    const selected=chooseColour(model);
    return <a className="wtw-card" key={model.code} href={`/${locale}/wall-to-wall/${model.slug}${selected?`?colour=${selected.code}`:''}`}>
-    <div className="wtw-card-art"><img src={model.representativeImage} alt={`${model.code} — ${wtwCategory(model.category,locale)} — ${t.view}`} loading="lazy" width="1200" height="800"/></div>
+    <div className="wtw-card-art"><img src={selected?.image??model.representativeImage} alt={`${selected?.code??model.code} — ${wtwCategory(model.category,locale)} — ${t.view}`} loading="lazy" width="1200" height="800"/></div>
     <div className="wtw-card-copy"><div><bdi>{model.code}</bdi><h2>{wtwCategory(model.category,locale)}</h2></div><p>{model.colourways.length} {t.colourPreviews}</p></div>
    </a>;
   })}</div>}
