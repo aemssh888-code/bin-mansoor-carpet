@@ -1,5 +1,6 @@
 import data from './wtw-catalog-data.json';
 import {wtwFeaturedOrder,wtwPresentation} from './wtw-presentation';
+import {wtwCuratedOrder,wtwPublication} from './wtw-publication';
 import type {Locale,LocalizedText} from './products';
 
 export type WTWColourway={code:string;image:string;colourFamily:string};
@@ -8,17 +9,35 @@ type WTWSourceModel={
  representativeImage:string;colourways:WTWColourway[];
  technicalSpecs:Record<string,null>;minimumOrderQuantityM2:null;
 };
-export type WTWModel=WTWSourceModel&{representativeColourwayCode:string;displayOrder:number;featured:boolean};
+export type WTWModel=WTWSourceModel&{representativeColourwayCode:string;displayOrder:number;featured:boolean;name:LocalizedText;curated:boolean};
 const sourceModels=data as WTWSourceModel[];
 const sourceByCode=new Map(sourceModels.map(model=>[model.code,model]));
+const publicByCode=new Map(wtwPublication.map(item=>[item.code,item]));
 if(sourceModels.length!==wtwPresentation.length||sourceByCode.size!==wtwPresentation.length||new Set(wtwPresentation.map(item=>item.code)).size!==wtwPresentation.length){
  throw new Error('WTW presentation must cover each approved active model exactly once.');
 }
+if(publicByCode.size!==65||publicByCode.size!==sourceModels.length||wtwCuratedOrder.length!==24||new Set(wtwCuratedOrder).size!==24){
+ throw new Error('WTW public names and curated selection must cover 65 and 24 models exactly.');
+}
+for(const locale of ['ar','en','tr'] as const){
+ if(new Set(wtwPublication.map(item=>item[locale])).size!==65)throw new Error(`Duplicate WTW ${locale} display name.`);
+}
+const curatedCodes=new Set<string>(wtwCuratedOrder);
+if(wtwPublication.filter(item=>item.curated).length!==24||wtwPublication.some(item=>item.curated!==curatedCodes.has(item.code))){
+ throw new Error('WTW curated flags and order disagree.');
+}
 export const wtwModels:WTWModel[]=wtwPresentation.map(item=>{
  const source=sourceByCode.get(item.code);
+ const publicItem=publicByCode.get(item.code);
  const representative=source?.colourways.find(colour=>colour.code===item.representativeColourwayCode);
- if(!source||!representative)throw new Error(`Invalid WTW presentation selection: ${item.code}`);
- return {...source,...item,representativeImage:representative.image};
+ if(!source||!representative||!publicItem)throw new Error(`Invalid WTW presentation selection: ${item.code}`);
+ return {...source,...item,representativeImage:representative.image,name:{ar:publicItem.ar,en:publicItem.en,tr:publicItem.tr},curated:publicItem.curated};
+});
+const modelByCode=new Map(wtwModels.map(model=>[model.code,model]));
+export const wtwCurated=wtwCuratedOrder.map(code=>{
+ const model=modelByCode.get(code);
+ if(!model||!model.curated)throw new Error(`Invalid curated WTW model: ${code}`);
+ return model;
 });
 export const wtwFeatured=wtwFeaturedOrder.map(code=>{
  const model=wtwModels.find(item=>item.code===code);
@@ -32,9 +51,34 @@ export const wtwColours=[...new Set(wtwModels.flatMap(model=>model.colourways.ma
 export const wtwReserved:Record<string,string>={'wtw-005':'wtw-006','wtw-007':'wtw-004'};
 export function getWTWModel(slug:string){return wtwModels.find(model=>model.slug===slug);}
 export function wtwColourLabel(code:string){return code.split('-').at(-1)??code;}
+export function wtwColourCount(count:number,locale:Locale){
+ if(locale==='ar')return `${count} ${count===1?'لون':count===2?'لونان':'ألوان'}`;
+ if(locale==='tr')return `${count} Renk`;
+ return `${count} ${count===1?'Colour':'Colours'}`;
+}
 export function wtwSearch(model:WTWModel,query:string){
- const needle=query.toLocaleLowerCase().trim();
- return [model.code,model.category,...model.styles,...model.colourways.map(colour=>colour.code)].join(' ').toLocaleLowerCase().includes(needle);
+ const normalize=(value:string)=>value.normalize('NFKD').replace(/[\u0300-\u036f\u064b-\u065f]/g,'').toLocaleLowerCase();
+ const needle=normalize(query.trim());
+ return [model.code,model.name.ar,model.name.en,model.name.tr,model.category,...model.styles,...model.colourways.map(colour=>colour.code)].some(value=>normalize(value).includes(needle));
+}
+
+export function wtwRelatedModels(model:WTWModel){
+ const pool=wtwCurated.filter(item=>item.code!==model.code);
+ const dominant=(item:WTWModel)=>item.colourways.find(colour=>colour.code===item.representativeColourwayCode)?.colourFamily;
+ const chosen:WTWModel[]=[];
+ while(chosen.length<3){
+  const next=pool.filter(item=>!chosen.includes(item)).sort((a,b)=>{
+   const score=(item:WTWModel)=>
+    Number(item.category!==model.category)*3+
+    Number(dominant(item)!==dominant(model))*2+
+    Number(!chosen.some(other=>other.category===item.category))*3+
+    Math.min(Math.abs(item.displayOrder-model.displayOrder),12)/12;
+   return score(b)-score(a)||a.displayOrder-b.displayOrder;
+  })[0];
+  if(!next)break;
+  chosen.push(next);
+ }
+ return chosen;
 }
 
 const categories:Record<string,LocalizedText>={
@@ -54,4 +98,10 @@ export const wtwText={
  ar:{nav:'الموكيت',rugNav:'السجاد',hero:'موكيت للمشاريع\nوالمساحات التجارية.',intro:'مجموعة من التصاميم المختارة للمشاريع والمساحات الواسعة.',designs:'تصميم',previews:'معاينة لونية',search:'ابحث بكود التصميم أو المعاينة',all:'الكل',category:'التصنيف',style:'الطابع',colour:'عائلة اللون',clear:'مسح الفلاتر',more:'عرض المزيد',empty:'لا توجد تصاميم مطابقة.',view:'عرض التصميم',selected:'المعاينة المختارة',quantity:'الكمية التقديرية (م²)',quantityError:'أدخل كمية تقديرية أكبر من صفر.',add:'أضف إلى قائمة العرض',added:'أُضيف إلى قائمة العرض',quote:'طلب عرض سعر',full:'معاينة كاملة للتصميم',whatsapp:'استفسار عبر واتساب',back:'كل تصاميم الموكيت',line:'موكيت',colourPreviews:'معاينات لونية',noMoq:'تُناقش تفاصيل الطلب عند طلب العرض.',homeTitle:'موكيت للمشاريع والمساحات الواسعة.',homeBody:'مجموعة مختارة من تصاميم الموكيت للأعمال والمشاريع.',explore:'استكشف الموكيت',code:'كود التصميم (WTW)'},
  en:{nav:'Wall-to-Wall',rugNav:'Rugs',hero:'Wall-to-Wall Carpet\nfor Projects & Commercial Spaces.',intro:'A curated collection of designs for projects and large-scale interiors.',designs:'designs',previews:'colour/design previews',search:'Search design or preview code',all:'All',category:'Category',style:'Style',colour:'Colour family',clear:'Clear filters',more:'Load more',empty:'No matching designs.',view:'View design',selected:'Selected preview',quantity:'Estimated Quantity (m²)',quantityError:'Enter a positive estimated quantity.',add:'Add to Quote List',added:'Added to Quote List',quote:'Request a Quote',full:'Full Pattern Preview',whatsapp:'WhatsApp inquiry',back:'All Wall-to-Wall designs',line:'Wall-to-Wall',colourPreviews:'colour previews',noMoq:'Order details are discussed when quoting.',homeTitle:'Wall-to-Wall Carpet for Projects & Large Interiors.',homeBody:'A selected collection of carpet designs for business and project spaces.',explore:'Explore Wall-to-Wall',code:'Design Code (WTW)'},
  tr:{nav:'Duvardan Duvara',rugNav:'Halılar',hero:'Projeler ve Ticari Alanlar İçin\nDuvardan Duvara Halı.',intro:'Projeler ve geniş iç mekânlar için seçili tasarımlar.',designs:'tasarım',previews:'renk/tasarım ön izlemesi',search:'Tasarım veya ön izleme kodu ara',all:'Tümü',category:'Kategori',style:'Stil',colour:'Renk ailesi',clear:'Filtreleri temizle',more:'Daha fazla göster',empty:'Eşleşen tasarım yok.',view:'Tasarımı incele',selected:'Seçilen ön izleme',quantity:'Tahmini Miktar (m²)',quantityError:'Sıfırdan büyük bir tahmini miktar girin.',add:'Teklif listesine ekle',added:'Teklif listesine eklendi',quote:'Teklif iste',full:'Tam Desen Önizlemesi',whatsapp:'WhatsApp talebi',back:'Tüm duvardan duvara tasarımlar',line:'Duvardan Duvara Halı',colourPreviews:'renk ön izlemesi',noMoq:'Sipariş detayları teklif aşamasında görüşülür.',homeTitle:'Projeler ve Geniş Alanlar İçin Duvardan Duvara Halı.',homeBody:'İş ve proje alanları için seçili halı tasarımları.',explore:'Duvardan Duvara Halıyı Keşfet',code:'Tasarım Kodu (WTW)'},
+} satisfies Record<Locale,Record<string,string>>;
+
+export const wtwPublicText={
+ ar:{selectedCollection:'مجموعة مختارة',fullCollection:'جميع التصاميم',viewAll:'عرض جميع التصاميم',viewSelected:'العودة للمجموعة المختارة',searchResults:'نتائج البحث',searchPlaceholder:'ابحث بالاسم أو الكود',colours:'ألوان',related:'تصاميم أخرى',quoteHeading:'هل لديك مشروع قيد التخطيط؟',quoteAction:'اطلب عرض سعر'},
+ en:{selectedCollection:'Selected Collection',fullCollection:'All Designs',viewAll:'View All Designs',viewSelected:'Back to Selected Collection',searchResults:'Search Results',searchPlaceholder:'Search name or code',colours:'Colours',related:'Related Designs',quoteHeading:'Planning a project?',quoteAction:'Request a Quote'},
+ tr:{selectedCollection:'Seçili Koleksiyon',fullCollection:'Tüm Tasarımlar',viewAll:'Tüm Tasarımları Gör',viewSelected:'Seçili Koleksiyona Dön',searchResults:'Arama Sonuçları',searchPlaceholder:'İsim veya kod ara',colours:'Renk',related:'İlgili Tasarımlar',quoteHeading:'Bir proje mi planlıyorsunuz?',quoteAction:'Teklif İste'},
 } satisfies Record<Locale,Record<string,string>>;

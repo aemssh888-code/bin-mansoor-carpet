@@ -450,3 +450,33 @@ address{overflow-wrap:anywhere}
 @media(min-width:1024px){.wtw-hero{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.wtw-hero-art{height:39rem}.wtw-featured-grid{grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:repeat(2,17rem)}.wtw-featured-item:first-child{grid-column:1;grid-row:1/3}.wtw-featured-item:nth-child(2){grid-column:2;grid-row:1}.wtw-featured-item:nth-child(3){grid-column:3;grid-row:1}.wtw-featured-item:last-child{grid-column:2/4;grid-row:2}.wtw-featured-art{flex:1;height:auto}.wtw-toolbar{grid-template-columns:minmax(16rem,2fr) repeat(3,minmax(9rem,1fr))}.wtw-search{grid-column:auto}.wtw-detail{grid-template-columns:minmax(0,1.6fr) minmax(19rem,1fr)}.wtw-detail-info{position:sticky;top:7.5rem;align-self:start}.home-wtw{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.home-wtw-art{grid-template-rows:repeat(2,15rem)}}
 @media(min-width:1440px){.wtw-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:639px){.wtw-hero{padding-block:3rem 4rem}.wtw-hero-copy h1{font-size:clamp(2.7rem,11vw,4rem)}.wtw-hero-art{height:19rem}.wtw-featured{padding-block:3.5rem 0}.wtw-featured-heading{display:block}.wtw-featured-heading h2{margin-top:.7rem}.wtw-featured-grid{gap:1.8rem}.wtw-featured-art{height:14rem}.wtw-grid{gap:3rem}.wtw-card-art{height:17rem}.wtw-detail{gap:2rem;padding-bottom:4rem}.wtw-main-art{min-height:14rem}.wtw-main-art img{max-height:55svh}.wtw-full-art{min-height:14rem}.wtw-full-art img{max-height:65svh}.home-wtw{padding-block:5rem}.home-wtw-art{grid-template-rows:repeat(2,8rem)}}
+
+/* WTW editorial collection: the full archive remains available on request. */
+.wtw-catalog{padding-block:6rem 7rem;scroll-margin-top:6rem}
+.wtw-catalog-heading{display:flex;align-items:end;justify-content:space-between;gap:2rem;margin-bottom:2.3rem}
+.wtw-catalog-heading h2{font-size:clamp(2.2rem,4vw,4.4rem);font-weight:500;line-height:1.12;letter-spacing:-.045em}
+.wtw-toolbar{max-width:43rem;grid-template-columns:minmax(10rem,14rem) minmax(0,1fr);gap:.8rem;border:0;padding:0}
+.wtw-toolbar label{display:block}.wtw-search{grid-column:auto}
+.wtw-result-line{padding-block:1.25rem 2.5rem}
+.wtw-grid{gap:4.5rem 1.8rem}
+.wtw-card-art{height:20rem}
+.wtw-card-copy{display:block;border:0;padding-top:1.25rem}
+.wtw-card-copy h3{font-size:1.5rem;font-weight:500;line-height:1.35}
+.wtw-card-copy p{max-width:none;margin-top:.4rem;text-align:start;font-size:.78rem;color:rgba(29,28,25,.55)}
+.wtw-card-copy bdi{font:inherit;letter-spacing:.02em;color:inherit}
+.wtw-load{margin-top:4.5rem}
+.wtw-full-access{margin-top:5rem;padding-top:1.6rem;border-top:1px solid rgba(29,28,25,.15)}
+.wtw-quote-cta{border-top:1px solid rgba(29,28,25,.15);background:#efebe3;padding-block:5rem}
+.wtw-quote-cta .site-shell{display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.wtw-quote-cta h2{font-size:clamp(1.8rem,3vw,3.2rem);font-weight:500;line-height:1.2}
+.wtw-detail-code{margin-top:.55rem;font:.9rem ui-monospace,SFMono-Regular,Menlo,monospace;color:#8b724e}
+.wtw-related{padding-block:6rem 8rem}
+.wtw-related h2{font-size:clamp(1.8rem,3vw,3rem);font-weight:500;letter-spacing:-.04em}
+.wtw-related-grid{display:grid;gap:2.5rem;margin-top:2.5rem}
+.wtw-related-grid .wtw-card-art{height:16rem}
+.wtw-related-grid h3{margin-top:1rem;font-size:1.3rem;font-weight:500}
+.wtw-related-grid p{margin-top:.3rem;font-size:.78rem;color:rgba(29,28,25,.53)}
+.home-wtw-art span{font-family:inherit;font-size:.86rem;font-weight:500;line-height:1.25;padding:.4rem .65rem}
+@media(min-width:640px){.wtw-related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1024px){.wtw-grid,.wtw-related-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.wtw-toolbar{grid-template-columns:minmax(10rem,14rem) minmax(0,1fr)}}
+@media(max-width:639px){.wtw-catalog{padding-block:4.5rem 6rem}.wtw-catalog-heading{display:block;margin-bottom:2rem}.wtw-catalog-heading .btn-text{margin-top:1rem}.wtw-toolbar{grid-template-columns:1fr}.wtw-grid{gap:3.8rem}.wtw-card-art{height:18rem}.wtw-card-copy h3{font-size:1.45rem}.wtw-quote-cta{padding-block:4rem}.wtw-quote-cta .site-shell{align-items:start;flex-direction:column}.wtw-related{padding-block:4.5rem 6rem}.wtw-related-grid{gap:3rem}}
