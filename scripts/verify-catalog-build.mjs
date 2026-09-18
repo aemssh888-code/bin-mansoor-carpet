@@ -7,6 +7,8 @@ import path from 'node:path';
 // This is the approved release contract, not a second product dataset.
 const raw = await readFile('lib/catalog-data.json', 'utf8');
 const products = JSON.parse(raw);
+const wtwRaw=await readFile('lib/wtw-catalog-data.json','utf8');
+const wtwModels=JSON.parse(wtwRaw);
 const locales = ['ar', 'en', 'tr'];
 const output = path.resolve('dist/client');
 assert.equal(products.length, 43, 'Approved release must contain 43 models');
@@ -15,6 +17,13 @@ assert.equal(new Set(products.map(p => p.slug)).size, 43, 'Duplicate slugs');
 const colors = products.flatMap(p => p.colorways);
 assert.equal(colors.length, 81, 'Approved release must contain 81 colorways');
 assert.equal(new Set(colors.map(c => c.code)).size, 81, 'Duplicate colorway codes');
+assert.equal(wtwModels.length,65,'Approved WTW release must contain 65 active models');
+assert.equal(new Set(wtwModels.map(model=>model.code)).size,65,'Duplicate WTW codes');
+assert.ok(!wtwModels.some(model=>['WTW-005','WTW-007'].includes(model.code)),'Reserved WTW code exposed');
+assert.equal(wtwModels.find(model=>model.code==='WTW-065').category,'Geometric');
+const wtwPreviews=wtwModels.flatMap(model=>model.colourways);
+assert.equal(wtwPreviews.length,173,'Approved WTW release must contain 173 unique previews');
+assert.equal(new Set(wtwPreviews.map(preview=>preview.code)).size,173,'Duplicate WTW preview codes');
 const forbidden = /نموذج تجريبي|Version 1 prototype|ثلاث لغات تصميم|قدرة إنتاجية|prototip/i;
 let productUrls = 0;
 for (const p of products) {
@@ -44,6 +53,29 @@ for (const locale of locales) {
     }
   }
 }
+let wtwProductUrls=0;
+for(const model of wtwModels){
+ assert.equal(model.slug,model.code.toLowerCase());
+ assert.equal(model.minimumOrderQuantityM2,null,'WTW MOQ must remain unknown');
+ assert.ok(Object.values(model.technicalSpecs).every(value=>value===null),'Unverified WTW technical field');
+ assert.ok(model.colourways.some(preview=>preview.image===model.representativeImage));
+ for(const locale of locales){
+  const html=await readFile(path.join(output,locale,'wall-to-wall',`${model.slug}.html`),'utf8');
+  assert.ok(html.includes(model.code),`Wrong WTW product: ${locale}/${model.slug}`);
+  assert.ok(html.includes(`lang="${locale}"`)&&html.includes(`dir="${locale==='ar'?'rtl':'ltr'}"`));
+  await access(path.join(output,locale,'wall-to-wall',model.slug,'index.html'));
+  wtwProductUrls++;
+ }
+ for(const preview of model.colourways)await access(path.join(output,preview.image.slice(1)));
+}
+for(const locale of locales){
+ const html=await readFile(path.join(output,`${locale}/wall-to-wall.html`),'utf8');
+ assert.ok(html.includes('65')&&html.includes('173'));
+ await access(path.join(output,locale,'wall-to-wall','index.html'));
+ for(const retired of ['wtw-005','wtw-007']){
+  try{await access(path.join(output,locale,'wall-to-wall',retired,'index.html'));assert.fail(`Reserved WTW route exists: ${locale}/${retired}`);}catch(error){if(error.code!=='ENOENT')throw error;}
+ }
+}
 const robots=await readFile(path.join(output,'robots.txt'),'utf8');
 assert.match(robots,/User-agent: \*/);
 assert.match(robots,/Allow: \//);
@@ -52,8 +84,11 @@ const sitemap=await readFile(path.join(output,'sitemap.xml'),'utf8');
 const sitemapLocations=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
 const productLocations=sitemapLocations.filter(url=>/\/(ar|en|tr)\/products\/bmc-(mod|mcl|cls)-\d+$/.test(url));
 assert.equal(productLocations.length,129,'Sitemap must contain 129 localized product routes');
-assert.equal(sitemapLocations.length,locales.length*(5+products.length),'Sitemap route count mismatch');
+const wtwLocations=sitemapLocations.filter(url=>/\/(ar|en|tr)\/wall-to-wall\/wtw-\d+$/.test(url));
+assert.equal(wtwLocations.length,195,'Sitemap must contain 195 localized WTW product routes');
+assert.equal(sitemapLocations.length,locales.length*(6+products.length+wtwModels.length),'Sitemap route count mismatch');
 for(const p of products)for(const locale of locales)assert.ok(productLocations.includes(`https://bin-mansoor-carpet.vercel.app/${locale}/products/${p.slug}`),`Sitemap missing ${locale}/${p.slug}`);
+for(const m of wtwModels)for(const locale of locales)assert.ok(wtwLocations.includes(`https://bin-mansoor-carpet.vercel.app/${locale}/wall-to-wall/${m.slug}`),`Sitemap missing WTW ${locale}/${m.slug}`);
 const commit = process.env.VERCEL_GIT_COMMIT_SHA || execFileSync('git', ['rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
 const identity = {
   repository: 'aemssh888-code/bin-mansoor-carpet',
@@ -63,6 +98,9 @@ const identity = {
   models: products.length,
   colorways: colors.length,
   productUrls,
+  wallToWallModels:wtwModels.length,
+  wallToWallPreviews:wtwPreviews.length,
+  wallToWallProductUrls:wtwProductUrls,
   catalogSha256: createHash('sha256').update(raw).digest('hex'),
 };
 // Public deployment identity contains no original filesystem paths or private data.

@@ -25,7 +25,7 @@ export function ProductDetailExperience({product,locale}:{product:Product;locale
     if(typeof value==='object'&&value!==null){const localized=(value as Record<string,unknown>)[locale];return typeof localized==='string'?localized:'';}
     return typeof value==='boolean'?(value?t.yes:t.no):String(value);
   };
-  function addCurrent(){if(!quantityValid)return false;add({modelCode:product.binMansoorCode,name:product.name,colorCode:active.code,colorName:active.name,quantity});setAdded(true);window.setTimeout(()=>setAdded(false),1800);return true;}
+  function addCurrent(){if(!quantityValid)return false;add({productLine:'rug',modelCode:product.binMansoorCode,name:product.name,colorCode:active.code,colorName:active.name,quantity,image:active.image,route:`/${locale}/products/${product.slug}`});setAdded(true);window.setTimeout(()=>setAdded(false),1800);return true;}
   function quoteClick(event:MouseEvent<HTMLAnchorElement>){if(!addCurrent())event.preventDefault();}
   function whatsappClick(event:MouseEvent<HTMLAnchorElement>){if(!quantityValid)event.preventDefault();}
 

@@ -1,0 +1,2908 @@
+[
+  {
+    "code": "WTW-001",
+    "slug": "wtw-001",
+    "category": "Geometric",
+    "styles": [
+      "Modern",
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-001/wtw-001-c04.webp",
+    "colourways": [
+      {
+        "code": "WTW-001-C01",
+        "image": "/catalog/wall-to-wall/wtw-001/wtw-001-c01.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-001-C02",
+        "image": "/catalog/wall-to-wall/wtw-001/wtw-001-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-001-C03",
+        "image": "/catalog/wall-to-wall/wtw-001/wtw-001-c03.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-001-C04",
+        "image": "/catalog/wall-to-wall/wtw-001/wtw-001-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-001-C05",
+        "image": "/catalog/wall-to-wall/wtw-001/wtw-001-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-001-C06",
+        "image": "/catalog/wall-to-wall/wtw-001/wtw-001-c06.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-002",
+    "slug": "wtw-002",
+    "category": "Abstract",
+    "styles": [
+      "Modern",
+      "Textural"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-002/wtw-002-c06.webp",
+    "colourways": [
+      {
+        "code": "WTW-002-C01",
+        "image": "/catalog/wall-to-wall/wtw-002/wtw-002-c01.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-002-C02",
+        "image": "/catalog/wall-to-wall/wtw-002/wtw-002-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-002-C03",
+        "image": "/catalog/wall-to-wall/wtw-002/wtw-002-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-002-C04",
+        "image": "/catalog/wall-to-wall/wtw-002/wtw-002-c04.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-002-C05",
+        "image": "/catalog/wall-to-wall/wtw-002/wtw-002-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-002-C06",
+        "image": "/catalog/wall-to-wall/wtw-002/wtw-002-c06.webp",
+        "colourFamily": "Blue"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-003",
+    "slug": "wtw-003",
+    "category": "Linear",
+    "styles": [
+      "Modern",
+      "Textural"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-003/wtw-003-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-003-C01",
+        "image": "/catalog/wall-to-wall/wtw-003/wtw-003-c01.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-003-C02",
+        "image": "/catalog/wall-to-wall/wtw-003/wtw-003-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-003-C03",
+        "image": "/catalog/wall-to-wall/wtw-003/wtw-003-c03.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-003-C04",
+        "image": "/catalog/wall-to-wall/wtw-003/wtw-003-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-003-C05",
+        "image": "/catalog/wall-to-wall/wtw-003/wtw-003-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-003-C06",
+        "image": "/catalog/wall-to-wall/wtw-003/wtw-003-c06.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-004",
+    "slug": "wtw-004",
+    "category": "Geometric",
+    "styles": [
+      "Modern",
+      "Graphic"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-004/wtw-004-c05.webp",
+    "colourways": [
+      {
+        "code": "WTW-004-C01",
+        "image": "/catalog/wall-to-wall/wtw-004/wtw-004-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-004-C02",
+        "image": "/catalog/wall-to-wall/wtw-004/wtw-004-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-004-C03",
+        "image": "/catalog/wall-to-wall/wtw-004/wtw-004-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-004-C04",
+        "image": "/catalog/wall-to-wall/wtw-004/wtw-004-c04.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-004-C05",
+        "image": "/catalog/wall-to-wall/wtw-004/wtw-004-c05.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-004-C06",
+        "image": "/catalog/wall-to-wall/wtw-004/wtw-004-c06.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-006",
+    "slug": "wtw-006",
+    "category": "Organic",
+    "styles": [
+      "Modern",
+      "High Contrast"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-006/wtw-006-c04.webp",
+    "colourways": [
+      {
+        "code": "WTW-006-C01",
+        "image": "/catalog/wall-to-wall/wtw-006/wtw-006-c01.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-006-C02",
+        "image": "/catalog/wall-to-wall/wtw-006/wtw-006-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-006-C03",
+        "image": "/catalog/wall-to-wall/wtw-006/wtw-006-c03.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-006-C04",
+        "image": "/catalog/wall-to-wall/wtw-006/wtw-006-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-006-C05",
+        "image": "/catalog/wall-to-wall/wtw-006/wtw-006-c05.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-006-C06",
+        "image": "/catalog/wall-to-wall/wtw-006/wtw-006-c06.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-006-C07",
+        "image": "/catalog/wall-to-wall/wtw-006/wtw-006-c07.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-008",
+    "slug": "wtw-008",
+    "category": "Organic",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-008/wtw-008-c04.webp",
+    "colourways": [
+      {
+        "code": "WTW-008-C01",
+        "image": "/catalog/wall-to-wall/wtw-008/wtw-008-c01.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-008-C02",
+        "image": "/catalog/wall-to-wall/wtw-008/wtw-008-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-008-C03",
+        "image": "/catalog/wall-to-wall/wtw-008/wtw-008-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-008-C04",
+        "image": "/catalog/wall-to-wall/wtw-008/wtw-008-c04.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-008-C05",
+        "image": "/catalog/wall-to-wall/wtw-008/wtw-008-c05.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-008-C06",
+        "image": "/catalog/wall-to-wall/wtw-008/wtw-008-c06.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-009",
+    "slug": "wtw-009",
+    "category": "Textural",
+    "styles": [
+      "Modern",
+      "Distressed"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-009/wtw-009-c02.webp",
+    "colourways": [
+      {
+        "code": "WTW-009-C01",
+        "image": "/catalog/wall-to-wall/wtw-009/wtw-009-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-009-C02",
+        "image": "/catalog/wall-to-wall/wtw-009/wtw-009-c02.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-009-C03",
+        "image": "/catalog/wall-to-wall/wtw-009/wtw-009-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-009-C04",
+        "image": "/catalog/wall-to-wall/wtw-009/wtw-009-c04.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-009-C05",
+        "image": "/catalog/wall-to-wall/wtw-009/wtw-009-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-009-C06",
+        "image": "/catalog/wall-to-wall/wtw-009/wtw-009-c06.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-010",
+    "slug": "wtw-010",
+    "category": "Ornamental",
+    "styles": [
+      "Modern Classic",
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-010/wtw-010-c04.webp",
+    "colourways": [
+      {
+        "code": "WTW-010-C01",
+        "image": "/catalog/wall-to-wall/wtw-010/wtw-010-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-010-C02",
+        "image": "/catalog/wall-to-wall/wtw-010/wtw-010-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-010-C03",
+        "image": "/catalog/wall-to-wall/wtw-010/wtw-010-c03.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-010-C04",
+        "image": "/catalog/wall-to-wall/wtw-010/wtw-010-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-010-C05",
+        "image": "/catalog/wall-to-wall/wtw-010/wtw-010-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-010-C06",
+        "image": "/catalog/wall-to-wall/wtw-010/wtw-010-c06.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-011",
+    "slug": "wtw-011",
+    "category": "Geometric",
+    "styles": [
+      "Modern",
+      "Graphic"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-011/wtw-011-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-011-C01",
+        "image": "/catalog/wall-to-wall/wtw-011/wtw-011-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-011-C02",
+        "image": "/catalog/wall-to-wall/wtw-011/wtw-011-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-011-C03",
+        "image": "/catalog/wall-to-wall/wtw-011/wtw-011-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-011-C04",
+        "image": "/catalog/wall-to-wall/wtw-011/wtw-011-c04.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-011-C05",
+        "image": "/catalog/wall-to-wall/wtw-011/wtw-011-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-011-C06",
+        "image": "/catalog/wall-to-wall/wtw-011/wtw-011-c06.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-012",
+    "slug": "wtw-012",
+    "category": "Geometric",
+    "styles": [
+      "Modern",
+      "Linear"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-012/wtw-012-c04.webp",
+    "colourways": [
+      {
+        "code": "WTW-012-C01",
+        "image": "/catalog/wall-to-wall/wtw-012/wtw-012-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-012-C02",
+        "image": "/catalog/wall-to-wall/wtw-012/wtw-012-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-012-C03",
+        "image": "/catalog/wall-to-wall/wtw-012/wtw-012-c03.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-012-C04",
+        "image": "/catalog/wall-to-wall/wtw-012/wtw-012-c04.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-012-C05",
+        "image": "/catalog/wall-to-wall/wtw-012/wtw-012-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-012-C06",
+        "image": "/catalog/wall-to-wall/wtw-012/wtw-012-c06.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-013",
+    "slug": "wtw-013",
+    "category": "Linear",
+    "styles": [
+      "Modern",
+      "Textural"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-013/wtw-013-c03.webp",
+    "colourways": [
+      {
+        "code": "WTW-013-C01",
+        "image": "/catalog/wall-to-wall/wtw-013/wtw-013-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-013-C02",
+        "image": "/catalog/wall-to-wall/wtw-013/wtw-013-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-013-C03",
+        "image": "/catalog/wall-to-wall/wtw-013/wtw-013-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-013-C04",
+        "image": "/catalog/wall-to-wall/wtw-013/wtw-013-c04.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-013-C05",
+        "image": "/catalog/wall-to-wall/wtw-013/wtw-013-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-013-C06",
+        "image": "/catalog/wall-to-wall/wtw-013/wtw-013-c06.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-014",
+    "slug": "wtw-014",
+    "category": "Linear",
+    "styles": [
+      "Modern",
+      "Soft"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-014/wtw-014-c02.webp",
+    "colourways": [
+      {
+        "code": "WTW-014-C01",
+        "image": "/catalog/wall-to-wall/wtw-014/wtw-014-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-014-C02",
+        "image": "/catalog/wall-to-wall/wtw-014/wtw-014-c02.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-015",
+    "slug": "wtw-015",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-015/wtw-015-c03.webp",
+    "colourways": [
+      {
+        "code": "WTW-015-C01",
+        "image": "/catalog/wall-to-wall/wtw-015/wtw-015-c01.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-015-C02",
+        "image": "/catalog/wall-to-wall/wtw-015/wtw-015-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-015-C03",
+        "image": "/catalog/wall-to-wall/wtw-015/wtw-015-c03.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-015-C04",
+        "image": "/catalog/wall-to-wall/wtw-015/wtw-015-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-015-C05",
+        "image": "/catalog/wall-to-wall/wtw-015/wtw-015-c05.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-016",
+    "slug": "wtw-016",
+    "category": "Geometric",
+    "styles": [
+      "Modern",
+      "Graphic"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-016/wtw-016-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-016-C01",
+        "image": "/catalog/wall-to-wall/wtw-016/wtw-016-c01.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-016-C02",
+        "image": "/catalog/wall-to-wall/wtw-016/wtw-016-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-016-C03",
+        "image": "/catalog/wall-to-wall/wtw-016/wtw-016-c03.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-016-C04",
+        "image": "/catalog/wall-to-wall/wtw-016/wtw-016-c04.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-016-C05",
+        "image": "/catalog/wall-to-wall/wtw-016/wtw-016-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-016-C06",
+        "image": "/catalog/wall-to-wall/wtw-016/wtw-016-c06.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-017",
+    "slug": "wtw-017",
+    "category": "Abstract",
+    "styles": [
+      "Modern",
+      "Textural"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-017/wtw-017-c05.webp",
+    "colourways": [
+      {
+        "code": "WTW-017-C01",
+        "image": "/catalog/wall-to-wall/wtw-017/wtw-017-c01.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-017-C02",
+        "image": "/catalog/wall-to-wall/wtw-017/wtw-017-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-017-C03",
+        "image": "/catalog/wall-to-wall/wtw-017/wtw-017-c03.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-017-C04",
+        "image": "/catalog/wall-to-wall/wtw-017/wtw-017-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-017-C05",
+        "image": "/catalog/wall-to-wall/wtw-017/wtw-017-c05.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-017-C06",
+        "image": "/catalog/wall-to-wall/wtw-017/wtw-017-c06.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-018",
+    "slug": "wtw-018",
+    "category": "Geometric",
+    "styles": [
+      "Modern",
+      "Textural"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-018/wtw-018-c05.webp",
+    "colourways": [
+      {
+        "code": "WTW-018-C01",
+        "image": "/catalog/wall-to-wall/wtw-018/wtw-018-c01.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-018-C02",
+        "image": "/catalog/wall-to-wall/wtw-018/wtw-018-c02.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-018-C03",
+        "image": "/catalog/wall-to-wall/wtw-018/wtw-018-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-018-C04",
+        "image": "/catalog/wall-to-wall/wtw-018/wtw-018-c04.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-018-C05",
+        "image": "/catalog/wall-to-wall/wtw-018/wtw-018-c05.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-018-C06",
+        "image": "/catalog/wall-to-wall/wtw-018/wtw-018-c06.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-019",
+    "slug": "wtw-019",
+    "category": "Geometric",
+    "styles": [
+      "Modern",
+      "Graphic"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-019/wtw-019-c02.webp",
+    "colourways": [
+      {
+        "code": "WTW-019-C01",
+        "image": "/catalog/wall-to-wall/wtw-019/wtw-019-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-019-C02",
+        "image": "/catalog/wall-to-wall/wtw-019/wtw-019-c02.webp",
+        "colourFamily": "Blue"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-020",
+    "slug": "wtw-020",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-020/wtw-020-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-020-C01",
+        "image": "/catalog/wall-to-wall/wtw-020/wtw-020-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-021",
+    "slug": "wtw-021",
+    "category": "Linear",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "LOW",
+    "representativeImage": "/catalog/wall-to-wall/wtw-021/wtw-021-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-021-C01",
+        "image": "/catalog/wall-to-wall/wtw-021/wtw-021-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-022",
+    "slug": "wtw-022",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "LOW",
+    "representativeImage": "/catalog/wall-to-wall/wtw-022/wtw-022-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-022-C01",
+        "image": "/catalog/wall-to-wall/wtw-022/wtw-022-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-023",
+    "slug": "wtw-023",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-023/wtw-023-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-023-C01",
+        "image": "/catalog/wall-to-wall/wtw-023/wtw-023-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-024",
+    "slug": "wtw-024",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-024/wtw-024-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-024-C01",
+        "image": "/catalog/wall-to-wall/wtw-024/wtw-024-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-025",
+    "slug": "wtw-025",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-025/wtw-025-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-025-C01",
+        "image": "/catalog/wall-to-wall/wtw-025/wtw-025-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-026",
+    "slug": "wtw-026",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-026/wtw-026-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-026-C01",
+        "image": "/catalog/wall-to-wall/wtw-026/wtw-026-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-027",
+    "slug": "wtw-027",
+    "category": "Linear",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-027/wtw-027-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-027-C01",
+        "image": "/catalog/wall-to-wall/wtw-027/wtw-027-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-028",
+    "slug": "wtw-028",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-028/wtw-028-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-028-C01",
+        "image": "/catalog/wall-to-wall/wtw-028/wtw-028-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-029",
+    "slug": "wtw-029",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-029/wtw-029-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-029-C01",
+        "image": "/catalog/wall-to-wall/wtw-029/wtw-029-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-030",
+    "slug": "wtw-030",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-030/wtw-030-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-030-C01",
+        "image": "/catalog/wall-to-wall/wtw-030/wtw-030-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-031",
+    "slug": "wtw-031",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-031/wtw-031-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-031-C01",
+        "image": "/catalog/wall-to-wall/wtw-031/wtw-031-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-032",
+    "slug": "wtw-032",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-032/wtw-032-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-032-C01",
+        "image": "/catalog/wall-to-wall/wtw-032/wtw-032-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-033",
+    "slug": "wtw-033",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "LOW",
+    "representativeImage": "/catalog/wall-to-wall/wtw-033/wtw-033-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-033-C01",
+        "image": "/catalog/wall-to-wall/wtw-033/wtw-033-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-034",
+    "slug": "wtw-034",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "LOW",
+    "representativeImage": "/catalog/wall-to-wall/wtw-034/wtw-034-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-034-C01",
+        "image": "/catalog/wall-to-wall/wtw-034/wtw-034-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-035",
+    "slug": "wtw-035",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-035/wtw-035-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-035-C01",
+        "image": "/catalog/wall-to-wall/wtw-035/wtw-035-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-036",
+    "slug": "wtw-036",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-036/wtw-036-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-036-C01",
+        "image": "/catalog/wall-to-wall/wtw-036/wtw-036-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-037",
+    "slug": "wtw-037",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-037/wtw-037-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-037-C01",
+        "image": "/catalog/wall-to-wall/wtw-037/wtw-037-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-038",
+    "slug": "wtw-038",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-038/wtw-038-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-038-C01",
+        "image": "/catalog/wall-to-wall/wtw-038/wtw-038-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-039",
+    "slug": "wtw-039",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-039/wtw-039-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-039-C01",
+        "image": "/catalog/wall-to-wall/wtw-039/wtw-039-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-040",
+    "slug": "wtw-040",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-040/wtw-040-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-040-C01",
+        "image": "/catalog/wall-to-wall/wtw-040/wtw-040-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-041",
+    "slug": "wtw-041",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-041/wtw-041-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-041-C01",
+        "image": "/catalog/wall-to-wall/wtw-041/wtw-041-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-042",
+    "slug": "wtw-042",
+    "category": "Abstract",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-042/wtw-042-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-042-C01",
+        "image": "/catalog/wall-to-wall/wtw-042/wtw-042-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-043",
+    "slug": "wtw-043",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-043/wtw-043-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-043-C01",
+        "image": "/catalog/wall-to-wall/wtw-043/wtw-043-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-044",
+    "slug": "wtw-044",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-044/wtw-044-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-044-C01",
+        "image": "/catalog/wall-to-wall/wtw-044/wtw-044-c01.webp",
+        "colourFamily": "Gold"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-045",
+    "slug": "wtw-045",
+    "category": "Botanical",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-045/wtw-045-c02.webp",
+    "colourways": [
+      {
+        "code": "WTW-045-C01",
+        "image": "/catalog/wall-to-wall/wtw-045/wtw-045-c01.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-045-C02",
+        "image": "/catalog/wall-to-wall/wtw-045/wtw-045-c02.webp",
+        "colourFamily": "Gold"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-046",
+    "slug": "wtw-046",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-046/wtw-046-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-046-C01",
+        "image": "/catalog/wall-to-wall/wtw-046/wtw-046-c01.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-047",
+    "slug": "wtw-047",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-047/wtw-047-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-047-C01",
+        "image": "/catalog/wall-to-wall/wtw-047/wtw-047-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-048",
+    "slug": "wtw-048",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-048/wtw-048-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-048-C01",
+        "image": "/catalog/wall-to-wall/wtw-048/wtw-048-c01.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-049",
+    "slug": "wtw-049",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-049/wtw-049-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-049-C01",
+        "image": "/catalog/wall-to-wall/wtw-049/wtw-049-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-050",
+    "slug": "wtw-050",
+    "category": "Organic",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-050/wtw-050-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-050-C01",
+        "image": "/catalog/wall-to-wall/wtw-050/wtw-050-c01.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-051",
+    "slug": "wtw-051",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-051/wtw-051-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-051-C01",
+        "image": "/catalog/wall-to-wall/wtw-051/wtw-051-c01.webp",
+        "colourFamily": "Gold"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-052",
+    "slug": "wtw-052",
+    "category": "Geometric",
+    "styles": [
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-052/wtw-052-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-052-C01",
+        "image": "/catalog/wall-to-wall/wtw-052/wtw-052-c01.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-053",
+    "slug": "wtw-053",
+    "category": "Textural",
+    "styles": [
+      "Modern",
+      "Linear"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-053/wtw-053-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-053-C01",
+        "image": "/catalog/wall-to-wall/wtw-053/wtw-053-c01.webp",
+        "colourFamily": "Beige"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-054",
+    "slug": "wtw-054",
+    "category": "Organic",
+    "styles": [
+      "Modern",
+      "High Contrast"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-054/wtw-054-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-054-C01",
+        "image": "/catalog/wall-to-wall/wtw-054/wtw-054-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-054-C02",
+        "image": "/catalog/wall-to-wall/wtw-054/wtw-054-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-054-C03",
+        "image": "/catalog/wall-to-wall/wtw-054/wtw-054-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-054-C04",
+        "image": "/catalog/wall-to-wall/wtw-054/wtw-054-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-054-C05",
+        "image": "/catalog/wall-to-wall/wtw-054/wtw-054-c05.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-054-C06",
+        "image": "/catalog/wall-to-wall/wtw-054/wtw-054-c06.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-054-C07",
+        "image": "/catalog/wall-to-wall/wtw-054/wtw-054-c07.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-055",
+    "slug": "wtw-055",
+    "category": "Organic",
+    "styles": [
+      "Graphic"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-055/wtw-055-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-055-C01",
+        "image": "/catalog/wall-to-wall/wtw-055/wtw-055-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-056",
+    "slug": "wtw-056",
+    "category": "Organic",
+    "styles": [
+      "Modern",
+      "Linear"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-056/wtw-056-c02.webp",
+    "colourways": [
+      {
+        "code": "WTW-056-C01",
+        "image": "/catalog/wall-to-wall/wtw-056/wtw-056-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-056-C02",
+        "image": "/catalog/wall-to-wall/wtw-056/wtw-056-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-056-C03",
+        "image": "/catalog/wall-to-wall/wtw-056/wtw-056-c03.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-056-C04",
+        "image": "/catalog/wall-to-wall/wtw-056/wtw-056-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-056-C05",
+        "image": "/catalog/wall-to-wall/wtw-056/wtw-056-c05.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-056-C06",
+        "image": "/catalog/wall-to-wall/wtw-056/wtw-056-c06.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-056-C07",
+        "image": "/catalog/wall-to-wall/wtw-056/wtw-056-c07.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-057",
+    "slug": "wtw-057",
+    "category": "Abstract",
+    "styles": [
+      "Modern",
+      "Textural"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-057/wtw-057-c02.webp",
+    "colourways": [
+      {
+        "code": "WTW-057-C01",
+        "image": "/catalog/wall-to-wall/wtw-057/wtw-057-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-057-C02",
+        "image": "/catalog/wall-to-wall/wtw-057/wtw-057-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-057-C03",
+        "image": "/catalog/wall-to-wall/wtw-057/wtw-057-c03.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-057-C04",
+        "image": "/catalog/wall-to-wall/wtw-057/wtw-057-c04.webp",
+        "colourFamily": "Blue"
+      },
+      {
+        "code": "WTW-057-C05",
+        "image": "/catalog/wall-to-wall/wtw-057/wtw-057-c05.webp",
+        "colourFamily": "Beige"
+      },
+      {
+        "code": "WTW-057-C06",
+        "image": "/catalog/wall-to-wall/wtw-057/wtw-057-c06.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-057-C07",
+        "image": "/catalog/wall-to-wall/wtw-057/wtw-057-c07.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-058",
+    "slug": "wtw-058",
+    "category": "Linear",
+    "styles": [
+      "Minimal",
+      "Soft"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-058/wtw-058-c02.webp",
+    "colourways": [
+      {
+        "code": "WTW-058-C01",
+        "image": "/catalog/wall-to-wall/wtw-058/wtw-058-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-058-C02",
+        "image": "/catalog/wall-to-wall/wtw-058/wtw-058-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-058-C03",
+        "image": "/catalog/wall-to-wall/wtw-058/wtw-058-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-058-C04",
+        "image": "/catalog/wall-to-wall/wtw-058/wtw-058-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-058-C05",
+        "image": "/catalog/wall-to-wall/wtw-058/wtw-058-c05.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-058-C06",
+        "image": "/catalog/wall-to-wall/wtw-058/wtw-058-c06.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-058-C07",
+        "image": "/catalog/wall-to-wall/wtw-058/wtw-058-c07.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-059",
+    "slug": "wtw-059",
+    "category": "Organic",
+    "styles": [
+      "Modern",
+      "Linear"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-059/wtw-059-c02.webp",
+    "colourways": [
+      {
+        "code": "WTW-059-C01",
+        "image": "/catalog/wall-to-wall/wtw-059/wtw-059-c01.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-059-C02",
+        "image": "/catalog/wall-to-wall/wtw-059/wtw-059-c02.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-059-C03",
+        "image": "/catalog/wall-to-wall/wtw-059/wtw-059-c03.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-059-C04",
+        "image": "/catalog/wall-to-wall/wtw-059/wtw-059-c04.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-059-C05",
+        "image": "/catalog/wall-to-wall/wtw-059/wtw-059-c05.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-059-C06",
+        "image": "/catalog/wall-to-wall/wtw-059/wtw-059-c06.webp",
+        "colourFamily": "Grey"
+      },
+      {
+        "code": "WTW-059-C07",
+        "image": "/catalog/wall-to-wall/wtw-059/wtw-059-c07.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-060",
+    "slug": "wtw-060",
+    "category": "Geometric",
+    "styles": [
+      "Minimal",
+      "Repeating Pattern"
+    ],
+    "confidence": "HIGH",
+    "representativeImage": "/catalog/wall-to-wall/wtw-060/wtw-060-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-060-C01",
+        "image": "/catalog/wall-to-wall/wtw-060/wtw-060-c01.webp",
+        "colourFamily": "Grey"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-061",
+    "slug": "wtw-061",
+    "category": "Textural",
+    "styles": [
+      "Soft"
+    ],
+    "confidence": "LOW",
+    "representativeImage": "/catalog/wall-to-wall/wtw-061/wtw-061-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-061-C01",
+        "image": "/catalog/wall-to-wall/wtw-061/wtw-061-c01.webp",
+        "colourFamily": "Gold"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-062",
+    "slug": "wtw-062",
+    "category": "Geometric",
+    "styles": [
+      "Minimal",
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-062/wtw-062-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-062-C01",
+        "image": "/catalog/wall-to-wall/wtw-062/wtw-062-c01.webp",
+        "colourFamily": "Brown"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-063",
+    "slug": "wtw-063",
+    "category": "Geometric",
+    "styles": [
+      "Minimal",
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-063/wtw-063-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-063-C01",
+        "image": "/catalog/wall-to-wall/wtw-063/wtw-063-c01.webp",
+        "colourFamily": "Gold"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-064",
+    "slug": "wtw-064",
+    "category": "Geometric",
+    "styles": [
+      "Minimal",
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-064/wtw-064-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-064-C01",
+        "image": "/catalog/wall-to-wall/wtw-064/wtw-064-c01.webp",
+        "colourFamily": "Brown"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-065",
+    "slug": "wtw-065",
+    "category": "Geometric",
+    "styles": [
+      "Soft"
+    ],
+    "confidence": "LOW",
+    "representativeImage": "/catalog/wall-to-wall/wtw-065/wtw-065-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-065-C01",
+        "image": "/catalog/wall-to-wall/wtw-065/wtw-065-c01.webp",
+        "colourFamily": "Gold"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-066",
+    "slug": "wtw-066",
+    "category": "Geometric",
+    "styles": [
+      "Minimal",
+      "Repeating Pattern"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-066/wtw-066-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-066-C01",
+        "image": "/catalog/wall-to-wall/wtw-066/wtw-066-c01.webp",
+        "colourFamily": "Gold"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  },
+  {
+    "code": "WTW-067",
+    "slug": "wtw-067",
+    "category": "Linear",
+    "styles": [
+      "Minimal"
+    ],
+    "confidence": "MEDIUM",
+    "representativeImage": "/catalog/wall-to-wall/wtw-067/wtw-067-c01.webp",
+    "colourways": [
+      {
+        "code": "WTW-067-C01",
+        "image": "/catalog/wall-to-wall/wtw-067/wtw-067-c01.webp",
+        "colourFamily": "Gold"
+      }
+    ],
+    "technicalSpecs": {
+      "material": null,
+      "yarnType": null,
+      "pileHeight": null,
+      "totalHeight": null,
+      "pileWeight": null,
+      "totalWeight": null,
+      "density": null,
+      "backing": null,
+      "rollWidth": null,
+      "construction": null,
+      "fireRating": null,
+      "commercialClass": null,
+      "productionMethod": null,
+      "countryOfOrigin": null,
+      "technicalPdf": null,
+      "certificateIds": null
+    },
+    "minimumOrderQuantityM2": null
+  }
+]

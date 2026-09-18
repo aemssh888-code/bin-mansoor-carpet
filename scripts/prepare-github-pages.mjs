@@ -38,7 +38,8 @@ for (const source of await collectHtmlFiles(outputDirectory)) {
 }
 
 const products=JSON.parse(await readFile('lib/catalog-data.json','utf8'));
-const routes=['','/products','/about','/contact','/quote',...products.map(product=>`/products/${product.slug}`)];
+const wtwModels=JSON.parse(await readFile('lib/wtw-catalog-data.json','utf8'));
+const routes=['','/products','/wall-to-wall','/about','/contact','/quote',...products.map(product=>`/products/${product.slug}`),...wtwModels.map(model=>`/wall-to-wall/${model.slug}`)];
 const escapeXml=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&apos;');
 const sitemapEntries=locales.flatMap(locale=>routes.map(route=>{
   const url=`${siteUrl}/${locale}${route}`;

@@ -8,6 +8,7 @@ import {catalogText} from '@/lib/catalog-i18n';
 import {useQuoteList} from '@/lib/quote-list';
 import {saveLanguagePreference} from '@/lib/language-preference';
 import {jointBrand} from '@/lib/business';
+import {wtwText} from '@/lib/wtw';
 import {
   Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger,
 } from '@/components/ui/sheet';
@@ -27,7 +28,8 @@ export function SiteHeader({
   const resolvedPath = currentPath ?? pathname.replace(new RegExp(`^/${locale}`), '');
   const items = [
     { label: nav.home, href: `/${locale}`, path: '' },
-    { label: nav.products, href: `/${locale}/products`, path: '/products' },
+    { label: wtwText[locale].rugNav, href: `/${locale}/products`, path: '/products' },
+    { label: wtwText[locale].nav, href: `/${locale}/wall-to-wall`, path: '/wall-to-wall' },
     { label: nav.about, href: `/${locale}/about`, path: '/about' },
     { label: nav.contact, href: `/${locale}/contact`, path: '/contact' },
     { label: catalogText[locale].quote, href: `/${locale}/quote`, path: '/quote' },

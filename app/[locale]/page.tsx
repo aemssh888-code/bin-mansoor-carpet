@@ -7,6 +7,7 @@ import {catalogText} from '@/lib/catalog-i18n';
 import {pageMetadata} from '@/lib/seo';
 import {homeHeroCampaign,sitePresentation} from '@/lib/presentation';
 import {HomeHeroCampaign} from '@/components/home-hero-campaign';
+import {wtwModels,wtwText} from '@/lib/wtw';
 
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}) {
   const {locale}=await params;
@@ -30,6 +31,8 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
   const editorial=byCode(sitePresentation.editorialProductCode);
   const selected=sitePresentation.homepageProductCodes.map(byCode);
   const collectionProducts=categories.map(category=>({category,product:byCode(sitePresentation.collectionProductCodes[category])}));
+  const wtwFeatured=['Geometric','Organic','Textural'].map(category=>wtwModels.find(model=>model.category===category&&model.confidence==='HIGH')).filter((model):model is (typeof wtwModels)[number]=>Boolean(model));
+  const wtwCopy=wtwText[locale];
 
   return <main id="main-content">
     <section className="home-hero site-shell">
@@ -64,6 +67,8 @@ export default async function HomePage({params}:{params:Promise<{locale:string}>
         </article>)}
       </div>
     </section>
+
+    <section className="home-wtw site-shell"><div className="home-wtw-heading"><p className="eyebrow">{wtwCopy.line}</p><h2 className="editorial-heading">{wtwCopy.homeTitle}</h2><p>{wtwCopy.homeBody}</p><a href={`/${locale}/wall-to-wall`} className="btn-text">{wtwCopy.explore}<ArrowUpRight className="size-4"/></a></div><div className="home-wtw-art">{wtwFeatured.map((model,index)=><a key={model.code} href={`/${locale}/wall-to-wall/${model.slug}`} className={`home-wtw-art-${index+1}`}><img src={model.representativeImage} alt={`${model.code} ${wtwCopy.view}`} loading="lazy" width="1200" height="800"/><span>{model.code}</span></a>)}</div></section>
 
     <section className="editorial-feature">
       <div className="site-shell editorial-feature-grid">
