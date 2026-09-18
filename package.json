@@ -11,6 +11,7 @@
     "pages:prepare": "node scripts/prepare-github-pages.mjs && node scripts/verify-catalog-build.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
+    "test:quote": "node --experimental-strip-types --test tests/wtw-quote.test.mjs",
     "format": "oxfmt"
   },
   "dependencies": {

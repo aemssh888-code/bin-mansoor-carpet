@@ -4,6 +4,7 @@ import {useState,useSyncExternalStore} from 'react';
 import type {Locale} from '@/lib/products';
 import {business} from '@/lib/business';
 import {isValidQuoteQuantity,useQuoteList} from '@/lib/quote-list';
+import {serializeWTWLine} from '@/lib/quote-logic';
 import {wtwCategory,wtwColourLabel,wtwPublicText,wtwRelatedModels,wtwText,type WTWModel} from '@/lib/wtw';
 
 export function WTWDetail({locale,model}:{locale:Locale;model:WTWModel}){
@@ -18,7 +19,7 @@ export function WTWDetail({locale,model}:{locale:Locale;model:WTWModel}){
  const [added,setAdded]=useState(false);
  const {add}=useQuoteList();
  const valid=isValidQuoteQuantity(quantity,'wall-to-wall');
- const message=`${t.line}\n${model.code}\n${selected.code}\n${t.quantity}: ${quantity} m²`;
+ const message=serializeWTWLine(locale,{productLine:'wall-to-wall',modelCode:model.code,name:model.name,colorCode:selected.code,colorName:{ar:wtwColourLabel(selected.code),en:wtwColourLabel(selected.code),tr:wtwColourLabel(selected.code)},quantity,image:selected.image});
  const whatsapp=`https://wa.me/${business.phoneHref.replace('+','')}?text=${encodeURIComponent(message)}`;
  function addCurrent(){if(!valid)return;add({productLine:'wall-to-wall',modelCode:model.code,name:model.name,colorCode:selected.code,colorName:{ar:wtwColourLabel(selected.code),en:wtwColourLabel(selected.code),tr:wtwColourLabel(selected.code)},quantity,image:selected.image,route:`/${locale}/wall-to-wall/${model.slug}`});setAdded(true);window.setTimeout(()=>setAdded(false),2000);}
  return <>

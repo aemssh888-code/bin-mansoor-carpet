@@ -2,20 +2,18 @@
 
 import {useCallback,useMemo,useSyncExternalStore} from 'react';
 import {MIN_ORDER_M2_PER_ITEM} from './business';
-import type {LocalizedText} from './products';
+import {wtwModels} from './wtw';
+import {normalizeQuoteItems,quoteItemKey,updateQuoteItem,upsertQuoteItem,validQuoteQuantity,type ProductLine,type QuoteItem} from './quote-logic';
 
-export type ProductLine='rug'|'wall-to-wall';
-export type QuoteItem={productLine:ProductLine;modelCode:string;name:LocalizedText;colorCode:string;colorName:LocalizedText;quantity:string;image?:string;route?:string};
+export type {ProductLine,QuoteItem} from './quote-logic';
+export {quoteItemKey} from './quote-logic';
 const KEY='bin-mansoor-quote-list';
 const EVENT='bin-mansoor-quote-list-change';
 let memory='[]';
 let migratedLegacyStorage=false;
 
 export function isValidQuoteQuantity(value:string|number,productLine:ProductLine='rug'){
- const text=String(value).trim();
- if(text==='')return false;
- const quantity=Number(text);
- return Number.isFinite(quantity)&&(productLine==='rug'?quantity>=MIN_ORDER_M2_PER_ITEM:quantity>0);
+ return validQuoteQuantity(value,productLine,MIN_ORDER_M2_PER_ITEM);
 }
 
 export function normalizeQuoteQuantity(value:unknown,productLine:ProductLine='rug'){
@@ -27,10 +25,7 @@ function stored(){
 }
 
 function parse(raw:string):QuoteItem[]{
- try{
-  const value=JSON.parse(raw);
-  return Array.isArray(value)?value.filter(item=>item&&typeof item.modelCode==='string').map(item=>({...item,productLine:item.productLine==='wall-to-wall'?'wall-to-wall':'rug',quantity:typeof item.quantity==='string'?item.quantity:String(item.quantity??'')})):[];
- }catch{return [];}
+ return normalizeQuoteItems(raw,wtwModels);
 }
 
 function read(){return parse(stored());}
@@ -52,13 +47,10 @@ export function useQuoteList(){
  const items=useMemo(()=>parse(raw),[raw]);
 
  const add=useCallback((item:QuoteItem)=>{
-  const current=read();
   const safeItem={...item,quantity:normalizeQuoteQuantity(item.quantity,item.productLine)};
-  const existing=current.findIndex(value=>value.modelCode===safeItem.modelCode);
-  if(existing>=0)current[existing]={...current[existing],...safeItem};else current.push(safeItem);
-  write(current);
+  write(upsertQuoteItem(read(),safeItem));
  },[]);
- const remove=useCallback((modelCode:string)=>write(read().filter(item=>item.modelCode!==modelCode)),[]);
- const update=useCallback((modelCode:string,patch:Partial<QuoteItem>)=>write(read().map(item=>item.modelCode===modelCode?{...item,...patch}:item)),[]);
+ const remove=useCallback((key:string)=>write(read().filter(item=>quoteItemKey(item)!==key)),[]);
+ const update=useCallback((key:string,patch:Partial<QuoteItem>)=>write(updateQuoteItem(read(),key,patch)),[]);
  return {items,add,remove,update};
 }

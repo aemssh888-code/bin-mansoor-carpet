@@ -4,7 +4,8 @@ import {useMemo,useState,type SyntheticEvent} from 'react';
 import {catalogText} from '@/lib/catalog-i18n';
 import {business,jointBrand,MIN_ORDER_M2_PER_ITEM} from '@/lib/business';
 import {type Locale,type Product} from '@/lib/products';
-import {isValidQuoteQuantity,useQuoteList} from '@/lib/quote-list';
+import {isValidQuoteQuantity,quoteItemKey,useQuoteList} from '@/lib/quote-list';
+import {serializeMixedQuote} from '@/lib/quote-logic';
 import {wtwColourLabel,wtwModels,wtwText} from '@/lib/wtw';
 
 export function QuoteForm({locale,products}:{locale:Locale;products:Product[]}) {
@@ -29,7 +30,7 @@ export function QuoteForm({locale,products}:{locale:Locale;products:Product[]}) 
   clearFeedback();
   if((!product||!selectedColor)&&(!wtwProduct||!wtwSelected))return;
   if(!draftValid){setError(`${t.invalidDesign} ${wtwProduct?.code??product?.binMansoorCode}. ${wtwProduct?wtwText[locale].quantityError:t.moqValidation}`);return;}
-  if(wtwProduct&&wtwSelected){const label=wtwColourLabel(wtwSelected.code);add({productLine:'wall-to-wall',modelCode:wtwProduct.code,name:{ar:wtwProduct.code,en:wtwProduct.code,tr:wtwProduct.code},colorCode:wtwSelected.code,colorName:{ar:label,en:label,tr:label},quantity,image:wtwSelected.image,route:`/${locale}/wall-to-wall/${wtwProduct.slug}`});}
+  if(wtwProduct&&wtwSelected){const label=wtwColourLabel(wtwSelected.code);add({productLine:'wall-to-wall',modelCode:wtwProduct.code,name:wtwProduct.name,colorCode:wtwSelected.code,colorName:{ar:label,en:label,tr:label},quantity,image:wtwSelected.image,route:`/${locale}/wall-to-wall/${wtwProduct.slug}`});}
   else if(product&&selectedColor)add({productLine:'rug',modelCode:product.binMansoorCode,name:product.name,colorCode:selectedColor.code,colorName:selectedColor.name,quantity,image:selectedColor.image,route:`/${locale}/products/${product.slug}`});
   setProductId('');setColorCode('');setQuantity(String(MIN_ORDER_M2_PER_ITEM));
  }
@@ -42,7 +43,7 @@ export function QuoteForm({locale,products}:{locale:Locale;products:Product[]}) 
   const value=(key:string)=>{const current=fields.get(key);return typeof current==='string'?current.trim():'';};
   if(items.length===0||!form.checkValidity()||['name','company','country'].some(key=>value(key).length<2)||value('phone').replace(/\D/g,'').length<7){setError(t.required);form.reportValidity();return;}
   const designs=items.flatMap((item,index)=>['',`${index+1}.`,`Product Line: ${item.productLine==='rug'?'Rug':'Wall-to-Wall'}`,`Model: ${item.name[locale]}`,`${item.productLine==='rug'?'BMC':'WTW'} Code: ${item.modelCode}`,`Colour Preview: ${item.colorName[locale]} — ${item.colorCode}`,`Quantity: ${item.quantity} m²`]);
-  const message=[jointBrand.name.en,'REQUEST FOR QUOTATION','',`Company: ${value('company')}`,`Name: ${value('name')}`,`Country: ${value('country')}`,`Phone: ${value('phone')}`,value('email')?`Email: ${value('email')}`:'','', 'Requested Designs:',...designs,'',`Total estimated quantity: ${total} m²`,value('message')?`Message: ${value('message')}`:''].filter(current=>current!=='').join('\n');
+  const message=items.some(item=>item.productLine==='wall-to-wall')?serializeMixedQuote(locale,jointBrand.name.en,items,{company:value('company'),name:value('name'),country:value('country'),phone:value('phone'),email:value('email'),message:value('message')}):[jointBrand.name.en,'REQUEST FOR QUOTATION','',`Company: ${value('company')}`,`Name: ${value('name')}`,`Country: ${value('country')}`,`Phone: ${value('phone')}`,value('email')?`Email: ${value('email')}`:'','', 'Requested Designs:',...designs,'',`Total estimated quantity: ${total} m²`,value('message')?`Message: ${value('message')}`:''].filter(current=>current!=='').join('\n');
   const url=`https://wa.me/${business.phoneHref.replace('+','')}?text=${encodeURIComponent(message)}`;
   setReady(url);setError('');window.open(url,'_blank','noopener,noreferrer');
  }
@@ -59,12 +60,13 @@ export function QuoteForm({locale,products}:{locale:Locale;products:Product[]}) 
     const itemWTW=wtwModels.find(current=>current.code===item.modelCode);
     if(!itemProduct&&!itemWTW)return null;
     const itemValid=isValidQuoteQuantity(item.quantity,item.productLine);
-    const errorId=`quantity-error-${item.modelCode}`;
-    return <fieldset key={item.modelCode} className="quote-item">
-     <legend className="font-semibold"><small className="me-3 uppercase tracking-wide text-black/50">{item.productLine==='rug'?wtwText[locale].rugNav:wtwText[locale].line}</small>{item.productLine==='rug'?item.name[locale]:null} <bdi className="ms-2 font-mono text-sm">{item.modelCode}</bdi></legend>
-     <label>{t.selected}<select value={item.colorCode} onChange={event=>{clearFeedback();if(itemWTW){const color=itemWTW.colourways.find(current=>current.code===event.target.value)!;const label=wtwColourLabel(color.code);update(item.modelCode,{colorCode:color.code,colorName:{ar:label,en:label,tr:label},image:color.image});}else if(itemProduct){const color=itemProduct.colorways.find(current=>current.code===event.target.value)!;update(item.modelCode,{colorCode:color.code,colorName:color.name,image:color.image});}}}>{itemWTW?itemWTW.colourways.map(color=><option key={color.code} value={color.code}>{wtwColourLabel(color.code)} — {color.code}</option>):itemProduct?.colorways.map(color=><option key={color.code} value={color.code}>{color.name[locale]} — {color.code}</option>)}</select></label>
-     <label>{t.quantity}<input data-quote-quantity={item.modelCode} type="number" min={item.productLine==='rug'?MIN_ORDER_M2_PER_ITEM:0} step="any" value={item.quantity} aria-invalid={!itemValid} aria-describedby={!itemValid?errorId:undefined} onChange={event=>{clearFeedback();update(item.modelCode,{quantity:event.target.value});}}/>{!itemValid&&<span id={errorId} role="alert" className="quantity-error">{item.productLine==='rug'?t.moqValidation:wtwText[locale].quantityError}</span>}</label>
-     <button type="button" className="underline" onClick={()=>remove(item.modelCode)}>{t.remove}</button>
+    const key=quoteItemKey(item);
+    const errorId=`quantity-error-${key}`;
+    return <fieldset key={key} className="quote-item">
+     <legend className="font-semibold"><small className="me-3 uppercase tracking-wide text-black/50">{item.productLine==='rug'?wtwText[locale].rugNav:wtwText[locale].line}</small>{item.name[locale]} <span className="ms-2 text-sm font-normal text-black/60">{item.productLine==='wall-to-wall'?wtwText[locale].code:null}</span> <bdi className="font-mono text-sm">{item.modelCode}</bdi></legend>
+     <label>{t.selected}<select value={item.colorCode} onChange={event=>{clearFeedback();if(itemWTW){const color=itemWTW.colourways.find(current=>current.code===event.target.value)!;const label=wtwColourLabel(color.code);update(key,{colorCode:color.code,colorName:{ar:label,en:label,tr:label},image:color.image});}else if(itemProduct){const color=itemProduct.colorways.find(current=>current.code===event.target.value)!;update(key,{colorCode:color.code,colorName:color.name,image:color.image});}}}>{itemWTW?itemWTW.colourways.map(color=><option key={color.code} value={color.code}>{wtwColourLabel(color.code)} — {color.code}</option>):itemProduct?.colorways.map(color=><option key={color.code} value={color.code}>{color.name[locale]} — {color.code}</option>)}</select></label>
+     <label>{item.productLine==='wall-to-wall'?wtwText[locale].quantity:t.quantity}<input data-quote-quantity={key} type="number" min={item.productLine==='rug'?MIN_ORDER_M2_PER_ITEM:0} step="any" value={item.quantity} aria-invalid={!itemValid} aria-describedby={!itemValid?errorId:undefined} onChange={event=>{clearFeedback();update(key,{quantity:event.target.value});}}/>{!itemValid&&<span id={errorId} role="alert" className="quantity-error">{item.productLine==='rug'?t.moqValidation:wtwText[locale].quantityError}</span>}</label>
+     <button type="button" className="underline" onClick={()=>remove(key)}>{t.remove}</button>
     </fieldset>;
    })}</div>
    {items.length>0&&<div className="mt-5" aria-live="polite"><p>{t.total}: <strong>{total.toLocaleString(locale==='ar'?'ar-SA':locale==='tr'?'tr-TR':'en-GB')} m²</strong></p>{invalidItem&&<p className="mt-2 border-s-2 border-[#a4875a] ps-4 text-sm text-black/65">{t.invalidDesign} <bdi>{invalidItem.modelCode}</bdi>. {invalidItem.productLine==='rug'?t.moqValidation:wtwText[locale].quantityError}</p>}</div>}
@@ -73,7 +75,7 @@ export function QuoteForm({locale,products}:{locale:Locale;products:Product[]}) 
   <fieldset className="quote-add sm:col-span-2">
    <legend className="mb-4 font-semibold">{t.add}</legend>
    <div className="grid gap-4 sm:grid-cols-2">
-    <label>{t.product}<select value={productId} onChange={event=>{clearFeedback();setProductId(event.target.value);setColorCode('');setQuantity(event.target.value.startsWith('wtw:')?'':String(MIN_ORDER_M2_PER_ITEM));}}><option value="">{t.select}</option><optgroup label={wtwText[locale].rugNav}>{products.map(current=><option key={current.id} value={current.id}>{current.name[locale]} — {current.binMansoorCode}</option>)}</optgroup><optgroup label={wtwText[locale].line}>{wtwModels.map(current=><option key={current.code} value={`wtw:${current.code}`}>{current.code}</option>)}</optgroup></select></label>
+    <label>{t.product}<select value={productId} onChange={event=>{clearFeedback();setProductId(event.target.value);setColorCode('');setQuantity(event.target.value.startsWith('wtw:')?'':String(MIN_ORDER_M2_PER_ITEM));}}><option value="">{t.select}</option><optgroup label={wtwText[locale].rugNav}>{products.map(current=><option key={current.id} value={current.id}>{current.name[locale]} — {current.binMansoorCode}</option>)}</optgroup><optgroup label={wtwText[locale].line}>{wtwModels.map(current=><option key={current.code} value={`wtw:${current.code}`}>{current.name[locale]} — {current.code}</option>)}</optgroup></select></label>
     <label>{wtwProduct?wtwText[locale].code:product?t.code:t.code.replace(' (BMC)','')}<input readOnly value={wtwProduct?.code??product?.binMansoorCode??''} dir="ltr"/></label>
     <label>{t.selected}<select disabled={!product&&!wtwProduct} value={wtwSelected?.code??selectedColor?.code??''} onChange={event=>{clearFeedback();setColorCode(event.target.value);}}><option value="">{t.select}</option>{wtwProduct?wtwProduct.colourways.map(color=><option key={color.code} value={color.code}>{wtwColourLabel(color.code)} — {color.code}</option>):product?.colorways.map(color=><option key={color.code} value={color.code}>{color.name[locale]} — {color.code}</option>)}</select></label>
     <label>{t.quantity}<input data-draft-quantity type="number" min={wtwProduct?0:MIN_ORDER_M2_PER_ITEM} step="any" value={quantity} aria-invalid={!draftValid} onChange={event=>{clearFeedback();setQuantity(event.target.value);}}/>{!draftValid&&<span role="alert" className="quantity-error">{wtwProduct?wtwText[locale].quantityError:t.moqValidation}</span>}</label>
