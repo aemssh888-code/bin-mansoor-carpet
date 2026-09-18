@@ -18,11 +18,12 @@ export type HomeHeroSlide={
 
 type Labels={region:string;previous:string;next:string;explore:string};
 
-export function HomeHeroCampaign({slides,labels}:{slides:HomeHeroSlide[];labels:Labels}) {
+export function HomeHeroCampaign({slides,labels,preloadMode='staggered'}:{slides:HomeHeroSlide[];labels:Labels;preloadMode?:'staggered'|'next'}) {
   const [active,setActive]=useState(0);
   const [cycle,setCycle]=useState(0);
   const [paused,setPaused]=useState(false);
   const [pageVisible,setPageVisible]=useState(true);
+  const [reducedMotion,setReducedMotion]=useState(false);
   const [loaded,setLoaded]=useState<Set<number>>(()=>new Set([0]));
   const pointerStart=useRef<{x:number;y:number}|null>(null);
   const didSwipe=useRef(false);
@@ -35,11 +36,20 @@ export function HomeHeroCampaign({slides,labels}:{slides:HomeHeroSlide[];labels:
   },[slides.length]);
 
   useEffect(()=>{
-    const timers=[700,2400,4100].map((delay,index)=>window.setTimeout(()=>{
+    const delays=preloadMode==='next'?[700]:[700,2400,4100];
+    const timers=delays.map((delay,index)=>window.setTimeout(()=>{
       setLoaded(current=>new Set(current).add((index+1)%slides.length));
     },delay));
     return ()=>timers.forEach(timer=>window.clearTimeout(timer));
-  },[slides.length]);
+  },[preloadMode,slides.length]);
+
+  useEffect(()=>{
+    const query=window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update=()=>setReducedMotion(query.matches);
+    update();
+    query.addEventListener('change',update);
+    return ()=>query.removeEventListener('change',update);
+  },[]);
 
   useEffect(()=>{
     const onVisibility=()=>setPageVisible(!document.hidden);
@@ -48,10 +58,10 @@ export function HomeHeroCampaign({slides,labels}:{slides:HomeHeroSlide[];labels:
   },[]);
 
   useEffect(()=>{
-    if(paused||!pageVisible||slides.length<2) return;
+    if(paused||!pageVisible||reducedMotion||slides.length<2) return;
     const timer=window.setTimeout(()=>select(active+1),SLIDE_DURATION);
     return ()=>window.clearTimeout(timer);
-  },[active,cycle,pageVisible,paused,select,slides.length]);
+  },[active,cycle,pageVisible,paused,reducedMotion,select,slides.length]);
 
   const onKeyDown=(event:React.KeyboardEvent<HTMLElement>)=>{
     if(event.key==='ArrowLeft') {event.preventDefault();select(active-1);}
@@ -77,7 +87,7 @@ export function HomeHeroCampaign({slides,labels}:{slides:HomeHeroSlide[];labels:
   };
 
   const current=slides[active];
-  const progressPaused=paused||!pageVisible;
+  const progressPaused=paused||!pageVisible||reducedMotion;
 
   return <section
     className="hero-art hero-campaign"
