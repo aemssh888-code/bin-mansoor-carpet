@@ -4,15 +4,19 @@ type OptionalText=LocalizedText|null;
 export const MIN_ORDER_M2_PER_ITEM=businessConstants.minimumOrderM2PerItem;
 export type PartnerCompany={
  brandName:string;legalName:string;
- phone:string|null;whatsapp:string|null;email:string|null;address:string|null;mapsUrl:string|null;socialLinks:Record<string,string>|null;
+ phone:string|null;whatsapp:string|null;email:string|null;address:string|null;mapsUrl:string|null;socialLinks:Record<string,{handle:string;url:string}>|null;
 };
 export const jointBrand={
  name:{ar:'تايام كاربت و بن منصور كاربت',en:'TAYYAM CARPET & BIN MANSOOR CARPET',tr:'TAYYAM CARPET & BIN MANSOOR CARPET'} satisfies LocalizedText,
  logo:'/media/brand/tayyam-bin-mansoor-joint-logo.webp',
  panelLogos:{tayyam:'/media/brand/tayyam-logo-panel.webp',binMansoor:'/media/brand/bin-mansoor-logo-panel.webp'},
 };
+export const tayyamSocialAccounts={
+ instagram:{handle:'@tayyamc2026',url:'https://www.instagram.com/tayyamc2026/'},
+ tiktok:{handle:'@tayyamcarpet',url:'https://www.tiktok.com/@tayyamcarpet'},
+} as const;
 export const partnerCompanies:{tayyam:PartnerCompany;binMansoor:PartnerCompany}={
- tayyam:{brandName:'TAYYAM CARPET',legalName:'TAYYAM HALI TEKSTİL İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ',phone:null,whatsapp:null,email:null,address:null,mapsUrl:null,socialLinks:null},
+ tayyam:{brandName:'TAYYAM CARPET',legalName:'TAYYAM HALI TEKSTİL İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ',phone:null,whatsapp:null,email:null,address:null,mapsUrl:null,socialLinks:tayyamSocialAccounts},
  binMansoor:{brandName:'BIN MANSOOR CARPET',legalName:'BINMANSOOR HALI TEKSTİL İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ',phone:null,whatsapp:null,email:null,address:null,mapsUrl:null,socialLinks:null},
 };
 export type FactScope='joint'|'tayyam'|'binMansoor';
