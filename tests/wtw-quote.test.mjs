@@ -1,6 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {normalizeQuoteItems,quoteItemKey,serializeMixedQuote,serializeWTWLine,updateQuoteItem,upsertQuoteItem,validQuoteQuantity} from '../lib/quote-logic.ts';
+import businessConstants from '../lib/business-constants.json' with {type:'json'};
+import {allQuoteItemsValid,normalizeQuoteItems,quoteItemKey,serializeMixedQuote,serializeWTWLine,updateQuoteItem,upsertQuoteItem,validQuoteQuantity} from '../lib/quote-logic.ts';
+
+const minimum=businessConstants.minimumOrderM2PerItem;
+const policy={rug:minimum,'wall-to-wall':minimum};
 
 const name={ar:'مدار',en:'Orbit',tr:'Yörünge'};
 const label={ar:'C03',en:'C03',tr:'C03'};
@@ -35,13 +39,25 @@ test('legacy storage preserves BMC values, converts reserved codes, drops only a
  assert.equal(items.length,4);assert.equal(items[0].quantity,'7999');assert.equal(items[0].productLine,'rug');
  assert.deepEqual(items.slice(2).map(item=>[item.modelCode,item.colorCode]),[['WTW-006','WTW-006-C07'],['WTW-004','WTW-004-C06']]);
 });
-test('WTW has no 8000 minimum; BMC retains per-design 8000 minimum',()=>{
- for(const value of ['1','500','7999'])assert.equal(validQuoteQuantity(value,'wall-to-wall',8000),true);
- assert.equal(validQuoteQuantity('0','wall-to-wall',8000),false);
- assert.equal(validQuoteQuantity('7999','rug',8000),false);
- assert.equal(validQuoteQuantity('8000','rug',8000),true);
- assert.equal([rug('7999'),wtw()].every(item=>validQuoteQuantity(item.quantity,item.productLine,8000)),false);
- assert.equal([rug(),wtw()].every(item=>validQuoteQuantity(item.quantity,item.productLine,8000)),true);
+test('BMC and WTW each require 8,000 m² per line',()=>{
+ assert.equal(minimum,8000);
+ for(const value of ['', '0','-1','1','7999'])assert.equal(validQuoteQuantity(value,minimum),false);
+ for(const value of ['8000','8001'])assert.equal(validQuoteQuantity(value,minimum),true);
+ assert.equal(allQuoteItemsValid([rug(),wtw('WTW-015-C03','8000')],policy),true);
+ assert.equal(allQuoteItemsValid([rug(),wtw('WTW-015-C03','7999')],policy),false);
+ assert.equal(allQuoteItemsValid([rug('7999'),wtw('WTW-015-C03','8000')],policy),false);
+ assert.equal(allQuoteItemsValid([wtw('WTW-015-C01','8000'),wtw('WTW-015-C03','8000')],policy),true);
+ assert.equal(allQuoteItemsValid([wtw('WTW-015-C01','8000'),wtw('WTW-015-C03','7999')],policy),false);
+ assert.equal(allQuoteItemsValid([wtw('WTW-015-C01','4000'),wtw('WTW-015-C03','4000')],policy),false);
+ const otherDesign={...wtw('WTW-015-C01','8000'),modelCode:'WTW-020',colorCode:'WTW-020-C01'};
+ assert.equal(allQuoteItemsValid([wtw('WTW-015-C03','8000'),otherDesign],policy),true);
+ assert.equal(allQuoteItemsValid([wtw('WTW-015-C03','8000'),{...otherDesign,quantity:'7999'}],policy),false);
+});
+test('legacy WTW 500 remains visible but invalid until edited',()=>{
+ const items=normalizeQuoteItems(JSON.stringify([wtw('WTW-015-C03','500')]),models);
+ assert.equal(items.length,1);assert.equal(items[0].quantity,'500');
+ assert.equal(allQuoteItemsValid(items,policy),false);
+ assert.equal(allQuoteItemsValid(updateQuoteItem(items,quoteItemKey(items[0]),{quantity:'8000'}),policy),true);
 });
 test('WTW direct WhatsApp contains selected code and localized labels',()=>{
  for(const locale of ['ar','en','tr']){

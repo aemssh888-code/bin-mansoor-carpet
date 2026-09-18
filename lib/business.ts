@@ -2,6 +2,10 @@ import type {LocalizedText} from './products';
 import businessConstants from './business-constants.json';
 type OptionalText=LocalizedText|null;
 export const MIN_ORDER_M2_PER_ITEM=businessConstants.minimumOrderM2PerItem;
+export const productOrderRules={
+ rug:{minOrderM2PerItem:MIN_ORDER_M2_PER_ITEM},
+ 'wall-to-wall':{minOrderM2PerItem:MIN_ORDER_M2_PER_ITEM},
+} as const;
 export type PartnerCompany={
  brandName:string;legalName:string;
  phone:string|null;whatsapp:string|null;email:string|null;address:string|null;mapsUrl:string|null;socialLinks:Record<string,{handle:string;url:string}>|null;

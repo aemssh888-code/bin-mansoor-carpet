@@ -1,7 +1,7 @@
 'use client';
 
 import {useCallback,useMemo,useSyncExternalStore} from 'react';
-import {MIN_ORDER_M2_PER_ITEM} from './business';
+import {productOrderRules} from './business';
 import {wtwModels} from './wtw';
 import {normalizeQuoteItems,quoteItemKey,updateQuoteItem,upsertQuoteItem,validQuoteQuantity,type ProductLine,type QuoteItem} from './quote-logic';
 
@@ -13,11 +13,12 @@ let memory='[]';
 let migratedLegacyStorage=false;
 
 export function isValidQuoteQuantity(value:string|number,productLine:ProductLine='rug'){
- return validQuoteQuantity(value,productLine,MIN_ORDER_M2_PER_ITEM);
+ return validQuoteQuantity(value,productOrderRules[productLine].minOrderM2PerItem);
 }
 
-export function normalizeQuoteQuantity(value:unknown,productLine:ProductLine='rug'){
- return isValidQuoteQuantity(typeof value==='string'||typeof value==='number'?value:'',productLine)?String(value).trim():productLine==='rug'?String(MIN_ORDER_M2_PER_ITEM):'';
+export function normalizeQuoteQuantity(value:unknown){
+ // Never silently turn an invalid or legacy quantity into an accepted 8,000 m² line.
+ return typeof value==='string'||typeof value==='number'?String(value).trim():'';
 }
 
 function stored(){
@@ -47,7 +48,7 @@ export function useQuoteList(){
  const items=useMemo(()=>parse(raw),[raw]);
 
  const add=useCallback((item:QuoteItem)=>{
-  const safeItem={...item,quantity:normalizeQuoteQuantity(item.quantity,item.productLine)};
+  const safeItem={...item,quantity:normalizeQuoteQuantity(item.quantity)};
   write(upsertQuoteItem(read(),safeItem));
  },[]);
  const remove=useCallback((key:string)=>write(read().filter(item=>quoteItemKey(item)!==key)),[]);

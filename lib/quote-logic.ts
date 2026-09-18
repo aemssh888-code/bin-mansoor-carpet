@@ -4,10 +4,14 @@ export type ProductLine='rug'|'wall-to-wall';
 export type QuoteItem={productLine:ProductLine;modelCode:string;name:LocalizedText;colorCode:string;colorName:LocalizedText;quantity:string;image?:string;route?:string};
 export type WTWQuoteModel={code:string;slug:string;name:LocalizedText;colourways:{code:string;image:string}[]};
 
-export function validQuoteQuantity(value:string|number,productLine:ProductLine,minimumRugM2:number){
+export function validQuoteQuantity(value:string|number,minimumPerItemM2:number){
  const text=String(value).trim();if(text==='')return false;
  const quantity=Number(text);
- return Number.isFinite(quantity)&&(productLine==='rug'?quantity>=minimumRugM2:quantity>0);
+ return Number.isFinite(quantity)&&quantity>=minimumPerItemM2;
+}
+
+export function allQuoteItemsValid(items:QuoteItem[],minimumByLine:Record<ProductLine,number>){
+ return items.every(item=>validQuoteQuantity(item.quantity,minimumByLine[item.productLine]));
 }
 
 export function quoteItemKey(item:Pick<QuoteItem,'productLine'|'modelCode'|'colorCode'>){
