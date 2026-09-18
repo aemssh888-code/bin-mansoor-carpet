@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
-import {ArrowUpRight,Camera,MapPin,MessageCircle,Music2,Phone} from 'lucide-react';
+import {ArrowUpRight,MapPin,Phone} from 'lucide-react';
+import {InstagramIcon,TikTokIcon,WhatsAppIcon} from '@/components/contact-brand-icons';
 import {company,getDictionary,isLocale,locales,whatsappUrl} from '@/lib/i18n';
 import {pageMetadata} from '@/lib/seo';
 import {partnerCompanies,tayyamSocialAccounts} from '@/lib/business';
@@ -21,11 +22,11 @@ export default async function ContactPage({params}:{params:Promise<{locale:strin
   const social=socialText[locale];
   const partners=[partnerCompanies.tayyam,partnerCompanies.binMansoor];
   const contactItems=[
-    {href:whatsappUrl(locale),label:dictionary.common.whatsapp,value:company.phoneDisplay,Icon:MessageCircle,external:true,ariaLabel:undefined},
+    {href:whatsappUrl(locale),label:dictionary.common.whatsapp,value:company.phoneDisplay,Icon:WhatsAppIcon,external:true,ariaLabel:undefined},
     {href:`tel:${company.phoneHref}`,label:dictionary.common.call,value:company.phoneDisplay,Icon:Phone,external:false,ariaLabel:undefined},
     {href:company.maps,label:dictionary.contact.address,value:company.address,Icon:MapPin,external:true,ariaLabel:undefined},
-    {href:tayyamSocialAccounts.instagram.url,label:social.instagram,value:tayyamSocialAccounts.instagram.handle,Icon:Camera,external:true,ariaLabel:social.instagramAria},
-    {href:tayyamSocialAccounts.tiktok.url,label:social.tiktok,value:tayyamSocialAccounts.tiktok.handle,Icon:Music2,external:true,ariaLabel:social.tiktokAria},
+    {href:tayyamSocialAccounts.instagram.url,label:social.instagram,value:tayyamSocialAccounts.instagram.handle,Icon:InstagramIcon,external:true,ariaLabel:social.instagramAria},
+    {href:tayyamSocialAccounts.tiktok.url,label:social.tiktok,value:tayyamSocialAccounts.tiktok.handle,Icon:TikTokIcon,external:true,ariaLabel:social.tiktokAria},
   ];
   return <main id="main-content">
     <section className="contact-hero site-shell"><div><p className="eyebrow">{dictionary.contact.eyebrow}</p><h1>{dictionary.contact.title}</h1></div><div className="contact-intro"><p>{dictionary.contact.body}</p><small>{dictionary.contact.shared}</small></div></section>
