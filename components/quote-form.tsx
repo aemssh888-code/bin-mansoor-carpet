@@ -42,8 +42,7 @@ export function QuoteForm({locale,products}:{locale:Locale;products:Product[]}) 
   const fields=new FormData(form);
   const value=(key:string)=>{const current=fields.get(key);return typeof current==='string'?current.trim():'';};
   if(items.length===0||!form.checkValidity()||['name','company','country'].some(key=>value(key).length<2)||value('phone').replace(/\D/g,'').length<7){setError(t.required);form.reportValidity();return;}
-  const designs=items.flatMap((item,index)=>['',`${index+1}.`,`Product Line: ${item.productLine==='rug'?'Rug':'Wall-to-Wall'}`,`Model: ${item.name[locale]}`,`${item.productLine==='rug'?'BMC':'WTW'} Code: ${item.modelCode}`,`Colour Preview: ${item.colorName[locale]} — ${item.colorCode}`,`Quantity: ${item.quantity} m²`]);
-  const message=items.some(item=>item.productLine==='wall-to-wall')?serializeMixedQuote(locale,jointBrand.name.en,items,{company:value('company'),name:value('name'),country:value('country'),phone:value('phone'),email:value('email'),message:value('message')}):[jointBrand.name.en,'REQUEST FOR QUOTATION','',`Company: ${value('company')}`,`Name: ${value('name')}`,`Country: ${value('country')}`,`Phone: ${value('phone')}`,value('email')?`Email: ${value('email')}`:'','', 'Requested Designs:',...designs,'',`Total estimated quantity: ${total} m²`,value('message')?`Message: ${value('message')}`:''].filter(current=>current!=='').join('\n');
+  const message=serializeMixedQuote(locale,jointBrand.name.en,items,{company:value('company'),name:value('name'),country:value('country'),phone:value('phone'),email:value('email'),message:value('message')});
   const url=`https://wa.me/${business.phoneHref.replace('+','')}?text=${encodeURIComponent(message)}`;
   setReady(url);setError('');window.open(url,'_blank','noopener,noreferrer');
  }

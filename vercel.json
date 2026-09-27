@@ -2,5 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "pnpm build && pnpm pages:prepare",
   "outputDirectory": "dist/client",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {"source":"/:locale(ar|en|tr)/wall-to-wall/wtw-005","destination":"/:locale/wall-to-wall/wtw-006","permanent":true},
+    {"source":"/:locale(ar|en|tr)/wall-to-wall/wtw-007","destination":"/:locale/wall-to-wall/wtw-004","permanent":true}
+  ]
 }

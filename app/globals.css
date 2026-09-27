@@ -381,7 +381,7 @@ address{overflow-wrap:anywhere}
 
 @media (min-width:768px) and (max-width:1023px){.hero-art{height:auto;min-height:0;max-height:none;aspect-ratio:4/3}.hero-campaign-drift{animation-duration:6.5s}}
 
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}.hero-title,.hero-support,.hero-actions,.hero-campaign-reveal,.hero-campaign-drift,.hero-campaign-light{animation:none!important;transform:none!important;opacity:1!important}.hero-campaign-progress span{animation:none!important;transform:scaleX(1)!important}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}.hero-title,.hero-support,.hero-actions,.hero-campaign-reveal,.hero-campaign-drift{animation:none!important;transform:none!important;opacity:1!important}.hero-campaign-light{animation:none!important;transform:none!important;opacity:.045!important}.hero-campaign-progress span{animation:none!important;transform:scaleX(1)!important}}
 
 /* Wall-to-Wall: separate product line, using the established editorial palette. */
 .wtw-page,.wtw-product-page{background:#f7f5f0;color:#1d1c19}

@@ -15,7 +15,7 @@ export function allQuoteItemsValid(items:QuoteItem[],minimumByLine:Record<Produc
 }
 
 export function quoteItemKey(item:Pick<QuoteItem,'productLine'|'modelCode'|'colorCode'>){
- return item.productLine==='wall-to-wall'?`wall-to-wall:${item.modelCode}:${item.colorCode}`:item.modelCode;
+ return `${item.productLine}:${item.modelCode}:${item.colorCode}`;
 }
 
 // These are the approved historical page mappings, not new active products.
@@ -37,7 +37,7 @@ export function normalizeQuoteItems(raw:string,models:WTWQuoteModel[]):QuoteItem
   const line:ProductLine=item.productLine==='wall-to-wall'?'wall-to-wall':'rug';
   const quantity=typeof item.quantity==='string'?item.quantity:typeof item.quantity==='number'?String(item.quantity):'';
   if(line==='rug'){
-   // Old BMC entries had no productLine. Keep their existing identity and values.
+   // Old BMC entries had no productLine. Preserve their colour and entered quantity.
    const rug={...item,productLine:line,quantity} as QuoteItem;
    const index=result.findIndex(existing=>quoteItemKey(existing)===quoteItemKey(rug));
    if(index<0)result.push(rug);else result[index]=rug;
@@ -71,7 +71,9 @@ export function updateQuoteItem(items:QuoteItem[],key:string,patch:Partial<Quote
  const found=items.find(item=>quoteItemKey(item)===key);
  if(!found)return items;
  const edited={...found,...patch};
- return upsertQuoteItem(items.filter(item=>quoteItemKey(item)!==key),edited);
+ const editedKey=quoteItemKey(edited);
+ // Keep the edited row in place; choosing an existing colour updates that line once.
+ return items.flatMap(item=>quoteItemKey(item)===key?[edited]:quoteItemKey(item)===editedKey?[]:[item]);
 }
 
 const labels={

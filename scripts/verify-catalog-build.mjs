@@ -3,6 +3,7 @@ import { readFile, access, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
+import {siteUrl} from '../lib/site-origin.mjs';
 
 // This is the approved release contract, not a second product dataset.
 const raw = await readFile('lib/catalog-data.json', 'utf8');
@@ -79,7 +80,7 @@ for(const locale of locales){
 const robots=await readFile(path.join(output,'robots.txt'),'utf8');
 assert.match(robots,/User-agent: \*/);
 assert.match(robots,/Allow: \//);
-assert.match(robots,/https:\/\/bin-mansoor-carpet\.vercel\.app\/sitemap\.xml/);
+assert.ok(robots.includes(`Sitemap: ${siteUrl}/sitemap.xml`),'Robots must use the configured site origin');
 const sitemap=await readFile(path.join(output,'sitemap.xml'),'utf8');
 const sitemapLocations=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
 const productLocations=sitemapLocations.filter(url=>/\/(ar|en|tr)\/products\/bmc-(mod|mcl|cls)-\d+$/.test(url));
@@ -87,8 +88,8 @@ assert.equal(productLocations.length,129,'Sitemap must contain 129 localized pro
 const wtwLocations=sitemapLocations.filter(url=>/\/(ar|en|tr)\/wall-to-wall\/wtw-\d+$/.test(url));
 assert.equal(wtwLocations.length,195,'Sitemap must contain 195 localized WTW product routes');
 assert.equal(sitemapLocations.length,locales.length*(6+products.length+wtwModels.length),'Sitemap route count mismatch');
-for(const p of products)for(const locale of locales)assert.ok(productLocations.includes(`https://bin-mansoor-carpet.vercel.app/${locale}/products/${p.slug}`),`Sitemap missing ${locale}/${p.slug}`);
-for(const m of wtwModels)for(const locale of locales)assert.ok(wtwLocations.includes(`https://bin-mansoor-carpet.vercel.app/${locale}/wall-to-wall/${m.slug}`),`Sitemap missing WTW ${locale}/${m.slug}`);
+for(const p of products)for(const locale of locales)assert.ok(productLocations.includes(`${siteUrl}/${locale}/products/${p.slug}`),`Sitemap missing ${locale}/${p.slug}`);
+for(const m of wtwModels)for(const locale of locales)assert.ok(wtwLocations.includes(`${siteUrl}/${locale}/wall-to-wall/${m.slug}`),`Sitemap missing WTW ${locale}/${m.slug}`);
 const commit = process.env.VERCEL_GIT_COMMIT_SHA || execFileSync('git', ['rev-parse', 'HEAD'], {encoding: 'utf8'}).trim();
 const identity = {
   repository: 'aemssh888-code/bin-mansoor-carpet',

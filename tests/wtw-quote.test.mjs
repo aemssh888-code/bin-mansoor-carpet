@@ -16,6 +16,36 @@ const models=[
 const wtw=(colorCode='WTW-015-C03',quantity='500')=>({productLine:'wall-to-wall',modelCode:'WTW-015',name,colorCode,colorName:label,quantity,image:colorCode.endsWith('C03')?'/c03.webp':'/c01.webp'});
 const rug=(quantity='8000')=>({productLine:'rug',modelCode:'BMC-MOD-001',name:{ar:'سجاد',en:'Rug',tr:'Halı'},colorCode:'BMC-MOD-001-C01',colorName:label,quantity});
 
+test('BMC colours have independent identity and survive legacy storage',()=>{
+ const first={...rug('7999'),modelCode:'BMC-MOD-004',colorCode:'BMC-MOD-004-C01'};
+ const second={...first,colorCode:'BMC-MOD-004-C03',quantity:'8000'};
+ const added=upsertQuoteItem(upsertQuoteItem([],first),second);
+ assert.equal(added.length,2);
+ assert.equal(quoteItemKey(first),'rug:BMC-MOD-004:BMC-MOD-004-C01');
+ const saved=normalizeQuoteItems(JSON.stringify(added.map(item=>({...item,productLine:undefined}))),models);
+ assert.equal(saved.length,2);assert.equal(saved[0].quantity,'7999');
+ assert.equal(allQuoteItemsValid(saved,policy),false);
+ const repeated=upsertQuoteItem(saved,{...second,quantity:'8001'});
+ assert.equal(repeated.length,2);assert.equal(repeated[1].quantity,'8001');
+});
+
+test('quantity edits keep row order and colour collisions remain one line',()=>{
+ const items=[wtw('WTW-015-C01','8000'),rug(),wtw('WTW-015-C03','8000')];
+ const edited=updateQuoteItem(items,quoteItemKey(items[0]),{quantity:'8001'});
+ assert.deepEqual(edited.map(quoteItemKey),items.map(quoteItemKey));
+ assert.equal(edited[0].quantity,'8001');
+ const collision=updateQuoteItem(edited,quoteItemKey(edited[0]),{colorCode:'WTW-015-C03'});
+ assert.equal(collision.length,2);assert.equal(collision[0].colorCode,'WTW-015-C03');
+ assert.equal(collision[0].quantity,'8001');
+});
+
+test('BMC-only WhatsApp uses the requested language and selected colour',()=>{
+ for(const [locale,title] of [['ar','طلب عرض سعر'],['en','REQUEST FOR QUOTATION'],['tr','FİYAT TEKLİFİ TALEBİ']]){
+  const text=serializeMixedQuote(locale,'Brand',[rug()],{company:'Factory',name:'Buyer',country:'Turkey',phone:'123456789'});
+  assert.ok(text.includes(title));assert.ok(text.includes('BMC-MOD-001-C01'));
+ }
+});
+
 test('WTW selected colour is canonical and survives locale/name migration',()=>{
  const saved=normalizeQuoteItems(JSON.stringify([{...wtw(),name:{ar:'WTW-015',en:'WTW-015',tr:'WTW-015'},image:'/c01.webp'}]),models);
  assert.equal(saved[0].colorCode,'WTW-015-C03');assert.equal(saved[0].image,'/c03.webp');

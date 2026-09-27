@@ -1,9 +1,9 @@
 import type {Metadata} from 'next';
-import {ArrowUpRight,MapPin,Phone} from 'lucide-react';
+import {ArrowUpRight,Mail,MapPin,Phone} from 'lucide-react';
 import {InstagramIcon,TikTokIcon,WhatsAppIcon} from '@/components/contact-brand-icons';
 import {company,getDictionary,isLocale,locales,whatsappUrl} from '@/lib/i18n';
 import {pageMetadata} from '@/lib/seo';
-import {partnerCompanies,tayyamSocialAccounts} from '@/lib/business';
+import {business,partnerCompanies,tayyamSocialAccounts} from '@/lib/business';
 import type {Locale} from '@/lib/products';
 
 const socialText={
@@ -24,6 +24,7 @@ export default async function ContactPage({params}:{params:Promise<{locale:strin
   const contactItems=[
     {href:whatsappUrl(locale),label:dictionary.common.whatsapp,value:company.phoneDisplay,Icon:WhatsAppIcon,external:true,ariaLabel:undefined},
     {href:`tel:${company.phoneHref}`,label:dictionary.common.call,value:company.phoneDisplay,Icon:Phone,external:false,ariaLabel:undefined},
+    ...(business.officialEmail?[{href:`mailto:${business.officialEmail}`,label:{ar:'البريد الإلكتروني',en:'Email',tr:'E-posta'}[locale],value:business.officialEmail,Icon:Mail,external:false,ariaLabel:undefined}]:[]),
     {href:company.maps,label:dictionary.contact.address,value:company.address,Icon:MapPin,external:true,ariaLabel:undefined},
     {href:tayyamSocialAccounts.instagram.url,label:social.instagram,value:tayyamSocialAccounts.instagram.handle,Icon:InstagramIcon,external:true,ariaLabel:social.instagramAria},
     {href:tayyamSocialAccounts.tiktok.url,label:social.tiktok,value:tayyamSocialAccounts.tiktok.handle,Icon:TikTokIcon,external:true,ariaLabel:social.tiktokAria},

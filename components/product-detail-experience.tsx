@@ -2,7 +2,7 @@
 
 import {useState,type MouseEvent} from 'react';
 import {CatalogImage} from './catalog-image';
-import {CopyCode} from './copy-code';
+import {CopyCode,CopyDesignLink} from './copy-code';
 import {catalogText} from '@/lib/catalog-i18n';
 import {heroVariant,type Locale,type Product,type TechnicalSpecs} from '@/lib/products';
 import {isValidQuoteQuantity,useQuoteList} from '@/lib/quote-list';
@@ -36,9 +36,10 @@ export function ProductDetailExperience({product,locale}:{product:Product;locale
         <p className="eyebrow">{product.category[locale]}</p>
         <h1>{product.name[locale]}</h1>
         <div className="product-code-line"><bdi>{product.binMansoorCode}</bdi><CopyCode code={product.binMansoorCode} locale={locale}/></div>
+        <div className="mt-3"><CopyDesignLink designPath={`/${locale}/products/${product.slug}`} locale={locale}/></div>
         <p className="product-description">{product.description[locale]}</p>
         <section className="swatch-section" aria-labelledby="colour-preview-title"><div className="swatch-heading"><h2 id="colour-preview-title">{t.colors}</h2><p>{active.name[locale]} · <bdi>{active.code}</bdi></p></div><div className="material-swatches">{product.colorways.map(color=><button key={color.code} type="button" aria-pressed={active.code===color.code} aria-label={`${color.name[locale]} ${color.code}`} onClick={()=>setActive(color)} className={active.code===color.code?'selected':''}><span><CatalogImage asset={color} alt={color.name[locale]} sizes="120px" className="h-full w-full object-contain"/></span><small>{color.name[locale]}</small></button>)}</div></section>
-        <label className="quantity-field">{t.quantity}<input data-quantity-input type="number" min={MIN_ORDER_M2_PER_ITEM} step="any" value={quantity} aria-invalid={!quantityValid} aria-describedby="product-quantity-error" onChange={event=>setQuantity(event.target.value)}/></label>
+        <label className="quantity-field">{t.quantity}<input data-quantity-input type="number" min={MIN_ORDER_M2_PER_ITEM} step="any" value={quantity} aria-invalid={!quantityValid} aria-describedby={!quantityValid?'product-quantity-error':undefined} onChange={event=>setQuantity(event.target.value)}/></label>
         {!quantityValid&&<p id="product-quantity-error" role="alert" className="quantity-error">{t.moqValidation}</p>}
         <div className="product-actions"><button data-add-to-quote type="button" className="btn-primary" disabled={!quantityValid} onClick={addCurrent}>{added?t.added:t.add}</button><a href={`/${locale}/quote`} aria-disabled={!quantityValid} onClick={quoteClick} className="btn-secondary">{t.quote}</a><a data-whatsapp-quote href={quantityValid?direct:undefined} aria-disabled={!quantityValid} onClick={whatsappClick} target="_blank" rel="noreferrer" className="btn-text">WhatsApp</a></div>
         <output className="sr-only">{added?t.added:''}</output>

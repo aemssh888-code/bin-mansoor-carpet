@@ -52,7 +52,7 @@ export const wtwReserved:Record<string,string>={'wtw-005':'wtw-006','wtw-007':'w
 export function getWTWModel(slug:string){return wtwModels.find(model=>model.slug===slug);}
 export function wtwColourLabel(code:string){return code.split('-').at(-1)??code;}
 export function wtwColourCount(count:number,locale:Locale){
- if(locale==='ar')return `${count} ${count===1?'لون':count===2?'لونان':'ألوان'}`;
+ if(locale==='ar')return count===1?'لون واحد':count===2?'لونان':`${count} ألوان`;
  if(locale==='tr')return `${count} Renk`;
  return `${count} ${count===1?'Colour':'Colours'}`;
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import {useState,useSyncExternalStore} from 'react';
+import {CopyDesignLink} from './copy-code';
 import type {Locale} from '@/lib/products';
 import {business,productOrderRules} from '@/lib/business';
 import {catalogText} from '@/lib/catalog-i18n';
@@ -30,6 +31,7 @@ export function WTWDetail({locale,model}:{locale:Locale;model:WTWModel}){
    <aside className="wtw-detail-info">
     <p className="eyebrow">{t.line} / {wtwCategory(model.category,locale)}</p>
     <h1>{model.name[locale]}</h1><p className="wtw-detail-code"><bdi>{model.code}</bdi></p>
+    <div className="mt-3"><CopyDesignLink designPath={`/${locale}/wall-to-wall/${model.slug}?colour=${selected.code}`} locale={locale}/></div>
     <dl className="wtw-facts"><div><dt>{t.category}</dt><dd>{wtwCategory(model.category,locale)}</dd></div>{model.styles.length>0&&<div><dt>{t.style}</dt><dd>{model.styles.join(' · ')}</dd></div>}<div><dt>{t.colourPreviews}</dt><dd>{model.colourways.length}</dd></div></dl>
     <section className="wtw-colour-section"><h2>{t.selected}: <bdi aria-live="polite">{selected.code}</bdi></h2><div className="wtw-swatches">{model.colourways.map(colour=><button type="button" key={colour.code} aria-pressed={selected.code===colour.code} aria-label={`${model.code} ${wtwColourLabel(colour.code)}`} onClick={()=>setSelectedCode(colour.code)}><img src={colour.image} alt="" width="1200" height="800" loading="lazy"/><span>{wtwColourLabel(colour.code)}</span></button>)}</div></section>
     <label className="wtw-quantity">{t.quantity}<input type="number" min={productOrderRules['wall-to-wall'].minOrderM2PerItem} step="any" inputMode="decimal" value={quantity} onChange={e=>setQuantity(e.target.value)} aria-invalid={!valid} aria-describedby={!valid?'wtw-quantity-error':'wtw-minimum-note'}/></label>

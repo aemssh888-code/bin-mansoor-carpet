@@ -2,7 +2,7 @@ import { company } from '@/lib/i18n';
 import type { Locale } from '@/lib/products';
 import {LanguageSwitcher} from './language-switcher';
 import {catalogText} from '@/lib/catalog-i18n';
-import {partnerCompanies} from '@/lib/business';
+import {business,partnerCompanies} from '@/lib/business';
 import {wtwText} from '@/lib/wtw';
 
 export function SiteFooter({
@@ -24,6 +24,7 @@ export function SiteFooter({
           </div>
           <nav className="flex flex-col items-start gap-4" aria-label={nav.about}>
             <a href={`tel:${company.phoneHref}`} dir="ltr" className="text-lg hover:text-[#c8b088]">{company.phoneDisplay}</a>
+            {business.officialEmail&&<a href={`mailto:${business.officialEmail}`} dir="ltr" className="break-all text-white/60 hover:text-white">{business.officialEmail}</a>}
             <a href={`/${locale}/products`} className="text-white/60 hover:text-white">{nav.products}</a>
             <a href={`/${locale}/wall-to-wall`} className="text-white/60 hover:text-white">{wtwText[locale].nav}</a>
             <a href={`/${locale}/about`} className="text-white/60 hover:text-white">{nav.about}</a>

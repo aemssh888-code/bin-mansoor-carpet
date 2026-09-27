@@ -1,8 +1,8 @@
 import { copyFile, mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import {siteUrl} from '../lib/site-origin.mjs';
 
 const outputDirectory = path.resolve('dist/client');
-const siteUrl=(process.env.NEXT_PUBLIC_SITE_URL??'https://bin-mansoor-carpet.vercel.app').replace(/\/$/,'');
 const locales=['ar','en','tr'];
 
 async function collectHtmlFiles(directory) {
