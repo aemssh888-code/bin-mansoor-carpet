@@ -12,32 +12,40 @@ For local testing, set the variable only in the terminal process or an ignored `
 
 Visit `/admin/outreach`. Unauthenticated requests are redirected to `/admin/outreach/login`. A successful server-side password check creates a 12-hour `HttpOnly`, `SameSite=Strict` session cookie scoped to the outreach route. Use **Sign out** when finished on a shared device.
 
-## 3. CSV import
+## 3. XLSX and CSV import
 
-UTF-8 CSV headers: `companyName,contactName,jobTitle,email,phone,city,country,sector,website,source,language,notes`.
+Use **Import XLSX / CSV** to process a workbook locally in the browser. For the Saudi lead workbook, the importer selects the `العملاء_100` sheet and maps its Arabic headers automatically. It also accepts UTF-8 CSV files with either those Arabic headers or the exported English field names.
 
-`companyName` and a valid `email` are required. Invalid and duplicate rows are shown for review rather than silently deleted. Supported languages are `en` and `ar`.
+Only `companyName` / `الشركة` is required. A company without an email is retained as **Needs Contact Research**; a valid email makes it **Ready to Contact**. Invalid rows and possible duplicates are shown in a confirmation preview. Duplicate handling can either skip the new row or update the existing local record.
 
-## 4. Prepare an email
+The target-role field is separate from an actual contact name and contact job title. Importing values such as `Procurement / Projects / FF&E` never creates a fictional contact person.
+
+## 4. Research and campaign workflow
+
+Use the **Needs Contact Research** view to open a company's public website or supplied contact source, then add a verified business email manually. Email actions remain disabled until the address is valid. Priority filters support **Priority 5**, **Priority 4+**, and **All**.
+
+The named working list stores up to 30 manually selected leads in this browser. It is a planning queue only and does not send bulk email.
+
+## 5. Prepare an email
 
 Open a lead, choose the email type, add an optional truthful Personal Opening Line, select MOQ/opt-out preferences and optionally include up to three existing BMC or WTW designs. Generate the draft, then edit TO, SUBJECT and BODY before using it.
 
-## 5. Open Gmail
+## 6. Open Gmail
 
 **Open in Gmail** opens the current browser's Gmail compose page with TO, SUBJECT and BODY filled. The dashboard never receives a Google password and never sends the email.
 
-## 6. Mark as sent
+## 7. Mark as sent
 
 Opening Gmail is not proof of sending. After manually sending in Gmail, return and click **Mark as Sent**. This records the time, sets status to `CONTACTED` and suggests a follow-up after four days.
 
-## 7. Follow-up workflow
+## 8. Follow-up workflow
 
 Due dates appear as `FOLLOW-UP DUE`. **Prepare Follow-Up** selects Follow-Up #1, then Follow-Up #2 based on local contact history. Follow-Up #2 does not schedule another follow-up automatically. `DO NOT CONTACT` blocks draft generation until the owner manually changes the status.
 
-## 8. Export and backup
+## 9. Export and backup
 
 **Export CSV** exports the current lead table. **Export Backup** saves the complete local state as JSON; **Import Backup** replaces the local browser database only after validation.
 
-## 9. Privacy limitations
+## 10. Privacy limitations
 
-Lead data is stored in IndexedDB in the current browser profile. It is not synchronized between devices and can be lost if browser site data is cleared. Keep encrypted device-level protection and regular JSON backups. Do not import sensitive personal data beyond legitimate business-contact information. No third-party analytics or server-side lead database is used.
+Lead data, campaign selections, and the selected workbook are processed only in the current browser profile. Lead records are stored in IndexedDB and campaign selections in local storage. Nothing is uploaded by the importer, synchronized between devices, committed with the site, or sent to analytics. Browser site data can be cleared, so keep encrypted device-level protection and regular JSON backups. Do not import sensitive personal data beyond legitimate business-contact information.

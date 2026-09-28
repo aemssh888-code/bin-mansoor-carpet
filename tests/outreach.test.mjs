@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {OUTREACH_SESSION_COOKIE,createOutreachSessionToken,outreachSecretConfigured,outreachSessionCookie,readCookie,sameRequestOrigin,validOutreachSession} from '../lib/outreach-auth.ts';
-import {createLead,exportLeadCsv,generateOutreachEmail,gmailComposeUrl,interpolateTemplate,markLeadSent,parseLeadCsv,validateBackup} from '../lib/outreach.ts';
+import {createLead,exportLeadCsv,findDuplicateLead,generateOutreachEmail,gmailComposeUrl,interpolateTemplate,isValidLeadEmail,markLeadSent,parseLeadCsv,parseLeadRows,validateBackup} from '../lib/outreach.ts';
 
-const lead=(patch={})=>createLead({companyName:'TEST Riyadh Projects',email:'buyer@example.test',contactName:'Amina',jobTitle:'Procurement Manager',city:'Riyadh',country:'Saudi Arabia',sector:'Contractors',source:'Manual Research',language:'en',...patch});
+const lead=(patch={})=>createLead({companyName:'TEST Riyadh Projects',email:'buyer@example.test',contactName:'Amina',contactJobTitle:'Procurement Manager',city:'Riyadh',country:'Saudi Arabia',sector:'Contractors',source:'Manual Research',language:'en',...patch});
 
 test('authentication tokens are server-secret derived and cookies are hardened',async()=>{
  const secret='a-strong-test-secret';const token=await createOutreachSessionToken(secret);
@@ -13,9 +13,23 @@ test('authentication tokens are server-secret derived and cookies are hardened',
  assert.equal(sameRequestOrigin(new Request('https://binmansoor.com/admin/outreach',{method:'POST',headers:{origin:'https://example.com'}})),false);
 });
 
-test('CSV import keeps valid rows and reports invalid rows',()=>{
- const csv='companyName,contactName,jobTitle,email,phone,city,country,sector,website,source,language,notes\nTEST One,Amina,,amina@example.test,,Riyadh,Saudi Arabia,Contractors,,Manual Research,en,Priority\nMissing,,,,,,,,,,,\nBad Email,,,not-an-email,,,,,,,,\nTEST Two,,,two@example.test,,Doha,Qatar,Hospitality / Hotels,,Referral,ar,';
- const result=parseLeadCsv(csv);assert.equal(result.leads.length,2);assert.equal(result.errors.length,2);assert.equal(result.leads[0].companyName,'TEST One');assert.equal(result.leads[1].language,'ar');
+test('CSV import keeps companies without email and reports malformed rows',()=>{
+ const csv='companyName,contactName,contactJobTitle,email,phone,city,country,sector,website,source,language,notes\nTEST One,Amina,,amina@example.test,,Riyadh,Saudi Arabia,Contractors,,Manual Research,en,Priority\nMissing Email,,,,,Riyadh,Saudi Arabia,Developers,,Manual Research,en,Research\n,No Company,,,,,,,,,,\nBad Email,,,not-an-email,,,,,,,,\nTEST Two,,,two@example.test,,Doha,Qatar,Hospitality / Hotels,,Referral,ar,';
+ const result=parseLeadCsv(csv);assert.equal(result.leads.length,3);assert.equal(result.errors.length,2);assert.equal(result.leads[1].readiness,'NEEDS_CONTACT_RESEARCH');assert.equal(result.leads[2].language,'ar');
+});
+
+test('Arabic workbook headers map target role separately and assign readiness',()=>{
+ const rows=[['رقم','الشركة','القطاع','المدينة/المنطقة','الدولة','الأولوية (1-5)','سبب الملاءمة','المنصب المستهدف','البريد العام','الموقع','رابط المصدر/التواصل','لغة التواصل','الحالة','جاهز للإيميل؟','الإجراء التالي','ملاحظات'],[1,'Saudi Ready','Developer / Giga-project','Riyadh','Saudi Arabia',5,'Large projects','Procurement / FF&E','sales@example.test','https://example.test','https://example.test/contact','English','New','نعم','Review',''],[2,'Saudi Research','Hotel Operator','Jeddah','Saudi Arabia',4,'Hospitality fit','Procurement','', 'https://hotel.test','https://hotel.test/contact','Arabic','New','لا','Find email','']];
+ const result=parseLeadRows(rows);assert.equal(result.totalRows,2);assert.equal(result.leads.length,2);assert.equal(result.leads[0].targetRole,'Procurement / FF&E');assert.equal(result.leads[0].contactName,'');assert.equal(result.leads[0].priority,5);assert.equal(result.leads[0].readiness,'READY_TO_CONTACT');assert.equal(result.leads[1].readiness,'NEEDS_CONTACT_RESEARCH');assert.equal(result.leads[1].language,'ar');
+});
+
+test('possible duplicates remain visible in preview and are not silently discarded',()=>{
+ const rows=[['الشركة','البريد العام','الموقع'],['First Company','','https://same.example.test'],['Second Company','sales@same.example.test','https://same.example.test']];
+ const result=parseLeadRows(rows);assert.equal(result.totalRows,2);assert.equal(result.leads.length,2);assert.equal(result.duplicates.length,1);assert.equal(result.leads.filter(item=>item.readiness==='READY_TO_CONTACT').length,1);
+});
+
+test('duplicates use company, website or email and missing email blocks drafts',()=>{
+ const original=lead({website:'https://www.example.test/'});assert.equal(findDuplicateLead([original],lead({companyName:'Different',email:'other@example.test',website:'https://example.test'}))?.id,original.id);assert.equal(isValidLeadEmail(''),false);assert.throws(()=>generateOutreachEmail({lead:lead({email:''}),type:'FIRST CONTACT'}),/valid public business email/);
 });
 
 test('template interpolation never invents missing values',()=>{assert.equal(interpolateTemplate('Hello {{contactName}} at {{companyName}} in {{city}}',lead({contactName:'',city:''})),'Hello  at TEST Riyadh Projects in ');});
@@ -35,6 +49,6 @@ test('mark sent records history and stops automatic follow-up after follow-up tw
 test('DO NOT CONTACT blocks every outreach template',()=>{assert.throws(()=>generateOutreachEmail({lead:lead({status:'DO NOT CONTACT'}),type:'FOLLOW-UP #1'}),/DO NOT CONTACT/);});
 
 test('CSV export and JSON backup retain updated sales fields',()=>{
- const updated={...lead(),status:'REPLIED',lastContactedAt:'2026-09-28T12:00:00Z',nextFollowUpAt:'2026-10-02',notes:'Asked for options'};const csv=exportLeadCsv([updated]);assert.match(csv,/companyName,contactName/);assert.match(csv,/REPLIED/);assert.match(csv,/Asked for options/);
+ const updated={...lead(),status:'REPLIED',priority:5,targetRole:'Procurement',lastContactedAt:'2026-09-28T12:00:00Z',nextFollowUpAt:'2026-10-02',notes:'Asked for options'};const csv=exportLeadCsv([updated]);assert.match(csv,/companyName,contactName/);assert.match(csv,/READY_TO_CONTACT/);assert.match(csv,/Procurement/);assert.match(csv,/Asked for options/);
  const restored=validateBackup({version:1,leads:[updated]});assert.equal(restored.length,1);assert.equal(restored[0].status,'REPLIED');
 });

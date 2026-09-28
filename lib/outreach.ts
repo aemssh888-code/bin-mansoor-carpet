@@ -5,24 +5,36 @@ export const OUTREACH_STATUSES=['NEW','READY TO CONTACT','CONTACTED','FOLLOW-UP 
 export const OUTREACH_SOURCES=['Company Website','Public Business Directory','Referral','Trade Fair','Existing Contact','Supplier Directory','Manual Research','Other'] as const;
 export const OUTREACH_LANGUAGES=['en','ar'] as const;
 export const OUTREACH_EMAIL_TYPES=['FIRST CONTACT','FOLLOW-UP #1','FOLLOW-UP #2','CATALOG REQUEST RESPONSE','QUOTE INTEREST RESPONSE','DISTRIBUTOR INTRODUCTION'] as const;
+export const OUTREACH_READINESS=['READY_TO_CONTACT','NEEDS_CONTACT_RESEARCH'] as const;
 
 export type OutreachSector=typeof OUTREACH_SECTORS[number];
 export type OutreachStatus=typeof OUTREACH_STATUSES[number];
 export type OutreachSource=typeof OUTREACH_SOURCES[number];
 export type OutreachLanguage=typeof OUTREACH_LANGUAGES[number];
 export type OutreachEmailType=typeof OUTREACH_EMAIL_TYPES[number];
+export type OutreachReadiness=typeof OUTREACH_READINESS[number];
 
 export type OutreachDesign={key:string;line:'Rug'|'Wall-to-Wall';code:string;name:{en:string;ar:string};path:string};
 export type ContactHistoryEntry={id:string;type:OutreachEmailType;subject:string;at:string};
 export type Lead={
- id:string;companyName:string;contactName:string;jobTitle:string;email:string;phone:string;city:string;country:string;sector:OutreachSector;website:string;source:OutreachSource;language:OutreachLanguage;status:OutreachStatus;lastContactedAt:string;nextFollowUpAt:string;notes:string;history:ContactHistoryEntry[];createdAt:string;updatedAt:string;
+ id:string;sourceRowNumber:string;companyName:string;contactName:string;contactJobTitle:string;email:string;phone:string;city:string;country:string;sector:OutreachSector;website:string;sourceUrl:string;source:OutreachSource;language:OutreachLanguage;status:OutreachStatus;readiness:OutreachReadiness;priority:1|2|3|4|5|null;fitReason:string;targetRole:string;nextAction:string;lastContactedAt:string;nextFollowUpAt:string;notes:string;history:ContactHistoryEntry[];createdAt:string;updatedAt:string;jobTitle?:string;
 };
 export type EmailDraft={to:string;subject:string;body:string;type:OutreachEmailType};
-export type CsvImportResult={leads:Lead[];errors:{row:number;message:string}[]};
+export type LeadImportResult={leads:Lead[];errors:{row:number;message:string}[];duplicates:{row:number;message:string}[];totalRows:number};
 
-const CSV_COLUMNS=['companyName','contactName','jobTitle','email','phone','city','country','sector','website','source','language','notes'] as const;
-const CSV_EXPORT_COLUMNS=['companyName','contactName','jobTitle','email','country','city','sector','website','source','language','status','lastContactedAt','nextFollowUpAt','notes'] as const;
+const CSV_EXPORT_COLUMNS=['sourceRowNumber','companyName','contactName','contactJobTitle','email','phone','country','city','sector','priority','fitReason','targetRole','website','sourceUrl','source','language','status','readiness','nextAction','lastContactedAt','nextFollowUpAt','notes'] as const;
 const EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const HEADER_ALIASES:Record<string,keyof Lead>={
+ 'رقم':'sourceRowNumber','source id':'sourceRowNumber','sourcerownumber':'sourceRowNumber',
+ 'الشركة':'companyName','company':'companyName','companyname':'companyName',
+ 'القطاع':'sector','sector':'sector','المدينة/المنطقة':'city','city':'city','الدولة':'country','country':'country',
+ 'الأولوية (1-5)':'priority','priority':'priority','سبب الملاءمة':'fitReason','fitreason':'fitReason',
+ 'المنصب المستهدف':'targetRole','targetrole':'targetRole','البريد العام':'email','email':'email',
+ 'الموقع':'website','website':'website','رابط المصدر/التواصل':'sourceUrl','sourceurl':'sourceUrl',
+ 'لغة التواصل':'language','language':'language','الحالة':'status','status':'status','جاهز للإيميل؟':'readiness','readiness':'readiness',
+ 'الإجراء التالي':'nextAction','nextaction':'nextAction','ملاحظات':'notes','notes':'notes',
+ 'contactname':'contactName','contactjobtitle':'contactJobTitle','jobtitle':'contactJobTitle','phone':'phone','source':'source',
+ };
 
 function csvRows(text:string){
  const rows:string[][]=[];let row:string[]=[];let field='';let quoted=false;
@@ -40,34 +52,51 @@ function csvRows(text:string){
 
 function validChoice<T extends readonly string[]>(value:string,choices:T,fallback:T[number]){return (choices as readonly string[]).includes(value)?value as T[number]:fallback;}
 function nowIso(){return new Date().toISOString();}
+function cellText(value:unknown){if(value instanceof Date)return value.toISOString();if(value==null)return '';if(typeof value==='string')return value.trim();if(typeof value==='number'||typeof value==='boolean'||typeof value==='bigint')return String(value).trim();return '';}
+function normalizedKey(value:string){return value.trim().toLocaleLowerCase().replace(/\s+/g,' ');}
+function normalizedWebsite(value:string){if(!value.trim())return '';try{const url=new URL(/^https?:\/\//i.test(value)?value:`https://${value}`);return `${url.hostname.replace(/^www\./,'')}${url.pathname.replace(/\/$/,'')}`.toLowerCase();}catch{return normalizedKey(value).replace(/^https?:\/\//,'').replace(/^www\./,'').replace(/\/$/,'');}}
+function normalizedSector(value:string):OutreachSector{const text=value.toLowerCase();if(!text)return 'Other';if(/mosque|prayer|awqaf|religious/.test(text))return 'Mosque / Religious Project Suppliers';if(/government|institution/.test(text))return 'Government / Institutional Projects';if(/distributor|import|wholesale|flooring|carpet manufacturer|supplier/.test(text))return 'Carpet Distributors / Importers';if(/fit[- ]?out|interior design/.test(text))return 'Fit-Out / Interior Contracting';if(/contractor|\bepc\b/.test(text))return 'Contractors';if(/developer|development/.test(text))return 'Developers';if(/hotel|hospitality|tourism/.test(text))return 'Hospitality / Hotels';return validChoice(value,OUTREACH_SECTORS,'Other');}
+function normalizedLanguage(value:string):OutreachLanguage{const text=value.toLowerCase();return text==='ar'||text.includes('arabic')||text.includes('العربية')?'ar':'en';}
+function normalizedStatus(value:string):OutreachStatus{const text=value.trim().replaceAll('_',' ').toUpperCase();return validChoice(text,OUTREACH_STATUSES,'NEW');}
+function normalizedPriority(value:unknown):Lead['priority']{const parsed=Number(cellText(value));return Number.isInteger(parsed)&&parsed>=1&&parsed<=5?parsed as Lead['priority']:null;}
+export function isValidLeadEmail(value:string){return EMAIL.test(value.trim());}
 
-export function createLead(input:Partial<Lead>&Pick<Lead,'companyName'|'email'>):Lead{
+export function createLead(input:Partial<Lead>&Pick<Lead,'companyName'>):Lead{
  const now=nowIso();
- return {id:input.id??crypto.randomUUID(),companyName:input.companyName.trim(),contactName:input.contactName?.trim()??'',jobTitle:input.jobTitle?.trim()??'',email:input.email.trim().toLowerCase(),phone:input.phone?.trim()??'',city:input.city?.trim()??'',country:input.country?.trim()||'Saudi Arabia',sector:validChoice(input.sector??'',OUTREACH_SECTORS,'Other'),website:input.website?.trim()??'',source:validChoice(input.source??'',OUTREACH_SOURCES,'Manual Research'),language:validChoice(input.language??'',OUTREACH_LANGUAGES,'en'),status:validChoice(input.status??'',OUTREACH_STATUSES,'NEW'),lastContactedAt:input.lastContactedAt??'',nextFollowUpAt:input.nextFollowUpAt??'',notes:input.notes?.trim()??'',history:Array.isArray(input.history)?input.history:[],createdAt:input.createdAt??now,updatedAt:now};
+ const email=input.email?.trim().toLowerCase()??'';const status=normalizedStatus(input.status??'');const validEmail=isValidLeadEmail(email);
+ return {id:input.id??crypto.randomUUID(),sourceRowNumber:cellText(input.sourceRowNumber),companyName:input.companyName.trim(),contactName:input.contactName?.trim()??'',contactJobTitle:input.contactJobTitle?.trim()??input.jobTitle?.trim()??'',email,phone:input.phone?.trim()??'',city:input.city?.trim()??'',country:input.country?.trim()||'Saudi Arabia',sector:normalizedSector(input.sector??''),website:input.website?.trim()??'',sourceUrl:input.sourceUrl?.trim()??'',source:validChoice(input.source??'',OUTREACH_SOURCES,'Manual Research'),language:normalizedLanguage(input.language??''),status,readiness:input.readiness==='READY_TO_CONTACT'&&validEmail?'READY_TO_CONTACT':validEmail?'READY_TO_CONTACT':'NEEDS_CONTACT_RESEARCH',priority:normalizedPriority(input.priority),fitReason:input.fitReason?.trim()??'',targetRole:input.targetRole?.trim()??'',nextAction:input.nextAction?.trim()??'',lastContactedAt:input.lastContactedAt??'',nextFollowUpAt:input.nextFollowUpAt??'',notes:input.notes?.trim()??'',history:Array.isArray(input.history)?input.history:[],createdAt:input.createdAt??now,updatedAt:input.updatedAt??now};
 }
 
-export function parseLeadCsv(text:string):CsvImportResult{
- const rows=csvRows(text.replace(/^\uFEFF/,''));
- if(!rows.length)return {leads:[],errors:[{row:1,message:'The CSV file is empty.'}]};
- const headers=rows[0].map(value=>value.trim());
- const missing=['companyName','email'].filter(column=>!headers.includes(column));
- if(missing.length)return {leads:[],errors:[{row:1,message:`Missing required columns: ${missing.join(', ')}`}]} ;
- const leads:Lead[]=[];const errors:CsvImportResult['errors']=[];const seen=new Set<string>();
+export function findDuplicateLead(leads:Lead[],candidate:Lead){const name=normalizedKey(candidate.companyName);const website=normalizedWebsite(candidate.website);const email=candidate.email.toLowerCase();return leads.find(lead=>(name&&normalizedKey(lead.companyName)===name)||(website&&normalizedWebsite(lead.website)===website)||(email&&lead.email.toLowerCase()===email));}
+
+export function mergeImportedLead(existing:Lead,incoming:Lead):Lead{
+ const merged={...existing,...incoming,id:existing.id,contactName:incoming.contactName||existing.contactName,contactJobTitle:incoming.contactJobTitle||existing.contactJobTitle,email:incoming.email||existing.email,phone:incoming.phone||existing.phone,website:incoming.website||existing.website,sourceUrl:incoming.sourceUrl||existing.sourceUrl,createdAt:existing.createdAt,history:existing.history,lastContactedAt:existing.lastContactedAt,nextFollowUpAt:existing.nextFollowUpAt,status:existing.status==='NEW'?incoming.status:existing.status,updatedAt:nowIso()};
+ return createLead(merged);
+}
+
+export function parseLeadRows(rows:unknown[][]):LeadImportResult{
+ if(!rows.length)return {leads:[],errors:[{row:1,message:'The import file is empty.'}],duplicates:[],totalRows:0};
+ const mappedHeaders=rows[0].map(value=>HEADER_ALIASES[cellText(value).replace(/^\uFEFF/,'').toLocaleLowerCase()]??null);
+ if(!mappedHeaders.includes('companyName'))return {leads:[],errors:[{row:1,message:'Missing required companyName / الشركة column.'}],duplicates:[],totalRows:Math.max(0,rows.length-1)};
+ const leads:Lead[]=[];const errors:LeadImportResult['errors']=[];const duplicates:LeadImportResult['duplicates']=[];let totalRows=0;
  rows.slice(1).forEach((values,index)=>{
-  const rowNumber=index+2;const raw=Object.fromEntries(headers.map((header,column)=>[header,values[column]?.trim()??'']));
-  if(!raw.companyName||!raw.email){errors.push({row:rowNumber,message:'companyName and email are required.'});return;}
-  if(!EMAIL.test(raw.email)){errors.push({row:rowNumber,message:`Invalid email: ${raw.email}`});return;}
-  const email=raw.email.toLowerCase();if(seen.has(email)){errors.push({row:rowNumber,message:`Duplicate email in import: ${raw.email}`});return;}seen.add(email);
-  leads.push(createLead({companyName:raw.companyName,email,...Object.fromEntries(CSV_COLUMNS.filter(column=>!['companyName','email'].includes(column)).map(column=>[column,raw[column]??'']))}));
+  if(!values.some(value=>cellText(value)))return;totalRows++;const rowNumber=index+2;const raw:Record<string,unknown>={};mappedHeaders.forEach((key,column)=>{if(key)raw[key]=values[column]??'';});
+  const companyName=cellText(raw.companyName);const email=cellText(raw.email).toLowerCase();if(!companyName){errors.push({row:rowNumber,message:'Company name is required.'});return;}if(email&&!isValidLeadEmail(email)){errors.push({row:rowNumber,message:`Invalid email: ${email}`});return;}
+  const lead=createLead({companyName,email,sourceRowNumber:cellText(raw.sourceRowNumber),contactName:cellText(raw.contactName),contactJobTitle:cellText(raw.contactJobTitle),phone:cellText(raw.phone),city:cellText(raw.city),country:cellText(raw.country),sector:cellText(raw.sector) as OutreachSector,website:cellText(raw.website),sourceUrl:cellText(raw.sourceUrl),source:cellText(raw.source) as OutreachSource,language:cellText(raw.language) as OutreachLanguage,status:cellText(raw.status) as OutreachStatus,priority:normalizedPriority(raw.priority),fitReason:cellText(raw.fitReason),targetRole:cellText(raw.targetRole),nextAction:cellText(raw.nextAction),notes:cellText(raw.notes)});
+  const duplicate=findDuplicateLead(leads,lead);if(duplicate)duplicates.push({row:rowNumber,message:`Possible duplicate of ${duplicate.companyName}.`});leads.push(lead);
  });
- return {leads,errors};
+ return {leads,errors,duplicates,totalRows};
+}
+
+export function parseLeadCsv(text:string):LeadImportResult{
+ return parseLeadRows(csvRows(text.replace(/^\uFEFF/,'')));
 }
 
 function csvCell(value:unknown){const text=value==null?'':typeof value==='string'?value:typeof value==='number'||typeof value==='boolean'?String(value):JSON.stringify(value);return /[",\n\r]/.test(text)?`"${text.replace(/"/g,'""')}"`:text;}
 export function exportLeadCsv(leads:Lead[]){return [CSV_EXPORT_COLUMNS.join(','),...leads.map(lead=>CSV_EXPORT_COLUMNS.map(column=>csvCell(lead[column])).join(','))].join('\r\n');}
 
 export function interpolateTemplate(template:string,lead:Lead){
- const values:Record<string,string>={contactName:lead.contactName,companyName:lead.companyName,jobTitle:lead.jobTitle,city:lead.city,sector:lead.sector};
+ const values:Record<string,string>={contactName:lead.contactName,companyName:lead.companyName,jobTitle:lead.contactJobTitle,city:lead.city,sector:lead.sector};
  return template.replace(/{{(contactName|companyName|jobTitle|city|sector)}}/g,(_,key:string)=>values[key]??'');
 }
 
@@ -110,6 +139,7 @@ function signature(language:OutreachLanguage){return language==='ar'?'مع ال�
 
 export function generateOutreachEmail({lead,type,personalOpeningLine='',includeMoq=defaultIncludeMoq(lead.sector),includeOptOut=type==='FIRST CONTACT',designs=[]}:{lead:Lead;type:OutreachEmailType;personalOpeningLine?:string;includeMoq?:boolean;includeOptOut?:boolean;designs?:OutreachDesign[]}):EmailDraft{
  if(lead.status==='DO NOT CONTACT')throw new Error('This lead is marked DO NOT CONTACT. Re-enable it before preparing outreach.');
+ if(!isValidLeadEmail(lead.email))throw new Error('Add a valid public business email before preparing outreach.');
  const language=lead.language;const arabic=language==='ar';const company=lead.companyName;const opening=interpolateTemplate(personalOpeningLine.trim(),lead);const links=designLinks(designs.slice(0,3),language);
  const moq=includeMoq?(arabic?'الحد الأدنى للطلب هو 8,000 م² لكل تصميم.':'Minimum order is 8,000 m² per design.'):'';
  const optOut=includeOptOut?(arabic?'إذا لم يكن هذا مناسبًا لفريقكم، يرجى إبلاغي ولن أتابع التواصل.':'If this is not relevant to your team, please let me know and I will not follow up.'):'';
@@ -149,7 +179,7 @@ export function validateBackup(value:unknown):Lead[]{
  return (value as {leads:unknown[]}).leads.map((item,index)=>{
   if(!item||typeof item!=='object')throw new Error(`Invalid lead at position ${index+1}.`);
   const lead=item as Partial<Lead>;
-  if(!lead.companyName||!lead.email||!EMAIL.test(lead.email))throw new Error(`Invalid lead at position ${index+1}.`);
-  return createLead(lead as Partial<Lead>&Pick<Lead,'companyName'|'email'>);
+  if(!lead.companyName||(lead.email&&!EMAIL.test(lead.email)))throw new Error(`Invalid lead at position ${index+1}.`);
+  return createLead(lead as Partial<Lead>&Pick<Lead,'companyName'>);
  });
 }
