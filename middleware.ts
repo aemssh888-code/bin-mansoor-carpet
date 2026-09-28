@@ -1,5 +1,5 @@
 import {next} from '@vercel/edge';
-import {OUTREACH_SESSION_COOKIE,clearOutreachSessionCookie,createOutreachSessionToken,outreachSecretConfigured,outreachSessionCookie,readCookie,sameRequestOrigin,validOutreachSession} from './lib/outreach-auth';
+import {OUTREACH_SESSION_COOKIE,clearOutreachSessionCookie,createOutreachSessionToken,outreachSecretConfigured,outreachSessionCookie,readCookie,sameRequestOrigin,validOutreachSession} from './lib/outreach-auth.js';
 
 const LOGIN='/admin/outreach/login';
 const LOGOUT='/admin/outreach/logout';
