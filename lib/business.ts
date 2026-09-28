@@ -42,7 +42,7 @@ export const business: {
  phoneDisplay:'+90 530 351 30 37',phoneHref:'+905303513037',
  maps:'https://www.google.com/maps/search/OSB+5.+Bolge+83523+Nolu+Cd.+19,+27620+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%BA%D8%A7%D8%B2%D9%8A+%D8%B9%D9%8A%D9%86%D8%AA%D8%A7%D8%A8,+Sehitkamil+%D8%AA%D8%B1%D9%83%D9%8A%D8%A7%E2%80%AD/@37.1993,37.3054,17z?hl=ar&entry=ttu',
  established:2023,machines:4,minimumOrderQuantity:MIN_ORDER_M2_PER_ITEM,
- officialEmail:null,socialLinks:null,factoryArea:null,employeeCount:null,dailyCapacity:null,monthlyCapacity:null,annualCapacity:null,
+ officialEmail:'sales@binmansoor.com',socialLinks:null,factoryArea:null,employeeCount:null,dailyCapacity:null,monthlyCapacity:null,annualCapacity:null,
  machineDetails:null,materials:null,certifications:null,exportMarkets:null,shippingMethods:null,leadTime:null,customManufacturing:null,customDesign:null,customColors:null,
  factoryPhotos:null,factoryVideo:null,projects:null,clients:null,applications:null,catalogPdf:null,
 };

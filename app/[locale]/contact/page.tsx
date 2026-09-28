@@ -11,6 +11,11 @@ const socialText={
   en:{instagram:'Instagram',tiktok:'TikTok',instagramAria:'Open TAYYAM CARPET on Instagram',tiktokAria:'Open TAYYAM CARPET on TikTok'},
   tr:{instagram:'Instagram',tiktok:'TikTok',instagramAria:'TAYYAM CARPET Instagram hesabını aç',tiktokAria:'TAYYAM CARPET TikTok hesabını aç'},
 } satisfies Record<Locale,{instagram:string;tiktok:string;instagramAria:string;tiktokAria:string}>;
+const salesEmailText={
+  ar:{label:'بريد المبيعات',aria:'مراسلة قسم المبيعات عبر البريد الإلكتروني'},
+  en:{label:'Sales Email',aria:'Email the sales team'},
+  tr:{label:'Satış E-postası',aria:'Satış ekibine e-posta gönder'},
+} satisfies Record<Locale,{label:string;aria:string}>;
 
 export function generateStaticParams(){return locales.map(locale=>({locale}));}
 export async function generateMetadata({params}:{params:Promise<{locale:string}>}):Promise<Metadata>{const {locale}=await params;if(!isLocale(locale))return {};const dictionary=getDictionary(locale);return pageMetadata(locale,'/contact',dictionary.contact.title,dictionary.contact.body);}
@@ -20,11 +25,12 @@ export default async function ContactPage({params}:{params:Promise<{locale:strin
   if(!isLocale(locale)) return null;
   const dictionary=getDictionary(locale);
   const social=socialText[locale];
+  const salesEmail=salesEmailText[locale];
   const partners=[partnerCompanies.tayyam,partnerCompanies.binMansoor];
   const contactItems=[
     {href:whatsappUrl(locale),label:dictionary.common.whatsapp,value:company.phoneDisplay,Icon:WhatsAppIcon,external:true,ariaLabel:undefined},
     {href:`tel:${company.phoneHref}`,label:dictionary.common.call,value:company.phoneDisplay,Icon:Phone,external:false,ariaLabel:undefined},
-    ...(business.officialEmail?[{href:`mailto:${business.officialEmail}`,label:{ar:'البريد الإلكتروني',en:'Email',tr:'E-posta'}[locale],value:business.officialEmail,Icon:Mail,external:false,ariaLabel:undefined}]:[]),
+    ...(business.officialEmail?[{href:`mailto:${business.officialEmail}`,label:salesEmail.label,value:business.officialEmail,Icon:Mail,external:false,ariaLabel:salesEmail.aria}]:[]),
     {href:company.maps,label:dictionary.contact.address,value:company.address,Icon:MapPin,external:true,ariaLabel:undefined},
     {href:tayyamSocialAccounts.instagram.url,label:social.instagram,value:tayyamSocialAccounts.instagram.handle,Icon:InstagramIcon,external:true,ariaLabel:social.instagramAria},
     {href:tayyamSocialAccounts.tiktok.url,label:social.tiktok,value:tayyamSocialAccounts.tiktok.handle,Icon:TikTokIcon,external:true,ariaLabel:social.tiktokAria},

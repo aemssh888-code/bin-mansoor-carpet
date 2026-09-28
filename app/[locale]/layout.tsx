@@ -3,7 +3,7 @@ import { LocaleDocument } from '@/components/locale-document';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 import { getDictionary, isLocale, locales } from '@/lib/i18n';
-import {jointBrand,partnerCompanies} from '@/lib/business';
+import {business,jointBrand,partnerCompanies} from '@/lib/business';
 import {siteUrl} from '@/lib/seo';
 
 export function generateStaticParams() {
@@ -14,7 +14,7 @@ export default async function LocaleLayout({ children, params }: Readonly<{ chil
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const dictionary = getDictionary(locale);
-  const organizations=[partnerCompanies.tayyam,partnerCompanies.binMansoor].map((partner,index)=>({'@type':'Organization','@id':`${siteUrl}/#organization-${index+1}`,name:partner.brandName,legalName:partner.legalName,url:siteUrl,...(partner.socialLinks?{sameAs:Object.values(partner.socialLinks).map(account=>account.url)}:{})}));
+  const organizations=[partnerCompanies.tayyam,partnerCompanies.binMansoor].map((partner,index)=>({'@type':'Organization','@id':`${siteUrl}/#organization-${index+1}`,name:partner.brandName,legalName:partner.legalName,url:siteUrl,...(business.officialEmail?{contactPoint:{'@type':'ContactPoint',contactType:'sales',email:business.officialEmail,availableLanguage:['ar','en','tr']}}:{}),...(partner.socialLinks?{sameAs:Object.values(partner.socialLinks).map(account=>account.url)}:{})}));
   const structuredData={'@context':'https://schema.org','@graph':[{'@type':'WebSite','@id':`${siteUrl}/#website`,url:siteUrl,name:jointBrand.name[locale],inLanguage:locale,about:organizations.map(organization=>({'@id':organization['@id']}))},...organizations]};
   return (
     <div lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="min-h-screen bg-[#f7f5f0] text-[#1d1c19]">
