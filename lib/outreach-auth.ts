@@ -3,7 +3,7 @@ export const OUTREACH_SESSION_MAX_AGE=60*60*12;
 
 const encoder=new TextEncoder();
 
-export function outreachSecretConfigured(secret:string|undefined):secret is string{return Boolean(secret&&secret.length>=12);}
+export function outreachSecretConfigured(secret:string|undefined):secret is string{return Boolean(secret);}
 
 export async function createOutreachSessionToken(secret:string){
  const key=await crypto.subtle.importKey('raw',encoder.encode(secret),{name:'HMAC',hash:'SHA-256'},false,['sign']);

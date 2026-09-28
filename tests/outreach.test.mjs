@@ -7,7 +7,7 @@ const lead=(patch={})=>createLead({companyName:'TEST Riyadh Projects',email:'buy
 
 test('authentication tokens are server-secret derived and cookies are hardened',async()=>{
  const secret='a-strong-test-secret';const token=await createOutreachSessionToken(secret);
- assert.equal(await validOutreachSession(secret,token),true);assert.equal(await validOutreachSession('different-secret',token),false);assert.equal(outreachSecretConfigured('short'),false);assert.equal(outreachSecretConfigured(secret),true);
+ assert.equal(await validOutreachSession(secret,token),true);assert.equal(await validOutreachSession('different-secret',token),false);assert.equal(outreachSecretConfigured(''),false);assert.equal(outreachSecretConfigured('configured'),true);
  const cookie=outreachSessionCookie(token,true);assert.match(cookie,/HttpOnly/);assert.match(cookie,/SameSite=Strict/);assert.match(cookie,/Secure/);assert.equal(readCookie(`${OUTREACH_SESSION_COOKIE}=${token}; other=1`,OUTREACH_SESSION_COOKIE),token);
  assert.equal(sameRequestOrigin(new Request('https://binmansoor.com/admin/outreach',{method:'POST',headers:{origin:'https://binmansoor.com'}})),true);
  assert.equal(sameRequestOrigin(new Request('https://binmansoor.com/admin/outreach',{method:'POST',headers:{origin:'https://example.com'}})),false);

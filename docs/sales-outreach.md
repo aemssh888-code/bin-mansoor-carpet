@@ -4,7 +4,7 @@ Private Phase 1 workspace for preparing one reviewed email at a time. It does no
 
 ## 1. Configure access
 
-Create a strong Vercel Production environment variable named `OUTREACH_ADMIN_PASSWORD` (minimum 12 characters; a unique generated passphrase is recommended). Do not place the value in source control or any `NEXT_PUBLIC_*` variable. Redeploy after adding or changing it.
+Create a strong Vercel Production environment variable named `OUTREACH_ADMIN_PASSWORD` (a unique generated passphrase of 12 or more characters is recommended). Do not place the value in source control or any `NEXT_PUBLIC_*` variable. Redeploy after adding or changing it.
 
 For local testing, set the variable only in the terminal process or an ignored `.env.local` file.
 
