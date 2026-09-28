@@ -80,6 +80,7 @@ for(const locale of locales){
 const robots=await readFile(path.join(output,'robots.txt'),'utf8');
 assert.match(robots,/User-agent: \*/);
 assert.match(robots,/Allow: \//);
+assert.match(robots,/Disallow: \/admin\//);
 assert.ok(robots.includes(`Sitemap: ${siteUrl}/sitemap.xml`),'Robots must use the configured site origin');
 const sitemap=await readFile(path.join(output,'sitemap.xml'),'utf8');
 const sitemapLocations=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
