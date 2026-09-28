@@ -8,6 +8,7 @@ function privateHeaders(response:Response){const headers=new Headers(response.he
 
 export default async function middleware(request:Request){
  const url=new URL(request.url);const secret=process.env.OUTREACH_ADMIN_PASSWORD;
+ if(process.env.VINEXT_PRERENDER==='1'&&request.headers.has('x-vinext-prerender-secret'))return next();
  if(!outreachSecretConfigured(secret))return new Response('Outreach admin is not configured.',{status:503,headers:{'Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow, noarchive'}});
  const secure=url.protocol==='https:';
  if(url.pathname===LOGIN&&request.method==='POST'){
