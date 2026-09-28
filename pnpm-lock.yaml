@@ -14,6 +14,9 @@ importers:
       '@shadcn/react':
         specifier: 0.3.0
         version: 0.3.0(@types/react@19.2.14)(react@19.2.6)
+      '@vercel/edge':
+        specifier: ^1.3.3
+        version: 1.3.3
       class-variance-authority:
         specifier: 0.7.1
         version: 0.7.1
@@ -1506,6 +1509,9 @@ packages:
     peerDependenciesMeta:
       next:
         optional: true
+
+  '@vercel/edge@1.3.3':
+    resolution: {integrity: sha512-B4zu4g81nI1JHoOqc2FnXmh1DUpAJlZKPQsZck6iLp23kQ/zZF4ma6+Wejn8p9bKB6WPTbYPqEYrRXx4yl0qaw==}
 
   '@vercel/og@0.8.6':
     resolution: {integrity: sha512-hBcWIOppZV14bi+eAmCZj8Elj8hVSUZJTpf1lgGBhVD85pervzQ1poM/qYfFUlPraYSZYP+ASg6To5BwYmUSGQ==}
@@ -4576,6 +4582,8 @@ snapshots:
       '@unpic/core': 1.0.3
       react: 19.2.6
       react-dom: 19.2.6(react@19.2.6)
+
+  '@vercel/edge@1.3.3': {}
 
   '@vercel/og@0.8.6':
     dependencies:

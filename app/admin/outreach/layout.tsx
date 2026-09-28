@@ -1,0 +1,6 @@
+import type {Metadata} from 'next';
+import {LocaleDocument} from '@/components/locale-document';
+
+export const metadata:Metadata={title:'Sales Outreach Assistant',robots:{index:false,follow:false,noarchive:true,nocache:true}};
+
+export default function OutreachLayout({children}:{children:React.ReactNode}){return <div className="outreach-root" lang="en" dir="ltr"><LocaleDocument locale="en"/>{children}</div>;}
