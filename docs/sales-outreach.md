@@ -16,13 +16,17 @@ Visit `/admin/outreach`. Unauthenticated requests are redirected to `/admin/outr
 
 Use **Import XLSX / CSV** to process a workbook locally in the browser. For the Saudi lead workbook, the importer selects the `العملاء_100` sheet and maps its Arabic headers automatically. It also accepts UTF-8 CSV files with either those Arabic headers or the exported English field names.
 
-Only `companyName` / `الشركة` is required. A company without an email is retained as **Needs Contact Research**; a valid email makes it **Ready to Contact**. Invalid rows and possible duplicates are shown in a confirmation preview. Duplicate handling can either skip the new row or update the existing local record.
+Only `companyName` / `الشركة` is required. A company without an email is retained as **Needs Contact Research**. Existing reviewed workbook rows keep their prior readiness only when the valid business email and public source evidence are both present. New research becomes **Ready to Contact** only after an accepted verification status and a public source are recorded. Invalid rows and possible duplicates are shown in a confirmation preview. Duplicate handling can either skip the new row or update the existing local record.
 
 The target-role field is separate from an actual contact name and contact job title. Importing values such as `Procurement / Projects / FF&E` never creates a fictional contact person.
 
 ## 4. Research and campaign workflow
 
-Use the **Needs Contact Research** view to open a company's public website or supplied contact source, then add a verified business email manually. Email actions remain disabled until the address is valid. Priority filters support **Priority 5**, **Priority 4+**, and **All**.
+Use the **Contact Research** queue to work highest priority first. **Research Contact** opens the focused manual-research panel with official-site, contact-page, source, supplier-registration, and optional web-search links. No site is scraped. Record only public business details and keep the supporting URL.
+
+The panel stores procurement, projects, business and general email separately and selects the recipient in that order. It also supports contact forms and supplier portals without inventing an email. These remain usable states—**Contact Form Available** or **Supplier Portal Available**—rather than being forced into email outreach. **Save & Next** opens the next highest-priority unresolved company. Domain mismatches and an email already used by another lead are warnings, never automatic rejection or merging.
+
+Email actions remain disabled until a valid business email, an accepted verification status (`VERIFIED` or `FOUND_TARGET_CONTACT`), and a public research source are present. `DO NOT CONTACT` always blocks email generation.
 
 The named working list stores up to 30 manually selected leads in this browser. It is a planning queue only and does not send bulk email.
 
@@ -44,7 +48,7 @@ Due dates appear as `FOLLOW-UP DUE`. **Prepare Follow-Up** selects Follow-Up #1,
 
 ## 9. Export and backup
 
-**Export CSV** exports the current lead table. **Export Backup** saves the complete local state as JSON; **Import Backup** replaces the local browser database only after validation.
+**Export CSV** exports the current lead table, including all research evidence, structured contact methods, verification state, and verification time. **Export Backup** saves the complete local state as JSON; **Import Backup** replaces the local browser database only after validation. Stored version-2 leads are normalized in place when loaded; the original 100-lead workbook does not need to be imported again.
 
 ## 10. Privacy limitations
 

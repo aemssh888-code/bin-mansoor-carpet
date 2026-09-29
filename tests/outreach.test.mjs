@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {OUTREACH_SESSION_COOKIE,createOutreachSessionToken,outreachSecretConfigured,outreachSessionCookie,readCookie,sameRequestOrigin,validOutreachSession} from '../lib/outreach-auth.ts';
-import {createLead,exportLeadCsv,findDuplicateLead,generateOutreachEmail,gmailComposeUrl,interpolateTemplate,isValidLeadEmail,markLeadSent,parseLeadCsv,parseLeadRows,validateBackup} from '../lib/outreach.ts';
+import {canSendToLead,createLead,emailDomainReview,exportLeadCsv,findDuplicateEmail,findDuplicateLead,generateOutreachEmail,gmailComposeUrl,interpolateTemplate,isValidLeadEmail,markLeadSent,parseLeadCsv,parseLeadRows,researchQueue,selectBestRecipient,validateBackup} from '../lib/outreach.ts';
 
-const lead=(patch={})=>createLead({companyName:'TEST Riyadh Projects',email:'buyer@example.test',contactName:'Amina',contactJobTitle:'Procurement Manager',city:'Riyadh',country:'Saudi Arabia',sector:'Contractors',source:'Manual Research',language:'en',...patch});
+const lead=(patch={})=>createLead({companyName:'TEST Riyadh Projects',businessEmail:'buyer@example.test',email:'buyer@example.test',researchSourceUrl:'https://example.test/contact',contactVerificationStatus:'VERIFIED',contactName:'Amina',contactJobTitle:'Procurement Manager',city:'Riyadh',country:'Saudi Arabia',sector:'Contractors',source:'Manual Research',language:'en',...patch});
 
 test('authentication tokens are server-secret derived and cookies are hardened',async()=>{
  const secret='a-strong-test-secret';const token=await createOutreachSessionToken(secret);
@@ -25,11 +25,11 @@ test('Arabic workbook headers map target role separately and assign readiness',(
 
 test('possible duplicates remain visible in preview and are not silently discarded',()=>{
  const rows=[['الشركة','البريد العام','الموقع'],['First Company','','https://same.example.test'],['Second Company','sales@same.example.test','https://same.example.test']];
- const result=parseLeadRows(rows);assert.equal(result.totalRows,2);assert.equal(result.leads.length,2);assert.equal(result.duplicates.length,1);assert.equal(result.leads.filter(item=>item.readiness==='READY_TO_CONTACT').length,1);
+ const result=parseLeadRows(rows);assert.equal(result.totalRows,2);assert.equal(result.leads.length,2);assert.equal(result.duplicates.length,1);assert.equal(result.leads.filter(item=>item.readiness==='READY_TO_CONTACT').length,0);
 });
 
 test('duplicates use company, website or email and missing email blocks drafts',()=>{
- const original=lead({website:'https://www.example.test/'});assert.equal(findDuplicateLead([original],lead({companyName:'Different',email:'other@example.test',website:'https://example.test'}))?.id,original.id);assert.equal(isValidLeadEmail(''),false);assert.throws(()=>generateOutreachEmail({lead:lead({email:''}),type:'FIRST CONTACT'}),/valid public business email/);
+ const original=lead({website:'https://www.example.test/'});assert.equal(findDuplicateLead([original],lead({companyName:'Different',email:'other@example.test',businessEmail:'other@example.test',website:'https://example.test'}))?.id,original.id);assert.equal(isValidLeadEmail(''),false);assert.throws(()=>generateOutreachEmail({lead:lead({email:'',businessEmail:'',generalEmail:'',procurementEmail:'',projectsEmail:''}),type:'FIRST CONTACT'}),/verified public business email/);
 });
 
 test('template interpolation never invents missing values',()=>{assert.equal(interpolateTemplate('Hello {{contactName}} at {{companyName}} in {{city}}',lead({contactName:'',city:''})),'Hello  at TEST Riyadh Projects in ');});
@@ -51,4 +51,46 @@ test('DO NOT CONTACT blocks every outreach template',()=>{assert.throws(()=>gene
 test('CSV export and JSON backup retain updated sales fields',()=>{
  const updated={...lead(),status:'REPLIED',priority:5,targetRole:'Procurement',lastContactedAt:'2026-09-28T12:00:00Z',nextFollowUpAt:'2026-10-02',notes:'Asked for options'};const csv=exportLeadCsv([updated]);assert.match(csv,/companyName,contactName/);assert.match(csv,/READY_TO_CONTACT/);assert.match(csv,/Procurement/);assert.match(csv,/Asked for options/);
  const restored=validateBackup({version:1,leads:[updated]});assert.equal(restored.length,1);assert.equal(restored[0].status,'REPLIED');
+});
+
+test('Needs Contact Research becomes Ready only with verified target email and public source',()=>{
+ const pending=createLead({companyName:'Research Co'});assert.equal(pending.readiness,'NEEDS_CONTACT_RESEARCH');
+ const ready=createLead({...pending,procurementEmail:'procurement@research.test',researchSourceUrl:'https://research.test/suppliers',contactVerificationStatus:'FOUND_TARGET_CONTACT'});
+ assert.equal(ready.readiness,'READY_TO_CONTACT');assert.equal(canSendToLead(ready),true);
+});
+
+test('invalid or unsupported email does not become Ready',()=>{
+ const invalid=createLead({companyName:'Invalid Co',businessEmail:'not-an-email',researchSourceUrl:'https://invalid.test/contact',contactVerificationStatus:'VERIFIED'});
+ assert.equal(invalid.readiness,'NEEDS_CONTACT_RESEARCH');assert.equal(canSendToLead(invalid),false);
+ const general=createLead({companyName:'General Co',generalEmail:'info@general.test',researchSourceUrl:'https://general.test/contact',contactVerificationStatus:'FOUND_GENERAL_CONTACT'});
+ assert.equal(general.readiness,'NEEDS_CONTACT_RESEARCH');
+});
+
+test('contact form only becomes Contact Form Available without inventing email',()=>{
+ const item=createLead({companyName:'Form Co',contactPageUrl:'https://form.test/contact',preferredContactMethod:'CONTACT_FORM'});
+ assert.equal(item.readiness,'CONTACT_FORM_AVAILABLE');assert.equal(selectBestRecipient(item),'');
+});
+
+test('supplier portal only becomes Supplier Portal Available',()=>{
+ const item=createLead({companyName:'Portal Co',supplierPortalUrl:'https://portal.test/vendors',contactVerificationStatus:'SUPPLIER_PORTAL_FOUND'});
+ assert.equal(item.readiness,'SUPPLIER_PORTAL_AVAILABLE');assert.equal(item.preferredContactMethod,'SUPPLIER_PORTAL');
+});
+
+test('DO NOT CONTACT remains blocked even with verified email',()=>{
+ const blocked=lead({status:'DO NOT CONTACT'});assert.equal(blocked.readiness,'NEEDS_CONTACT_RESEARCH');assert.equal(canSendToLead(blocked),false);assert.throws(()=>generateOutreachEmail({lead:blocked,type:'FIRST CONTACT'}),/DO NOT CONTACT/);
+});
+
+test('duplicate email warning finds another lead without merging companies',()=>{
+ const first=lead({companyName:'First Co',procurementEmail:'buy@group.test',businessEmail:''});const second=lead({companyName:'Second Co',projectsEmail:'buy@group.test',businessEmail:''});
+ assert.equal(findDuplicateEmail([first,second],second,second.id)?.companyName,'First Co');assert.notEqual(first.id,second.id);
+});
+
+test('best recipient follows procurement, projects, business then general order',()=>{
+ const item=lead({procurementEmail:'procurement@example.test',projectsEmail:'projects@example.test',businessEmail:'sales@example.test',generalEmail:'info@example.test'});
+ assert.equal(selectBestRecipient(item),'procurement@example.test');assert.equal(generateOutreachEmail({lead:item,type:'FIRST CONTACT'}).to,'procurement@example.test');assert.equal(emailDomainReview({...item,website:'https://example.test'}),'MATCH');
+});
+
+test('Save & Next ordering uses highest priority then company name',()=>{
+ const queue=researchQueue([createLead({companyName:'Zeta',priority:4}),createLead({companyName:'Beta',priority:5}),createLead({companyName:'Alpha',priority:5}),lead({companyName:'Already Ready',priority:5})]);
+ assert.deepEqual(queue.map(item=>item.companyName),['Alpha','Beta','Zeta']);
 });

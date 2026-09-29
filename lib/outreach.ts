@@ -5,7 +5,10 @@ export const OUTREACH_STATUSES=['NEW','READY TO CONTACT','CONTACTED','FOLLOW-UP 
 export const OUTREACH_SOURCES=['Company Website','Public Business Directory','Referral','Trade Fair','Existing Contact','Supplier Directory','Manual Research','Other'] as const;
 export const OUTREACH_LANGUAGES=['en','ar'] as const;
 export const OUTREACH_EMAIL_TYPES=['FIRST CONTACT','FOLLOW-UP #1','FOLLOW-UP #2','CATALOG REQUEST RESPONSE','QUOTE INTEREST RESPONSE','DISTRIBUTOR INTRODUCTION'] as const;
-export const OUTREACH_READINESS=['READY_TO_CONTACT','NEEDS_CONTACT_RESEARCH'] as const;
+export const OUTREACH_READINESS=['READY_TO_CONTACT','NEEDS_CONTACT_RESEARCH','CONTACT_FORM_AVAILABLE','SUPPLIER_PORTAL_AVAILABLE'] as const;
+export const CONTACT_VERIFICATION_STATUSES=['UNRESEARCHED','FOUND_GENERAL_CONTACT','FOUND_TARGET_CONTACT','SUPPLIER_PORTAL_FOUND','MANUAL_REVIEW','VERIFIED'] as const;
+export const PREFERRED_CONTACT_METHODS=['EMAIL','CONTACT_FORM','SUPPLIER_PORTAL','PHONE','WHATSAPP','LINKEDIN','UNKNOWN'] as const;
+export const SUPPLIER_REGISTRATION_STATUSES=['NOT_STARTED','STARTED','REGISTERED'] as const;
 
 export type OutreachSector=typeof OUTREACH_SECTORS[number];
 export type OutreachStatus=typeof OUTREACH_STATUSES[number];
@@ -13,16 +16,19 @@ export type OutreachSource=typeof OUTREACH_SOURCES[number];
 export type OutreachLanguage=typeof OUTREACH_LANGUAGES[number];
 export type OutreachEmailType=typeof OUTREACH_EMAIL_TYPES[number];
 export type OutreachReadiness=typeof OUTREACH_READINESS[number];
+export type ContactVerificationStatus=typeof CONTACT_VERIFICATION_STATUSES[number];
+export type PreferredContactMethod=typeof PREFERRED_CONTACT_METHODS[number];
+export type SupplierRegistrationStatus=typeof SUPPLIER_REGISTRATION_STATUSES[number];
 
 export type OutreachDesign={key:string;line:'Rug'|'Wall-to-Wall';code:string;name:{en:string;ar:string};path:string};
 export type ContactHistoryEntry={id:string;type:OutreachEmailType;subject:string;at:string};
 export type Lead={
- id:string;sourceRowNumber:string;companyName:string;contactName:string;contactJobTitle:string;email:string;phone:string;city:string;country:string;sector:OutreachSector;website:string;sourceUrl:string;source:OutreachSource;language:OutreachLanguage;status:OutreachStatus;readiness:OutreachReadiness;priority:1|2|3|4|5|null;fitReason:string;targetRole:string;nextAction:string;lastContactedAt:string;nextFollowUpAt:string;notes:string;history:ContactHistoryEntry[];createdAt:string;updatedAt:string;jobTitle?:string;
+ id:string;sourceRowNumber:string;companyName:string;contactName:string;contactJobTitle:string;email:string;businessEmail:string;generalEmail:string;procurementEmail:string;projectsEmail:string;phone:string;whatsapp:string;linkedinCompanyUrl:string;supplierPortalUrl:string;contactPageUrl:string;researchSourceUrl:string;researchNotes:string;researchVerifiedAt:string;contactVerificationStatus:ContactVerificationStatus;preferredContactMethod:PreferredContactMethod;supplierRegistrationStatus:SupplierRegistrationStatus;city:string;country:string;sector:OutreachSector;website:string;sourceUrl:string;source:OutreachSource;language:OutreachLanguage;status:OutreachStatus;readiness:OutreachReadiness;priority:1|2|3|4|5|null;fitReason:string;targetRole:string;nextAction:string;lastContactedAt:string;nextFollowUpAt:string;notes:string;history:ContactHistoryEntry[];createdAt:string;updatedAt:string;jobTitle?:string;
 };
 export type EmailDraft={to:string;subject:string;body:string;type:OutreachEmailType};
 export type LeadImportResult={leads:Lead[];errors:{row:number;message:string}[];duplicates:{row:number;message:string}[];totalRows:number};
 
-const CSV_EXPORT_COLUMNS=['sourceRowNumber','companyName','contactName','contactJobTitle','email','phone','country','city','sector','priority','fitReason','targetRole','website','sourceUrl','source','language','status','readiness','nextAction','lastContactedAt','nextFollowUpAt','notes'] as const;
+const CSV_EXPORT_COLUMNS=['sourceRowNumber','companyName','contactName','contactJobTitle','email','businessEmail','procurementEmail','projectsEmail','generalEmail','phone','whatsapp','country','city','sector','priority','fitReason','targetRole','website','sourceUrl','supplierPortalUrl','contactPageUrl','linkedinCompanyUrl','researchSourceUrl','researchNotes','contactVerificationStatus','preferredContactMethod','supplierRegistrationStatus','researchVerifiedAt','source','language','status','readiness','nextAction','lastContactedAt','nextFollowUpAt','notes'] as const;
 const EMAIL=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const HEADER_ALIASES:Record<string,keyof Lead>={
  'رقم':'sourceRowNumber','source id':'sourceRowNumber','sourcerownumber':'sourceRowNumber',
@@ -34,6 +40,7 @@ const HEADER_ALIASES:Record<string,keyof Lead>={
  'لغة التواصل':'language','language':'language','الحالة':'status','status':'status','جاهز للإيميل؟':'readiness','readiness':'readiness',
  'الإجراء التالي':'nextAction','nextaction':'nextAction','ملاحظات':'notes','notes':'notes',
  'contactname':'contactName','contactjobtitle':'contactJobTitle','jobtitle':'contactJobTitle','phone':'phone','source':'source',
+ 'businessemail':'businessEmail','generalemail':'generalEmail','procurementemail':'procurementEmail','projectsemail':'projectsEmail','whatsapp':'whatsapp','linkedincompanyurl':'linkedinCompanyUrl','supplierportalurl':'supplierPortalUrl','contactpageurl':'contactPageUrl','researchsourceurl':'researchSourceUrl','researchnotes':'researchNotes','contactverificationstatus':'contactVerificationStatus','preferredcontactmethod':'preferredContactMethod','supplierregistrationstatus':'supplierRegistrationStatus','researchverifiedat':'researchVerifiedAt',
  };
 
 function csvRows(text:string){
@@ -61,16 +68,44 @@ function normalizedStatus(value:string):OutreachStatus{const text=value.trim().r
 function normalizedPriority(value:unknown):Lead['priority']{const parsed=Number(cellText(value));return Number.isInteger(parsed)&&parsed>=1&&parsed<=5?parsed as Lead['priority']:null;}
 export function isValidLeadEmail(value:string){return EMAIL.test(value.trim());}
 
-export function createLead(input:Partial<Lead>&Pick<Lead,'companyName'>):Lead{
- const now=nowIso();
- const email=input.email?.trim().toLowerCase()??'';const status=normalizedStatus(input.status??'');const validEmail=isValidLeadEmail(email);
- return {id:input.id??crypto.randomUUID(),sourceRowNumber:cellText(input.sourceRowNumber),companyName:input.companyName.trim(),contactName:input.contactName?.trim()??'',contactJobTitle:input.contactJobTitle?.trim()??input.jobTitle?.trim()??'',email,phone:input.phone?.trim()??'',city:input.city?.trim()??'',country:input.country?.trim()||'Saudi Arabia',sector:normalizedSector(input.sector??''),website:input.website?.trim()??'',sourceUrl:input.sourceUrl?.trim()??'',source:validChoice(input.source??'',OUTREACH_SOURCES,'Manual Research'),language:normalizedLanguage(input.language??''),status,readiness:input.readiness==='READY_TO_CONTACT'&&validEmail?'READY_TO_CONTACT':validEmail?'READY_TO_CONTACT':'NEEDS_CONTACT_RESEARCH',priority:normalizedPriority(input.priority),fitReason:input.fitReason?.trim()??'',targetRole:input.targetRole?.trim()??'',nextAction:input.nextAction?.trim()??'',lastContactedAt:input.lastContactedAt??'',nextFollowUpAt:input.nextFollowUpAt??'',notes:input.notes?.trim()??'',history:Array.isArray(input.history)?input.history:[],createdAt:input.createdAt??now,updatedAt:input.updatedAt??now};
+function cleanEmail(value:unknown){return cellText(value).toLowerCase();}
+function firstValidEmail(values:string[]){return values.find(isValidLeadEmail)??'';}
+export function selectBestRecipient(lead:Pick<Lead,'procurementEmail'|'projectsEmail'|'businessEmail'|'generalEmail'|'email'>){return firstValidEmail([lead.procurementEmail,lead.projectsEmail,lead.businessEmail,lead.generalEmail,lead.email]);}
+export function deriveResearchReadiness(lead:Pick<Lead,'status'|'contactVerificationStatus'|'researchSourceUrl'|'supplierPortalUrl'|'contactPageUrl'|'procurementEmail'|'projectsEmail'|'businessEmail'|'generalEmail'|'email'>):OutreachReadiness{
+ if(lead.status!=='DO NOT CONTACT'&&selectBestRecipient(lead)&&lead.researchSourceUrl&&(lead.contactVerificationStatus==='VERIFIED'||lead.contactVerificationStatus==='FOUND_TARGET_CONTACT'))return 'READY_TO_CONTACT';
+ if(lead.supplierPortalUrl)return 'SUPPLIER_PORTAL_AVAILABLE';
+ if(lead.contactPageUrl)return 'CONTACT_FORM_AVAILABLE';
+ return 'NEEDS_CONTACT_RESEARCH';
+}
+export function canSendToLead(lead:Lead){return lead.status!=='DO NOT CONTACT'&&lead.readiness==='READY_TO_CONTACT'&&isValidLeadEmail(selectBestRecipient(lead));}
+export function findDuplicateEmail(leads:Lead[],candidate:Lead,excludeId=''){
+ const emails=[candidate.procurementEmail,candidate.projectsEmail,candidate.businessEmail,candidate.generalEmail,candidate.email].filter(isValidLeadEmail);
+ if(!emails.length)return undefined;
+ return leads.find(lead=>lead.id!==excludeId&&[lead.procurementEmail,lead.projectsEmail,lead.businessEmail,lead.generalEmail,lead.email].some(email=>emails.includes(email)));
+}
+export function emailDomainReview(lead:Lead):'MATCH'|'REVIEW_DOMAIN'|'UNKNOWN'{
+ const email=selectBestRecipient(lead);if(!email||!lead.website)return 'UNKNOWN';
+ try{const emailDomain=email.split('@')[1].replace(/^www\./,'');const websiteDomain=new URL(/^https?:\/\//i.test(lead.website)?lead.website:`https://${lead.website}`).hostname.replace(/^www\./,'');return emailDomain===websiteDomain||emailDomain.endsWith(`.${websiteDomain}`)||websiteDomain.endsWith(`.${emailDomain}`)?'MATCH':'REVIEW_DOMAIN';}catch{return 'UNKNOWN';}
+}
+export function researchQueue(leads:Lead[],sort:'priority'|'sector'|'city'|'company'='priority'){
+ const queue=leads.filter(lead=>['NEEDS_CONTACT_RESEARCH','CONTACT_FORM_AVAILABLE','SUPPLIER_PORTAL_AVAILABLE'].includes(lead.readiness)&&lead.status!=='DO NOT CONTACT');
+ return [...queue].sort((a,b)=>sort==='priority'?(b.priority??0)-(a.priority??0)||a.companyName.localeCompare(b.companyName):String(a[sort==='company'?'companyName':sort]).localeCompare(String(b[sort==='company'?'companyName':sort]))||((b.priority??0)-(a.priority??0)));
 }
 
-export function findDuplicateLead(leads:Lead[],candidate:Lead){const name=normalizedKey(candidate.companyName);const website=normalizedWebsite(candidate.website);const email=candidate.email.toLowerCase();return leads.find(lead=>(name&&normalizedKey(lead.companyName)===name)||(website&&normalizedWebsite(lead.website)===website)||(email&&lead.email.toLowerCase()===email));}
+export function createLead(input:Partial<Lead>&Pick<Lead,'companyName'>):Lead{
+ const now=nowIso();
+ const legacyEmail=cleanEmail(input.email);const businessEmail=cleanEmail(input.businessEmail)||legacyEmail;const generalEmail=cleanEmail(input.generalEmail);const procurementEmail=cleanEmail(input.procurementEmail);const projectsEmail=cleanEmail(input.projectsEmail);const status=normalizedStatus(input.status??'');const sourceUrl=input.sourceUrl?.trim()??'';const researchSourceUrl=input.researchSourceUrl?.trim()||sourceUrl;const legacyReadiness=String(input.readiness??'').trim().toUpperCase();const hasLegacyVerifiedEvidence=(legacyReadiness==='READY_TO_CONTACT'||legacyReadiness==='READY TO CONTACT'||legacyReadiness==='YES'||legacyReadiness==='نعم')&&isValidLeadEmail(legacyEmail||businessEmail)&&Boolean(researchSourceUrl);const contactVerificationStatus=validChoice(input.contactVerificationStatus??(hasLegacyVerifiedEvidence?'VERIFIED':''),CONTACT_VERIFICATION_STATUSES,hasLegacyVerifiedEvidence?'VERIFIED':'UNRESEARCHED');
+ const base:Lead={id:input.id??crypto.randomUUID(),sourceRowNumber:cellText(input.sourceRowNumber),companyName:input.companyName.trim(),contactName:input.contactName?.trim()??'',contactJobTitle:input.contactJobTitle?.trim()??input.jobTitle?.trim()??'',email:'',businessEmail,generalEmail,procurementEmail,projectsEmail,phone:input.phone?.trim()??'',whatsapp:input.whatsapp?.trim()??'',linkedinCompanyUrl:input.linkedinCompanyUrl?.trim()??'',supplierPortalUrl:input.supplierPortalUrl?.trim()??'',contactPageUrl:input.contactPageUrl?.trim()??'',researchSourceUrl,researchNotes:input.researchNotes?.trim()??'',researchVerifiedAt:input.researchVerifiedAt??'',contactVerificationStatus,preferredContactMethod:validChoice(input.preferredContactMethod??'',PREFERRED_CONTACT_METHODS,'UNKNOWN'),supplierRegistrationStatus:validChoice(input.supplierRegistrationStatus??'',SUPPLIER_REGISTRATION_STATUSES,'NOT_STARTED'),city:input.city?.trim()??'',country:input.country?.trim()||'Saudi Arabia',sector:normalizedSector(input.sector??''),website:input.website?.trim()??'',sourceUrl,source:validChoice(input.source??'',OUTREACH_SOURCES,'Manual Research'),language:normalizedLanguage(input.language??''),status,readiness:'NEEDS_CONTACT_RESEARCH',priority:normalizedPriority(input.priority),fitReason:input.fitReason?.trim()??'',targetRole:input.targetRole?.trim()??'',nextAction:input.nextAction?.trim()??'',lastContactedAt:input.lastContactedAt??'',nextFollowUpAt:input.nextFollowUpAt??'',notes:input.notes?.trim()??'',history:Array.isArray(input.history)?input.history:[],createdAt:input.createdAt??now,updatedAt:input.updatedAt??now};
+ base.email=selectBestRecipient(base);base.readiness=deriveResearchReadiness(base);
+ if(base.preferredContactMethod==='UNKNOWN')base.preferredContactMethod=base.readiness==='READY_TO_CONTACT'?'EMAIL':base.readiness==='SUPPLIER_PORTAL_AVAILABLE'?'SUPPLIER_PORTAL':base.readiness==='CONTACT_FORM_AVAILABLE'?'CONTACT_FORM':base.phone?'PHONE':base.whatsapp?'WHATSAPP':base.linkedinCompanyUrl?'LINKEDIN':'UNKNOWN';
+ if(!base.researchVerifiedAt&&base.researchSourceUrl&&(base.contactVerificationStatus==='VERIFIED'||base.contactVerificationStatus==='FOUND_TARGET_CONTACT'))base.researchVerifiedAt=now;
+ return base;
+}
+
+export function findDuplicateLead(leads:Lead[],candidate:Lead){const name=normalizedKey(candidate.companyName);const website=normalizedWebsite(candidate.website);const email=selectBestRecipient(candidate);return leads.find(lead=>(name&&normalizedKey(lead.companyName)===name)||(website&&normalizedWebsite(lead.website)===website)||(email&&[lead.procurementEmail,lead.projectsEmail,lead.businessEmail,lead.generalEmail,lead.email].includes(email)));}
 
 export function mergeImportedLead(existing:Lead,incoming:Lead):Lead{
- const merged={...existing,...incoming,id:existing.id,contactName:incoming.contactName||existing.contactName,contactJobTitle:incoming.contactJobTitle||existing.contactJobTitle,email:incoming.email||existing.email,phone:incoming.phone||existing.phone,website:incoming.website||existing.website,sourceUrl:incoming.sourceUrl||existing.sourceUrl,createdAt:existing.createdAt,history:existing.history,lastContactedAt:existing.lastContactedAt,nextFollowUpAt:existing.nextFollowUpAt,status:existing.status==='NEW'?incoming.status:existing.status,updatedAt:nowIso()};
+ const merged={...existing,...incoming,id:existing.id,contactName:incoming.contactName||existing.contactName,contactJobTitle:incoming.contactJobTitle||existing.contactJobTitle,businessEmail:incoming.businessEmail||existing.businessEmail,generalEmail:incoming.generalEmail||existing.generalEmail,procurementEmail:incoming.procurementEmail||existing.procurementEmail,projectsEmail:incoming.projectsEmail||existing.projectsEmail,phone:incoming.phone||existing.phone,website:incoming.website||existing.website,sourceUrl:incoming.sourceUrl||existing.sourceUrl,researchSourceUrl:incoming.researchSourceUrl||existing.researchSourceUrl,createdAt:existing.createdAt,history:existing.history,lastContactedAt:existing.lastContactedAt,nextFollowUpAt:existing.nextFollowUpAt,status:existing.status==='NEW'?incoming.status:existing.status,updatedAt:nowIso()};
  return createLead(merged);
 }
 
@@ -82,7 +117,7 @@ export function parseLeadRows(rows:unknown[][]):LeadImportResult{
  rows.slice(1).forEach((values,index)=>{
   if(!values.some(value=>cellText(value)))return;totalRows++;const rowNumber=index+2;const raw:Record<string,unknown>={};mappedHeaders.forEach((key,column)=>{if(key)raw[key]=values[column]??'';});
   const companyName=cellText(raw.companyName);const email=cellText(raw.email).toLowerCase();if(!companyName){errors.push({row:rowNumber,message:'Company name is required.'});return;}if(email&&!isValidLeadEmail(email)){errors.push({row:rowNumber,message:`Invalid email: ${email}`});return;}
-  const lead=createLead({companyName,email,sourceRowNumber:cellText(raw.sourceRowNumber),contactName:cellText(raw.contactName),contactJobTitle:cellText(raw.contactJobTitle),phone:cellText(raw.phone),city:cellText(raw.city),country:cellText(raw.country),sector:cellText(raw.sector) as OutreachSector,website:cellText(raw.website),sourceUrl:cellText(raw.sourceUrl),source:cellText(raw.source) as OutreachSource,language:cellText(raw.language) as OutreachLanguage,status:cellText(raw.status) as OutreachStatus,priority:normalizedPriority(raw.priority),fitReason:cellText(raw.fitReason),targetRole:cellText(raw.targetRole),nextAction:cellText(raw.nextAction),notes:cellText(raw.notes)});
+  const lead=createLead({companyName,email,businessEmail:cellText(raw.businessEmail)||email,generalEmail:cellText(raw.generalEmail),procurementEmail:cellText(raw.procurementEmail),projectsEmail:cellText(raw.projectsEmail),sourceRowNumber:cellText(raw.sourceRowNumber),contactName:cellText(raw.contactName),contactJobTitle:cellText(raw.contactJobTitle),phone:cellText(raw.phone),whatsapp:cellText(raw.whatsapp),city:cellText(raw.city),country:cellText(raw.country),sector:cellText(raw.sector) as OutreachSector,website:cellText(raw.website),sourceUrl:cellText(raw.sourceUrl),supplierPortalUrl:cellText(raw.supplierPortalUrl),contactPageUrl:cellText(raw.contactPageUrl),linkedinCompanyUrl:cellText(raw.linkedinCompanyUrl),researchSourceUrl:cellText(raw.researchSourceUrl)||cellText(raw.sourceUrl),researchNotes:cellText(raw.researchNotes),contactVerificationStatus:cellText(raw.contactVerificationStatus) as ContactVerificationStatus,preferredContactMethod:cellText(raw.preferredContactMethod) as PreferredContactMethod,supplierRegistrationStatus:cellText(raw.supplierRegistrationStatus) as SupplierRegistrationStatus,researchVerifiedAt:cellText(raw.researchVerifiedAt),source:cellText(raw.source) as OutreachSource,language:cellText(raw.language) as OutreachLanguage,status:cellText(raw.status) as OutreachStatus,readiness:cellText(raw.readiness) as OutreachReadiness,priority:normalizedPriority(raw.priority),fitReason:cellText(raw.fitReason),targetRole:cellText(raw.targetRole),nextAction:cellText(raw.nextAction),notes:cellText(raw.notes)});
   const duplicate=findDuplicateLead(leads,lead);if(duplicate)duplicates.push({row:rowNumber,message:`Possible duplicate of ${duplicate.companyName}.`});leads.push(lead);
  });
  return {leads,errors,duplicates,totalRows};
@@ -139,7 +174,7 @@ function signature(language:OutreachLanguage){return language==='ar'?'مع ال�
 
 export function generateOutreachEmail({lead,type,personalOpeningLine='',includeMoq=defaultIncludeMoq(lead.sector),includeOptOut=type==='FIRST CONTACT',designs=[]}:{lead:Lead;type:OutreachEmailType;personalOpeningLine?:string;includeMoq?:boolean;includeOptOut?:boolean;designs?:OutreachDesign[]}):EmailDraft{
  if(lead.status==='DO NOT CONTACT')throw new Error('This lead is marked DO NOT CONTACT. Re-enable it before preparing outreach.');
- if(!isValidLeadEmail(lead.email))throw new Error('Add a valid public business email before preparing outreach.');
+ const recipient=selectBestRecipient(lead);if(!canSendToLead(lead)||!isValidLeadEmail(recipient))throw new Error('Add a verified public business email and its public source before preparing outreach.');
  const language=lead.language;const arabic=language==='ar';const company=lead.companyName;const opening=interpolateTemplate(personalOpeningLine.trim(),lead);const links=designLinks(designs.slice(0,3),language);
  const moq=includeMoq?(arabic?'الحد الأدنى للطلب هو 8,000 م² لكل تصميم.':'Minimum order is 8,000 m² per design.'):'';
  const optOut=includeOptOut?(arabic?'إذا لم يكن هذا مناسبًا لفريقكم، يرجى إبلاغي ولن أتابع التواصل.':'If this is not relevant to your team, please let me know and I will not follow up.'):'';
@@ -159,7 +194,7 @@ export function generateOutreachEmail({lead,type,personalOpeningLine='',includeM
  if(type==='QUOTE INTEREST RESPONSE')bodyParts.push(arabic?'يسعدنا إعداد عرض سعر. يرجى تزويدنا بكود كل تصميم، والكمية التقريبية، والوجهة، وأي متطلبات للمشروع حتى نراجع الطلب بدقة.':'We would be pleased to prepare a quotation. Please share each design code, approximate quantity, destination and any project requirements so we can review the request accurately.');
  if(type==='DISTRIBUTOR INTRODUCTION')bodyParts.push(arabic?'نتواصل لبحث علاقة توريد مباشرة من المصنع تشمل تصاميم السجاد والموكيت للطلبات التجارية الكبيرة والتوريد المستمر. يمكننا مشاركة روابط مختارة ومناقشة احتياجات السوق لديكم.':'I am reaching out to explore a direct factory supply relationship covering rug designs and wall-to-wall carpet for large commercial orders and ongoing supply. We can share a focused design selection and discuss your market requirements.');
  if(moq)bodyParts.push(moq);if(links)bodyParts.push(links);if(optOut)bodyParts.push(optOut);bodyParts.push(signature(language));
- return {to:lead.email,subject:subjects[type],body:bodyParts.filter(Boolean).join('\n\n'),type};
+ return {to:recipient,subject:subjects[type],body:bodyParts.filter(Boolean).join('\n\n'),type};
 }
 
 export function gmailComposeUrl(draft:EmailDraft){const params=new URLSearchParams({view:'cm',fs:'1',to:draft.to,su:draft.subject,body:draft.body});return `https://mail.google.com/mail/?${params}`;}
