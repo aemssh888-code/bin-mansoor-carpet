@@ -2,6 +2,24 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {OUTREACH_SESSION_COOKIE,createOutreachSessionToken,outreachSecretConfigured,outreachSessionCookie,readCookie,sameRequestOrigin,validOutreachSession} from '../lib/outreach-auth.ts';
 import {canSendToLead,createLead,emailDomainReview,exportLeadCsv,filterLeadList,findDuplicateEmail,findDuplicateLead,generateOutreachEmail,gmailComposeUrl,interpolateTemplate,isValidLeadEmail,markLeadSent,normalizedCompanyName,paginateLeads,parseLeadCsv,parseLeadRows,priorityFromLeadScore,researchQueue,selectBestRecipient,validateBackup} from '../lib/outreach.ts';
+import {outreachArLabel,outreachArMessage,outreachPriorityLabel} from '../lib/outreach-ar.ts';
+import {CONTACT_VERIFICATION_STATUSES,OUTREACH_COUNTRIES,OUTREACH_EMAIL_TYPES,OUTREACH_LANGUAGES,OUTREACH_SECTORS,OUTREACH_SOURCES,OUTREACH_STATUSES,PREFERRED_CONTACT_METHODS,SAUDI_CITIES,SUPPLIER_REGISTRATION_STATUSES} from '../lib/outreach.ts';
+
+test('Arabic labels are display-only and keep filter keys and imports unchanged',()=>{
+ assert.equal(outreachArLabel('READY_TO_CONTACT'),'جاهز للتواصل');
+ assert.equal(outreachArLabel('Hospitality / Hotels'),'الضيافة والفنادق');
+ assert.equal(outreachArLabel('Saudi Arabia'),'السعودية');
+ assert.equal(outreachArLabel('custom owner value'),'custom owner value');
+ assert.match(outreachPriorityLabel(5),/الأولوية 5/);
+ assert.equal(outreachArMessage('Company name is required.'),'اسم الشركة مطلوب.');
+ assert.equal(outreachArMessage('Invalid email: test@'), 'بريد إلكتروني غير صالح: test@');
+});
+
+test('all fixed outreach filter and status choices have Arabic labels',()=>{
+ const options=[CONTACT_VERIFICATION_STATUSES,OUTREACH_COUNTRIES,OUTREACH_EMAIL_TYPES,OUTREACH_LANGUAGES,OUTREACH_SECTORS,OUTREACH_SOURCES,OUTREACH_STATUSES,PREFERRED_CONTACT_METHODS,SAUDI_CITIES,SUPPLIER_REGISTRATION_STATUSES].flat();
+ const untranslated=options.filter(value=>!/[\u0600-\u06ff]/.test(outreachArLabel(value)));
+ assert.deepEqual(untranslated,[]);
+});
 
 const lead=(patch={})=>createLead({companyName:'TEST Riyadh Projects',businessEmail:'buyer@example.test',email:'buyer@example.test',researchSourceUrl:'https://example.test/contact',contactVerificationStatus:'VERIFIED',contactName:'Amina',contactJobTitle:'Procurement Manager',city:'Riyadh',country:'Saudi Arabia',sector:'Contractors',source:'Manual Research',language:'en',...patch});
 
