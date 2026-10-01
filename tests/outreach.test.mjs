@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {OUTREACH_SESSION_COOKIE,createOutreachSessionToken,outreachSecretConfigured,outreachSessionCookie,readCookie,sameRequestOrigin,validOutreachSession} from '../lib/outreach-auth.ts';
-import {canSendToLead,createLead,emailDomainReview,exportLeadCsv,findDuplicateEmail,findDuplicateLead,generateOutreachEmail,gmailComposeUrl,interpolateTemplate,isValidLeadEmail,markLeadSent,parseLeadCsv,parseLeadRows,researchQueue,selectBestRecipient,validateBackup} from '../lib/outreach.ts';
+import {canSendToLead,createLead,emailDomainReview,exportLeadCsv,filterLeadList,findDuplicateEmail,findDuplicateLead,generateOutreachEmail,gmailComposeUrl,interpolateTemplate,isValidLeadEmail,markLeadSent,normalizedCompanyName,paginateLeads,parseLeadCsv,parseLeadRows,priorityFromLeadScore,researchQueue,selectBestRecipient,validateBackup} from '../lib/outreach.ts';
 
 const lead=(patch={})=>createLead({companyName:'TEST Riyadh Projects',businessEmail:'buyer@example.test',email:'buyer@example.test',researchSourceUrl:'https://example.test/contact',contactVerificationStatus:'VERIFIED',contactName:'Amina',contactJobTitle:'Procurement Manager',city:'Riyadh',country:'Saudi Arabia',sector:'Contractors',source:'Manual Research',language:'en',...patch});
 
@@ -49,7 +49,7 @@ test('mark sent records history and stops automatic follow-up after follow-up tw
 test('DO NOT CONTACT blocks every outreach template',()=>{assert.throws(()=>generateOutreachEmail({lead:lead({status:'DO NOT CONTACT'}),type:'FOLLOW-UP #1'}),/DO NOT CONTACT/);});
 
 test('CSV export and JSON backup retain updated sales fields',()=>{
- const updated={...lead(),status:'REPLIED',priority:5,targetRole:'Procurement',lastContactedAt:'2026-09-28T12:00:00Z',nextFollowUpAt:'2026-10-02',notes:'Asked for options'};const csv=exportLeadCsv([updated]);assert.match(csv,/companyName,contactName/);assert.match(csv,/READY_TO_CONTACT/);assert.match(csv,/Procurement/);assert.match(csv,/Asked for options/);
+ const updated={...lead(),status:'REPLIED',priority:5,targetRole:'Procurement',lastContactedAt:'2026-09-28T12:00:00Z',nextFollowUpAt:'2026-10-02',notes:'Asked for options'};const csv=exportLeadCsv([updated]);assert.match(csv,/companyName,companyNameNormalized,contactName/);assert.match(csv,/READY_TO_CONTACT/);assert.match(csv,/Procurement/);assert.match(csv,/Asked for options/);
  const restored=validateBackup({version:1,leads:[updated]});assert.equal(restored.length,1);assert.equal(restored[0].status,'REPLIED');
 });
 
@@ -93,4 +93,23 @@ test('best recipient follows procurement, projects, business then general order'
 test('Save & Next ordering uses highest priority then company name',()=>{
  const queue=researchQueue([createLead({companyName:'Zeta',priority:4}),createLead({companyName:'Beta',priority:5}),createLead({companyName:'Alpha',priority:5}),lead({companyName:'Already Ready',priority:5})]);
  assert.deepEqual(queue.map(item=>item.companyName),['Alpha','Beta','Zeta']);
+});
+
+test('5,000-lead search, filters and pagination stay bounded',()=>{
+ const records=Array.from({length:5000},(_,index)=>createLead({id:`MUQ-${index}`,companyName:`Saudi Contractor ${index}`,companyNameNormalized:`saudi contractor ${index}`,registrationIdentifier:String(100000+index),city:index%2?'Riyadh':'Jeddah',region:index%2?'Riyadh':'Makkah',sector:'Contractors',sourceName:'Muqawil — Saudi Contractors Authority',preferredContactMethod:index%10===0?'SUPPLIER_PORTAL':'UNKNOWN',leadScore:index%5===0?82:55,priority:index%5===0?5:3}));
+ const filtered=filterLeadList(records,{search:'MUQ-4999'});
+ assert.equal(filtered.length,0);
+ const byRegistration=filterLeadList(records,{search:'104999'});
+ assert.equal(byRegistration.length,1);
+ const riyadh=filterLeadList(records,{region:'Riyadh',priority:'5'});
+ assert.equal(riyadh.length,500);
+ const page=paginateLeads(records,50,100);
+ assert.equal(page.items.length,100);assert.equal(page.pages,50);assert.equal(page.items[0].id,'MUQ-4900');
+});
+
+test('expanded import retains official evidence, scoring and duplicate identifiers',()=>{
+ const csv='id,companyName,companyNameNormalized,region,officialDomain,leadScore,registrationIdentifier,sourceName,sourceType,sourceRetrievedAt,sourceEvidence,duplicateStatus\nMUQ-123,Example Contracting,example,Riyadh,,86,123,Muqawil,Official public business directory,2026-10-01,Membership 123,UNIQUE';
+ const result=parseLeadCsv(csv);assert.equal(result.errors.length,0);assert.equal(result.leads[0].id,'MUQ-123');assert.equal(result.leads[0].priority,5);assert.equal(result.leads[0].registrationIdentifier,'123');assert.equal(result.leads[0].sourceEvidence,'Membership 123');
+ assert.equal(normalizedCompanyName('Example Contracting Co. Ltd.'),'example');assert.equal(priorityFromLeadScore(64),3);assert.equal(priorityFromLeadScore(65),4);
+ const exported=exportLeadCsv(result.leads);assert.match(exported,/registrationIdentifier/);assert.match(exported,/Official public business directory/);
 });

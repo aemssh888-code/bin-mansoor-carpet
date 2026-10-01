@@ -1,6 +1,6 @@
 # Sales Outreach Assistant
 
-Private Phase 1 workspace for preparing one reviewed email at a time. It does not send email, access Gmail credentials, scrape leads, or store lead data on the server.
+Private workspace for preparing one reviewed email at a time. It does not send email, access Gmail credentials, scrape leads, or store lead data on the server. The browser workspace is designed for at least 5,000 local records.
 
 ## 1. Configure access
 
@@ -14,7 +14,7 @@ Visit `/admin/outreach`. Unauthenticated requests are redirected to `/admin/outr
 
 ## 3. XLSX and CSV import
 
-Use **Import XLSX / CSV** to process a workbook locally in the browser. For the Saudi lead workbook, the importer selects the `العملاء_100` sheet and maps its Arabic headers automatically. It also accepts UTF-8 CSV files with either those Arabic headers or the exported English field names.
+Use **Import XLSX / CSV** to process a workbook locally in the browser. For the original Saudi lead workbook, the importer selects the `العملاء_100` sheet and maps its Arabic headers automatically. It also accepts the expanded `saudi_5000_master.xlsx` workbook and UTF-8 CSV files with either the legacy Arabic headers or the exported English field names.
 
 Only `companyName` / `الشركة` is required. A company without an email is retained as **Needs Contact Research**. Existing reviewed workbook rows keep their prior readiness only when the valid business email and public source evidence are both present. New research becomes **Ready to Contact** only after an accepted verification status and a public source are recorded. Invalid rows and possible duplicates are shown in a confirmation preview. Duplicate handling can either skip the new row or update the existing local record.
 
@@ -28,7 +28,9 @@ The panel stores procurement, projects, business and general email separately an
 
 Email actions remain disabled until a valid business email, an accepted verification status (`VERIFIED` or `FOUND_TARGET_CONTACT`), and a public research source are present. `DO NOT CONTACT` always blocks email generation.
 
-The named working list stores up to 30 manually selected leads in this browser. It is a planning queue only and does not send bulk email.
+Large lists are paginated at 50, 100 or 250 rows per page. Search covers company, normalized company name, domain, public business email, registration identifier and target role. Filters cover priority, sector, city, region, readiness/status, contact method and source.
+
+The named working list stores up to 30 manually selected leads in this browser. Safe bulk actions are limited to selecting the current page, exporting selected rows, or adding selected rows to that 30-lead queue. They never send email or change contact status.
 
 ## 5. Prepare an email
 
@@ -48,7 +50,9 @@ Due dates appear as `FOLLOW-UP DUE`. **Prepare Follow-Up** selects Follow-Up #1,
 
 ## 9. Export and backup
 
-**Export CSV** exports the current lead table, including all research evidence, structured contact methods, verification state, and verification time. **Export Backup** saves the complete local state as JSON; **Import Backup** replaces the local browser database only after validation. Stored version-2 leads are normalized in place when loaded; the original 100-lead workbook does not need to be imported again.
+**Export CSV** exports the current lead table, including scoring, deduplication review, source traceability, registration ID, research evidence, structured contact methods, verification state, and verification time. **Export Backup** saves the complete local state as JSON; **Import Backup** replaces the local browser database only after validation. At 500 or more records the dashboard reminds the owner when no backup has been exported in the last seven days.
+
+The private delivery package includes checkpoint backups at 500, 1,000, 2,000, 3,000, 4,000 and 5,000 leads. Store those outside the public repository.
 
 ## 10. Privacy limitations
 
