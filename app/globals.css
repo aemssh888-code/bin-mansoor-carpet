@@ -523,4 +523,5 @@ address{overflow-wrap:anywhere}
 @media(max-width:480px){.outreach-tools,.outreach-quick-add{grid-template-columns:1fr}.outreach-quick-add button{min-height:3rem}.outreach-file-actions button,.outreach-file-actions label{justify-content:center}}
 @media(max-width:1100px){.outreach-detail-filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:767px){.outreach-detail-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.outreach-filter-heading{align-items:start}.outreach-filter-heading p{max-width:19rem}.outreach-pagination{flex-wrap:wrap}.outreach-pagination label{margin-inline-start:auto}}
+@media(max-width:767px){.outreach-summary article:last-child{grid-column:1/-1}}
 @media(max-width:480px){.outreach-filter-heading{flex-direction:column}.outreach-filter-heading button{width:100%;justify-content:center}.outreach-detail-filters{grid-template-columns:1fr}.outreach-more-filters{padding:.75rem}}
