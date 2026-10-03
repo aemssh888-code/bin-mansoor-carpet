@@ -2,6 +2,7 @@ import data from './wtw-catalog-data.json';
 import {wtwFeaturedOrder,wtwPresentation} from './wtw-presentation';
 import {wtwCuratedOrder,wtwPublication} from './wtw-publication';
 import type {Locale,LocalizedText} from './products';
+export {wtwColourCount,wtwStyle} from './wtw-copy';
 
 export type WTWColourway={code:string;image:string;colourFamily:string};
 type WTWSourceModel={
@@ -51,11 +52,6 @@ export const wtwColours=[...new Set(wtwModels.flatMap(model=>model.colourways.ma
 export const wtwReserved:Record<string,string>={'wtw-005':'wtw-006','wtw-007':'wtw-004'};
 export function getWTWModel(slug:string){return wtwModels.find(model=>model.slug===slug);}
 export function wtwColourLabel(code:string){return code.split('-').at(-1)??code;}
-export function wtwColourCount(count:number,locale:Locale){
- if(locale==='ar')return count===1?'لون واحد':count===2?'لونان':`${count} ألوان`;
- if(locale==='tr')return `${count} Renk`;
- return `${count} ${count===1?'Colour':'Colours'}`;
-}
 export function wtwSearch(model:WTWModel,query:string){
  const normalize=(value:string)=>value.normalize('NFKD').replace(/[\u0300-\u036f\u064b-\u065f]/g,'').toLocaleLowerCase();
  const needle=normalize(query.trim());

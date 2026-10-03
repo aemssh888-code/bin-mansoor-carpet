@@ -13,6 +13,7 @@
     "lint": "oxlint",
     "test:outreach": "node --experimental-strip-types --test tests/outreach.test.mjs",
     "test:quote": "node --experimental-strip-types --test tests/wtw-quote.test.mjs",
+    "test:catalog-copy": "node --experimental-strip-types --test tests/wtw-copy.test.mjs",
     "format": "oxfmt"
   },
   "dependencies": {
